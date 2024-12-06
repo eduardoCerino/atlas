@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  Hoja de estilos externa -->
+    <link rel="stylesheet" href="stytles.css">
+    <link rel="stylesheet" href="visualizador.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</head>
+
+<body class="main">
+
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Card Modal -->
+        <div class="card" style="width: 367px;" id="card-modal">
+            <div>
+                <img src="./assets/images/Container.png" class="card-img-top" alt="..." style="padding: 16px;" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    style="position: absolute; right: 16px; top: 16px; cursor: pointer;"
+                    onclick="toggleElement('card-modal')">
+                    <path
+                        d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
+                        fill="black" />
+                </svg>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"> Bienvenido al Visualizador </h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus sed purus
+                    eu
+                    eleifend. Sed venenatis vel nibh ut iaculis. Maecenas interdum quam id mauris eleifend auctor. Proin
+                    hendrerit ullamcorper dignissim. Praesent non euismod metus. In hac habitasse platea dictums.</p>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="button" style="font-weight:500;"
+                        onclick="toggleElement('card-modal')">
+                        Comenzar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu -->
+        <div class="menu-container">
+            <div class="menu">
+
+
+                <div class="menu-item menu-selected " id="menu-rule" onclick="selectMenuItem('menu-rule')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                            d="M8.45736 19.4948L4.6867 23.2668L9.40003 27.9802L27.3134 10.0668L22.6 5.3535L19.7707 8.1815L21.6574 10.0668L19.7707 11.9522L17.8854 10.0668L15.0574 12.8962L17.8854 15.7228L16 17.6108L13.172 14.7828L10.3427 17.6108L12.2294 19.4962L10.3427 21.3828L8.45736 19.4962V19.4948ZM23.5427 2.52417L30.1427 9.12417C30.3927 9.37421 30.5331 9.71329 30.5331 10.0668C30.5331 10.4204 30.3927 10.7595 30.1427 11.0095L10.3427 30.8095C10.0927 31.0595 9.75358 31.1999 9.40003 31.1999C9.04648 31.1999 8.7074 31.0595 8.45736 30.8095L1.85736 24.2095C1.6074 23.9595 1.46698 23.6204 1.46698 23.2668C1.46698 22.9133 1.6074 22.5742 1.85736 22.3242L21.6574 2.52417C21.9074 2.27421 22.2465 2.13379 22.6 2.13379C22.9536 2.13379 23.2927 2.27421 23.5427 2.52417Z"
+                            fill="#484848" />
+                    </svg>
+                </div>
+                <div class="menu-item " id="menu-map" onclick="selectMenuItem('menu-map')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                            d="M16 27.8669L22.6 21.2669C23.9052 19.9616 24.794 18.2985 25.1541 16.4881C25.5141 14.6776 25.3292 12.801 24.6228 11.0956C23.9163 9.39024 22.7201 7.93263 21.1852 6.90711C19.6504 5.88159 17.8459 5.33423 16 5.33423C14.1541 5.33423 12.3496 5.88159 10.8148 6.90711C9.27994 7.93263 8.08367 9.39024 7.37722 11.0956C6.67078 12.801 6.48589 14.6776 6.84594 16.4881C7.20599 18.2985 8.09481 19.9616 9.40001 21.2669L16 27.8669ZM16 31.6376L7.51467 23.1522C5.83646 21.474 4.69358 19.3358 4.23057 17.008C3.76756 14.6803 4.00521 12.2675 4.91346 10.0748C5.82172 7.88205 7.35979 6.00792 9.33318 4.68935C11.3066 3.37078 13.6266 2.66699 16 2.66699C18.3734 2.66699 20.6934 3.37078 22.6668 4.68935C24.6402 6.00792 26.1783 7.88205 27.0865 10.0748C27.9948 12.2675 28.2324 14.6803 27.7694 17.008C27.3064 19.3358 26.1636 21.474 24.4853 23.1522L16 31.6376V31.6376ZM16 17.3336C16.7072 17.3336 17.3855 17.0526 17.8856 16.5525C18.3857 16.0524 18.6667 15.3741 18.6667 14.6669C18.6667 13.9596 18.3857 13.2814 17.8856 12.7813C17.3855 12.2812 16.7072 12.0002 16 12.0002C15.2928 12.0002 14.6145 12.2812 14.1144 12.7813C13.6143 13.2814 13.3333 13.9596 13.3333 14.6669C13.3333 15.3741 13.6143 16.0524 14.1144 16.5525C14.6145 17.0526 15.2928 17.3336 16 17.3336ZM16 20.0002C14.5855 20.0002 13.229 19.4383 12.2288 18.4381C11.2286 17.4379 10.6667 16.0814 10.6667 14.6669C10.6667 13.2524 11.2286 11.8958 12.2288 10.8957C13.229 9.89546 14.5855 9.33355 16 9.33355C17.4145 9.33355 18.771 9.89546 19.7712 10.8957C20.7714 11.8958 21.3333 13.2524 21.3333 14.6669C21.3333 16.0814 20.7714 17.4379 19.7712 18.4381C18.771 19.4383 17.4145 20.0002 16 20.0002Z"
+                            fill="#484848" />
+                    </svg>
+                </div>
+                <div class="menu-item" id="menu-eraser" onclick="selectMenuItem('menu-eraser')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                            d="M11.448 11.8105L4.84802 18.4105L11.7734 25.3358H13.3334V25.3331H14.896L19.9334 20.2958L11.448 11.8105ZM13.3334 9.92513L21.8187 18.4105L25.5894 14.6385L17.104 6.15313L13.3334 9.92513ZM18.6667 25.3331H28V27.9998H16L10.6694 28.0025L2.02002 19.3531C1.77006 19.1031 1.62964 18.764 1.62964 18.4105C1.62964 18.0569 1.77006 17.7178 2.02002 17.4678L16.16 3.32513C16.2839 3.20116 16.4309 3.10282 16.5928 3.03572C16.7546 2.96862 16.9281 2.93408 17.1034 2.93408C17.2786 2.93408 17.4521 2.96862 17.6139 3.03572C17.7758 3.10282 17.9229 3.20116 18.0467 3.32513L28.4174 13.6958C28.6673 13.9458 28.8077 14.2849 28.8077 14.6385C28.8077 14.992 28.6673 15.3311 28.4174 15.5811L18.6667 25.3331Z"
+                            fill="#484848" />
+                    </svg>
+                </div>
+            
+                <div class="menu-separator">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2" height="26" viewBox="0 0 2 26" fill="none">
+                        <path d="M1 0.5V25.5" stroke="#484848" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <div class="menu-item" id="menu-stack" onclick="selectMenuItem('menu-stack')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                            d="M26.7773 20.2664L28.38 21.2278C28.4789 21.287 28.5607 21.3708 28.6175 21.471C28.6744 21.5713 28.7042 21.6845 28.7042 21.7998C28.7042 21.915 28.6744 22.0283 28.6175 22.1285C28.5607 22.2288 28.4789 22.3126 28.38 22.3718L16.6867 29.3878C16.4793 29.5124 16.2419 29.5782 16 29.5782C15.7581 29.5782 15.5207 29.5124 15.3133 29.3878L3.62001 22.3718C3.52114 22.3126 3.4393 22.2288 3.38247 22.1285C3.32565 22.0283 3.29578 21.915 3.29578 21.7998C3.29578 21.6845 3.32565 21.5713 3.38247 21.471C3.4393 21.3708 3.52114 21.287 3.62001 21.2278L5.22268 20.2664L16 26.7331L26.7773 20.2664ZM26.7773 13.9998L28.38 14.9611C28.4789 15.0203 28.5607 15.1041 28.6175 15.2043C28.6744 15.3046 28.7042 15.4179 28.7042 15.5331C28.7042 15.6483 28.6744 15.7616 28.6175 15.8619C28.5607 15.9621 28.4789 16.0459 28.38 16.1051L16 23.5331L3.62001 16.1051C3.52114 16.0459 3.4393 15.9621 3.38247 15.8619C3.32565 15.7616 3.29578 15.6483 3.29578 15.5331C3.29578 15.4179 3.32565 15.3046 3.38247 15.2043C3.4393 15.1041 3.52114 15.0203 3.62001 14.9611L5.22268 13.9998L16 20.4664L26.7773 13.9998ZM16.6853 1.7451L28.38 8.7611C28.4789 8.82029 28.5607 8.9041 28.6175 9.00435C28.6744 9.1046 28.7042 9.21786 28.7042 9.3331C28.7042 9.44834 28.6744 9.5616 28.6175 9.66185C28.5607 9.7621 28.4789 9.84591 28.38 9.9051L16 17.3331L3.62001 9.9051C3.52114 9.84591 3.4393 9.7621 3.38247 9.66185C3.32565 9.5616 3.29578 9.44834 3.29578 9.3331C3.29578 9.21786 3.32565 9.1046 3.38247 9.00435C3.4393 8.9041 3.52114 8.82029 3.62001 8.7611L15.3133 1.7451C15.5207 1.62051 15.7581 1.55469 16 1.55469C16.2419 1.55469 16.4793 1.62051 16.6867 1.7451H16.6853ZM16 4.44243L7.84934 9.3331L16 14.2238L24.1507 9.3331L16 4.44243Z"
+                            fill="#484848" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zooms -->
+        <div class="zoom-container">
+            <div class="zoom">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path
+                        d="M7.5 15C7.5 14.7514 7.59877 14.5129 7.77459 14.3371C7.9504 14.1613 8.18886 14.0625 8.4375 14.0625H21.5625C21.8111 14.0625 22.0496 14.1613 22.2254 14.3371C22.4012 14.5129 22.5 14.7514 22.5 15C22.5 15.2486 22.4012 15.4871 22.2254 15.6629C22.0496 15.8387 21.8111 15.9375 21.5625 15.9375H8.4375C8.18886 15.9375 7.9504 15.8387 7.77459 15.6629C7.59877 15.4871 7.5 15.2486 7.5 15Z"
+                        fill="black" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                    <path
+                        d="M15 7.5C15.2486 7.5 15.4871 7.59877 15.6629 7.77459C15.8387 7.9504 15.9375 8.18886 15.9375 8.4375V14.0625H21.5625C21.8111 14.0625 22.0496 14.1613 22.2254 14.3371C22.4012 14.5129 22.5 14.7514 22.5 15C22.5 15.2486 22.4012 15.4871 22.2254 15.6629C22.0496 15.8387 21.8111 15.9375 21.5625 15.9375H15.9375V21.5625C15.9375 21.8111 15.8387 22.0496 15.6629 22.2254C15.4871 22.4012 15.2486 22.5 15 22.5C14.7514 22.5 14.5129 22.4012 14.3371 22.2254C14.1613 22.0496 14.0625 21.8111 14.0625 21.5625V15.9375H8.4375C8.18886 15.9375 7.9504 15.8387 7.77459 15.6629C7.59877 15.4871 7.5 15.2486 7.5 15C7.5 14.7514 7.59877 14.5129 7.77459 14.3371C7.9504 14.1613 8.18886 14.0625 8.4375 14.0625H14.0625V8.4375C14.0625 8.18886 14.1613 7.9504 14.3371 7.77459C14.5129 7.59877 14.7514 7.5 15 7.5Z"
+                        fill="black" />
+                </svg>
+            </div>
+        </div>
+
+    
+
+        <div class="help-container hide-item" id="help-container">
+            <div class="help">
+                <div class="help-title">
+                    <h1> Ayuda </h1>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                        onclick="toggleElement('help-container')" style="cursor: pointer;">
+                        <path
+                            d="M5.00045 4.05767L8.30032 0.757812L9.24312 1.70062L5.94325 5.00047L9.24312 8.30027L8.30032 9.24306L5.00045 5.94327L1.70063 9.24306L0.757812 8.30027L4.05765 5.00047L0.757812 1.70062L1.70063 0.757812L5.00045 4.05767Z"
+                            fill="#55212E" />
+                    </svg>
+                </div>
+
+                <div class="hep-content">
+                    <div class="help-content-item">
+
+                        <h1> Titulo</h1>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique accumsan nulla ac
+                            feugiat. Nunc at dui non elit fringilla suscipit. Sed vitae nibh quis ante laoreet viverra.
+                            In lobortis a ex ut varius. Donec sapien dolor, vehicula et tempor at, facilisis at sem.
+                            Nunc vitae lobortis ex.</p>
+
+                    </div>
+                    <div class="help-content-item">
+
+                        <h1> Titulo</h1>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique accumsan nulla ac
+                            feugiat. Nunc at dui non elit fringilla suscipit. Sed vitae nibh quis ante laoreet viverra.
+                            In lobortis a ex ut varius. Donec sapien dolor, vehicula et tempor at, facilisis at sem.
+                            Nunc vitae lobortis ex.</p>
+
+                    </div>
+                    <div class="help-content-item">
+
+                        <h1> Titulo</h1>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique accumsan nulla ac
+                            feugiat. Nunc at dui non elit fringilla suscipit. Sed vitae nibh quis ante laoreet viverra.
+                            In lobortis a ex ut varius. Donec sapien dolor, vehicula et tempor at, facilisis at sem.
+                            Nunc vitae lobortis ex.</p>
+
+                    </div>
+                    <div class="help-content-item">
+
+                        <h1> Titulo</h1>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique accumsan nulla ac
+                            feugiat. Nunc at dui non elit fringilla suscipit. Sed vitae nibh quis ante laoreet viverra.
+                            In lobortis a ex ut varius. Donec sapien dolor, vehicula et tempor at, facilisis at sem.
+                            Nunc vitae lobortis ex.</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="options-info hide-item" id="options-info">
+            <a href="index.html" class="options-info-link"> Home </a>
+            <hr class="options-info-separator">
+            <a href="visualizador.html" class="options-info-link"> Mapa Visualizador </a>
+            <hr class="options-info-separator">
+            <a href="emergencias.html" class="options-info-link"> Gestión de emergencias </a>
+            <hr class="options-info-separator">
+            <span class="options-info-link-help" onclick="toggleElement('help-container')" style="cursor: pointer;">
+                <div class="options-info-link-help-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path
+                            d="M9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9C16.5 13.1421 13.1421 16.5 9 16.5ZM8.25 8.25V12.75H9.75V8.25H8.25ZM8.25 5.25V6.75H9.75V5.25H8.25Z"
+                            fill="#55212E" />
+                    </svg>
+                </div>
+                Ayuda
+            </span>
+
+        </div>
+
+        <!-- Go back and search -->
+        <div class="navigation-container">
+            <div class="back"  onclick="toggleElement('options-info')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="28" viewBox="0 0 30 28" fill="none">
+                    <path d="M-1 0H30.5V3.5H-1V0ZM-1 12.25H30.5V15.75H-1V12.25ZM-1 24.5H30.5V28H-1V24.5Z"
+                        fill="#55212E" />
+                </svg>
+            </div>
+            <div class="search">
+                <div style="position: relative;">
+                    <input type="text" class="search-input" placeholder="Buscar por ubicación" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                        class="search-icon">
+                        <path
+                            d="M13.5233 12.4628L16.7355 15.6743L15.6743 16.7355L12.4628 13.5233C11.2678 14.4812 9.7815 15.0022 8.25 15C4.524 15 1.5 11.976 1.5 8.25C1.5 4.524 4.524 1.5 8.25 1.5C11.976 1.5 15 4.524 15 8.25C15.0022 9.7815 14.4812 11.2678 13.5233 12.4628ZM12.0188 11.9063C12.9706 10.9274 13.5022 9.61532 13.5 8.25C13.5 5.349 11.1503 3 8.25 3C5.349 3 3 5.349 3 8.25C3 11.1503 5.349 13.5 8.25 13.5C9.61532 13.5022 10.9274 12.9706 11.9063 12.0188L12.0188 11.9063V11.9063Z"
+                            fill="#484848" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tooltip steps -->
+        <div class="tooltip-container" id="tooltip-container">
+
+            <div class="tooltip-header-container">
+                <div class="tooltip-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M4.44164 2.72573C4.96168 2.5402 5.5237 2.50611 6.06236 2.62739C6.60101 2.74868 7.09417 3.02038 7.48451 3.41089C7.87485 3.8014 8.14632 4.29468 8.26737 4.83339C8.38841 5.3721 8.35406 5.9341 8.16831 6.45406L17.2058 15.4916L15.4375 17.2591L6.39998 8.22239C5.87993 8.40791 5.31792 8.44201 4.77926 8.32073C4.24061 8.19944 3.74744 7.92774 3.35711 7.53723C2.96677 7.14672 2.6953 6.65344 2.57425 6.11473C2.4532 5.57602 2.48755 5.01402 2.67331 4.49406L4.53664 6.35823C4.65195 6.47761 4.78988 6.57284 4.94239 6.63835C5.09489 6.70386 5.25892 6.73835 5.42489 6.73979C5.59086 6.74123 5.75546 6.7096 5.90908 6.64675C6.0627 6.5839 6.20227 6.49109 6.31964 6.37372C6.437 6.25635 6.52982 6.11679 6.59267 5.96317C6.65552 5.80955 6.68715 5.64495 6.68571 5.47897C6.68426 5.313 6.64978 5.14898 6.58427 4.99647C6.51876 4.84397 6.42353 4.70603 6.30414 4.59073L4.44081 2.72489L4.44164 2.72573ZM13.0808 4.29573L15.7325 2.82239L16.9108 4.00073L15.4375 6.65239L13.9641 6.94739L12.1975 8.71489L11.0183 7.53656L12.7858 5.76906L13.0808 4.29573V4.29573ZM7.18831 10.7774L8.95581 12.5457L4.83081 16.6707C4.60334 16.8961 4.29807 17.0255 3.97796 17.0324C3.65785 17.0393 3.3473 16.9231 3.11035 16.7077C2.87341 16.4924 2.72814 16.1943 2.7045 15.875C2.68086 15.5557 2.78066 15.2395 2.98331 14.9916L3.06414 14.9024L7.18914 10.7774H7.18831Z"
+                            fill="#484848" />
+                    </svg>
+
+                    <h5 class="tooltip-title">
+                        Menú de herramientas
+                    </h5>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    style="cursor:pointer;" onclick="toggleElement('tooltip-container'); ">
+                    <path
+                        d="M9.99999 8.82178L14.125 4.69678L15.3033 5.87511L11.1783 10.0001L15.3033 14.1251L14.125 15.3034L9.99999 11.1784L5.87499 15.3034L4.69666 14.1251L8.82166 10.0001L4.69666 5.87511L5.87499 4.69678L9.99999 8.82178Z"
+                        fill="#333333" />
+                </svg>
+            </div>
+            <div class="tooltip-content">
+                <p class="tooltip-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus sed purus eu eleifend.
+                    Sed
+                    venenatis vel nibh ut iaculis.
+                </p>
+
+                <div class="tooltip-images">
+                    <img src="./assets/images/map3.png" alt="Tooltip image" class="tooltip-image" />
+                    <img src="./assets/images/map3.png" alt="Tooltip image" class="tooltip-image" />
+                    <img src="./assets/images/map3.png" alt="Tooltip image" class="tooltip-image" />
+
+                </div>
+
+            </div>
+            <div class="tooltip-actions">
+                <p class="tooltip-steps" style="font-weight:500; font-size: 12px;">
+                    1/5
+                </p>
+
+                <div>
+                    <button class="btn btn-link" type="button" style="font-weight:500;">
+                        Anterior
+                    </button>
+                    <button class="btn btn-primary" type="button" style="font-weight:500;"
+                        onclick="toggleElement('tooltip-container')">
+                        Continuar
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Popover info -->
+        <div class="popover-container-2 " id="popover-container">
+
+
+            <div class="popover-content">
+                <p class="popover-text">
+                    Selecciona una opción de la barra de herramientas
+                    para trazar sobre el mapa y puedas visualizar el análisis
+                    de la zona
+                </p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Side menu -->
+    <div class="side-menu-container" id="side-menu-container" style="background-color: aqua; width: 350px;">
+
+        <div class="sidemenu-collapse" onclick="collapseSideBar()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path
+                    d="M7.99999 7.21883L4.69999 10.5188L3.75732 9.57616L7.99999 5.3335L12.2427 9.57616L11.3 10.5188L7.99999 7.21883Z"
+                    fill="#484848" />
+            </svg>
+        </div>
+
+        <div class="side-menu" id="side-menu">
+
+            <div class="side-menu-header">
+                <div class="side-menu-header-title">
+                    <h5 class="side-menu-header-title-text">Análisis del sector</h5>
+                </div>
+            </div>
+
+            <div class="side-menu-content">
+
+                <div class="side-menu-dropdown" onclick="toggleElement('poblation-dropdown')">
+                    <div class="side-menu-dropdown-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path
+                                d="M12 11.5C13.3261 11.5 14.5979 12.0268 15.5355 12.9645C16.4732 13.9021 17 15.1739 17 16.5V22.5H15V16.5C15 15.7348 14.7077 14.9985 14.1827 14.4417C13.6578 13.885 12.9399 13.5499 12.176 13.505L12 13.5C11.2348 13.5 10.4985 13.7923 9.94174 14.3173C9.38499 14.8422 9.04989 15.5601 9.005 16.324L9 16.5V22.5H7V16.5C7 15.1739 7.52678 13.9021 8.46447 12.9645C9.40215 12.0268 10.6739 11.5 12 11.5ZM5.5 14.5C5.779 14.5 6.05 14.533 6.31 14.594C6.13902 15.103 6.03777 15.6328 6.009 16.169L6 16.5V16.586C5.88505 16.5449 5.76549 16.518 5.644 16.506L5.5 16.5C5.12712 16.5 4.76761 16.6389 4.49158 16.8896C4.21555 17.1403 4.0428 17.4848 4.007 17.856L4 18V22.5H2V18C2 17.0717 2.36875 16.1815 3.02513 15.5251C3.6815 14.8687 4.57174 14.5 5.5 14.5ZM18.5 14.5C19.4283 14.5 20.3185 14.8687 20.9749 15.5251C21.6313 16.1815 22 17.0717 22 18V22.5H20V18C20 17.6271 19.8611 17.2676 19.6104 16.9916C19.3597 16.7156 19.0152 16.5428 18.644 16.507L18.5 16.5C18.325 16.5 18.157 16.53 18 16.585V16.5C18 15.834 17.892 15.194 17.691 14.596C17.95 14.533 18.221 14.5 18.5 14.5ZM5.5 8.5C6.16304 8.5 6.79893 8.76339 7.26777 9.23223C7.73661 9.70107 8 10.337 8 11C8 11.663 7.73661 12.2989 7.26777 12.7678C6.79893 13.2366 6.16304 13.5 5.5 13.5C4.83696 13.5 4.20107 13.2366 3.73223 12.7678C3.26339 12.2989 3 11.663 3 11C3 10.337 3.26339 9.70107 3.73223 9.23223C4.20107 8.76339 4.83696 8.5 5.5 8.5ZM18.5 8.5C19.163 8.5 19.7989 8.76339 20.2678 9.23223C20.7366 9.70107 21 10.337 21 11C21 11.663 20.7366 12.2989 20.2678 12.7678C19.7989 13.2366 19.163 13.5 18.5 13.5C17.837 13.5 17.2011 13.2366 16.7322 12.7678C16.2634 12.2989 16 11.663 16 11C16 10.337 16.2634 9.70107 16.7322 9.23223C17.2011 8.76339 17.837 8.5 18.5 8.5ZM5.5 10.5C5.36739 10.5 5.24021 10.5527 5.14645 10.6464C5.05268 10.7402 5 10.8674 5 11C5 11.1326 5.05268 11.2598 5.14645 11.3536C5.24021 11.4473 5.36739 11.5 5.5 11.5C5.63261 11.5 5.75979 11.4473 5.85355 11.3536C5.94732 11.2598 6 11.1326 6 11C6 10.8674 5.94732 10.7402 5.85355 10.6464C5.75979 10.5527 5.63261 10.5 5.5 10.5ZM18.5 10.5C18.3674 10.5 18.2402 10.5527 18.1464 10.6464C18.0527 10.7402 18 10.8674 18 11C18 11.1326 18.0527 11.2598 18.1464 11.3536C18.2402 11.4473 18.3674 11.5 18.5 11.5C18.6326 11.5 18.7598 11.4473 18.8536 11.3536C18.9473 11.2598 19 11.1326 19 11C19 10.8674 18.9473 10.7402 18.8536 10.6464C18.7598 10.5527 18.6326 10.5 18.5 10.5ZM12 2.5C13.0609 2.5 14.0783 2.92143 14.8284 3.67157C15.5786 4.42172 16 5.43913 16 6.5C16 7.56087 15.5786 8.57828 14.8284 9.32843C14.0783 10.0786 13.0609 10.5 12 10.5C10.9391 10.5 9.92172 10.0786 9.17157 9.32843C8.42143 8.57828 8 7.56087 8 6.5C8 5.43913 8.42143 4.42172 9.17157 3.67157C9.92172 2.92143 10.9391 2.5 12 2.5ZM12 4.5C11.4696 4.5 10.9609 4.71071 10.5858 5.08579C10.2107 5.46086 10 5.96957 10 6.5C10 7.03043 10.2107 7.53914 10.5858 7.91421C10.9609 8.28929 11.4696 8.5 12 8.5C12.5304 8.5 13.0391 8.28929 13.4142 7.91421C13.7893 7.53914 14 7.03043 14 6.5C14 5.96957 13.7893 5.46086 13.4142 5.08579C13.0391 4.71071 12.5304 4.5 12 4.5Z"
+                                fill="#484848" />
+                        </svg>
+                        <h5> Población</h4>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path
+                            d="M12.0002 13.6722L16.9502 8.72217L18.3642 10.1362L12.0002 16.5002L5.63623 10.1362L7.05023 8.72217L12.0002 13.6722Z"
+                            fill="#484848" />
+                    </svg>
+                </div>
+
+                <div id="poblation-dropdown" class="side-menu-dropdown-content  hide-item">
+                    <div class="poblation-container">
+                        <div class="sizes-item">
+                            <p> Área</p>
+                            <span> 1,315.60 km2</span>
+                        </div>
+                        <div class="sizes-item">
+                            <p> Perímetro</p>
+                            <span> 136.49 km</span>
+                        </div>
+
+                    </div>
+
+                    <div class="poblation-container">
+
+                        <div class="sizes-item">
+                            <div style="display: flex; align-items: center; gap:8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M12 11C13.3261 11 14.5979 11.5268 15.5355 12.4645C16.4732 13.4021 17 14.6739 17 16V22H7V16C7 14.6739 7.52678 13.4021 8.46447 12.4645C9.40215 11.5268 10.6739 11 12 11ZM5.288 14.006C5.12886 14.5428 5.03485 15.0968 5.008 15.656L5 16V22H2V17.5C1.9998 16.6376 2.31803 15.8054 2.89363 15.1632C3.46924 14.521 4.2617 14.1139 5.119 14.02L5.289 14.006H5.288ZM18.712 14.006C19.6019 14.0602 20.4376 14.452 21.0486 15.1012C21.6596 15.7505 21.9999 16.6084 22 17.5V22H19V16C19 15.307 18.9 14.638 18.712 14.006ZM5.5 8C6.16304 8 6.79893 8.26339 7.26777 8.73223C7.73661 9.20107 8 9.83696 8 10.5C8 11.163 7.73661 11.7989 7.26777 12.2678C6.79893 12.7366 6.16304 13 5.5 13C4.83696 13 4.20107 12.7366 3.73223 12.2678C3.26339 11.7989 3 11.163 3 10.5C3 9.83696 3.26339 9.20107 3.73223 8.73223C4.20107 8.26339 4.83696 8 5.5 8ZM18.5 8C19.163 8 19.7989 8.26339 20.2678 8.73223C20.7366 9.20107 21 9.83696 21 10.5C21 11.163 20.7366 11.7989 20.2678 12.2678C19.7989 12.7366 19.163 13 18.5 13C17.837 13 17.2011 12.7366 16.7322 12.2678C16.2634 11.7989 16 11.163 16 10.5C16 9.83696 16.2634 9.20107 16.7322 8.73223C17.2011 8.26339 17.837 8 18.5 8ZM12 2C13.0609 2 14.0783 2.42143 14.8284 3.17157C15.5786 3.92172 16 4.93913 16 6C16 7.06087 15.5786 8.07828 14.8284 8.82843C14.0783 9.57857 13.0609 10 12 10C10.9391 10 9.92172 9.57857 9.17157 8.82843C8.42143 8.07828 8 7.06087 8 6C8 4.93913 8.42143 3.92172 9.17157 3.17157C9.92172 2.42143 10.9391 2 12 2Z"
+                                        fill="#A51D38" />
+                                </svg>
+                                <p> Población por estado</p>
+
+                            </div>
+                            <p> 366,576</span>
+                        </div>
+
+                        <div class="sizes-item sizes-dark">
+                            <div style="display: flex; align-items: center; gap:8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M15.05 8.537L18.585 5H14V3H22V11H20V6.414L16.463 9.951C17.6168 11.4635 18.1528 13.358 17.9623 15.2508C17.7719 17.1437 16.8692 18.8934 15.4372 20.1457C14.0051 21.398 12.1507 22.0594 10.2493 21.9958C8.34801 21.9322 6.5419 21.1485 5.1967 19.8033C3.85151 18.4581 3.06777 16.652 3.00419 14.7506C2.94061 12.8493 3.60194 10.9949 4.85426 9.5628C6.10658 8.13075 7.85631 7.2281 9.74914 7.03764C11.642 6.84719 13.5364 7.38315 15.049 8.537H15.05ZM10.5 20C11.9587 20 13.3576 19.4205 14.3891 18.3891C15.4205 17.3576 16 15.9587 16 14.5C16 13.0413 15.4205 11.6424 14.3891 10.6109C13.3576 9.57946 11.9587 9 10.5 9C9.04128 9 7.64233 9.57946 6.61088 10.6109C5.57943 11.6424 4.99997 13.0413 4.99997 14.5C4.99997 15.9587 5.57943 17.3576 6.61088 18.3891C7.64233 19.4205 9.04128 20 10.5 20Z"
+                                        fill="#A51D38" />
+                                </svg>
+                                <p> Masculino</p>
+
+                            </div>
+                            <p>177,795</span>
+                        </div>
+                        <div class="sizes-item">
+                            <div style="display: flex; align-items: center; gap:8px;">
+                                <p> Menores a 12 años</p>
+                            </div>
+                            <span> 52,136</span>
+                        </div>
+                        <div class="sizes-item">
+                            <div style="display: flex; align-items: center; gap:8px;">
+                                <p> Mayores a 60 años</p>
+                            </div>
+                            <span> 11,432</span>
+                        </div>
+                        <div class="sizes-item sizes-dark">
+                            <div style="display: flex; align-items: center; gap:8px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M11.0002 15.934C9.11608 15.6786 7.3993 14.7172 6.197 13.2443C4.99469 11.7714 4.39658 9.8969 4.52361 7.99985C4.65064 6.10279 5.49333 4.32475 6.88128 3.0253C8.26922 1.72585 10.0988 1.00195 12.0002 1C13.9038 0.998168 15.7369 1.72028 17.1278 3.01993C18.5188 4.31959 19.3634 6.09953 19.4906 7.99891C19.6178 9.89829 19.018 11.775 17.8127 13.2485C16.6075 14.722 14.887 15.682 13.0002 15.934V18H18.0002V20H13.0002V24H11.0002V20H6.00015V18H11.0002V15.934ZM12.0002 14C13.4588 14 14.8578 13.4205 15.8892 12.3891C16.9207 11.3576 17.5002 9.95869 17.5002 8.5C17.5002 7.04131 16.9207 5.64237 15.8892 4.61092C14.8578 3.57947 13.4588 3 12.0002 3C10.5415 3 9.14251 3.57947 8.11106 4.61092C7.07961 5.64237 6.50015 7.04131 6.50015 8.5C6.50015 9.95869 7.07961 11.3576 8.11106 12.3891C9.14251 13.4205 10.5415 14 12.0002 14Z"
+                                        fill="#A51D38" />
+                                </svg>
+                                <p> Femenino</p>
+
+                            </div>
+                            <p>188,781</span>
+                        </div>
+                        <div class="sizes-item">
+                            <div style="display: flex; align-items: center; gap:8px;">
+                                <p> Menores a 12 años</p>
+                            </div>
+                            <span> 51,362</span>
+                        </div>
+                        <div class="sizes-item">
+                            <div style="display: flex; align-items: center; gap:8px;">
+                                <p> Mayores a 60 años</p>
+                            </div>
+                            <span> 14,872</span>
+                        </div>
+                    </div>
+
+                    <div class="poblation-container">
+                        <div class="sizes-item">
+                            <p> Índice Municipal de Vulnerabilidad Social </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="side-menu-dropdown" onclick="toggleElement('infra-dropdown')">
+                    <div class="side-menu-dropdown-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <path
+                                d="M21 21.5H3C2.44772 21.5 2 21.0523 2 20.5V12.9868C2 12.6978 2.12501 12.4229 2.34282 12.233L6 9.04435V4.5C6 3.94772 6.44772 3.5 7 3.5H21C21.5523 3.5 22 3.94772 22 4.5V20.5C22 21.0523 21.5523 21.5 21 21.5ZM9 19.5H12V13.4416L8 9.95402L4 13.4416V19.5H7V15.5H9V19.5ZM14 19.5H20V5.5H8V7.62729C8.23444 7.62729 8.46888 7.70938 8.65718 7.87355L13.6572 12.233C13.875 12.4229 14 12.6978 14 12.9868V19.5ZM16 11.5H18V13.5H16V11.5ZM16 15.5H18V17.5H16V15.5ZM16 7.5H18V9.5H16V7.5ZM12 7.5H14V9.5H12V7.5Z"
+                                fill="#484848" />
+                        </svg>
+                        <h5> Infraestructura</h4>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path
+                            d="M12.0002 13.6722L16.9502 8.72217L18.3642 10.1362L12.0002 16.5002L5.63623 10.1362L7.05023 8.72217L12.0002 13.6722Z"
+                            fill="#484848" />
+                    </svg>
+                </div>
+
+                <!-- Dropdown Infra -->
+                <div id="infra-dropdown" class="side-menu-dropdown-content  hide-item">
+                    <button type="button" class="btn btn-outline-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                            <path
+                                d="M3 15.8332H18V17.4998H3V15.8332ZM11.3333 10.9765L16.3925 5.9165L17.5708 7.09484L10.5 14.1665L3.42917 7.09567L4.6075 5.9165L9.66667 10.9748V1.6665H11.3333V10.9765Z"
+                                fill="#55212E" />
+                        </svg>
+                        <span style="font-weight: 500;"> Descargar CSV </span>
+
+                    </button>
+                    <div class="infra-container">
+                        <div class="infra-item">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path
+                                        d="M16.6663 16.6668C16.6663 16.8878 16.5785 17.0997 16.4223 17.256C16.266 17.4123 16.054 17.5001 15.833 17.5001H4.16634C3.94533 17.5001 3.73337 17.4123 3.57709 17.256C3.4208 17.0997 3.33301 16.8878 3.33301 16.6668V9.16676H0.833008L9.43884 1.34343C9.59227 1.20383 9.79224 1.12646 9.99967 1.12646C10.2071 1.12646 10.4071 1.20383 10.5605 1.34343L19.1663 9.16676H16.6663V16.6668Z"
+                                        fill="#A51D38" />
+                                </svg>
+                                <span class="infra-text"> Vivienda</span>
+                            </div>
+                            <div class="infra-text-container">
+                                <span class="infra-text"> 92,469</span>
+                            </div>
+                        </div>
+                        <div class="infra-item">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none">
+                                    <path
+                                        d="M17.4997 16.6665H19.1663V18.3332H0.833008V16.6665H2.49967V2.49984C2.49967 2.27882 2.58747 2.06686 2.74375 1.91058C2.90003 1.7543 3.11199 1.6665 3.33301 1.6665H16.6663C16.8874 1.6665 17.0993 1.7543 17.2556 1.91058C17.4119 2.06686 17.4997 2.27882 17.4997 2.49984V16.6665ZM9.16634 6.6665H7.49967V8.33317H9.16634V9.99984H10.833V8.33317H12.4997V6.6665H10.833V4.99984H9.16634V6.6665ZM11.6663 16.6665H13.333V11.6665H6.66634V16.6665H8.33301V13.3332H11.6663V16.6665Z"
+                                        fill="#A51D38" />
+                                </svg>
+                                <span class="infra-text"> Establecimiento de salud</span>
+                            </div>
+                            <div class="infra-text-container">
+                                <span class="infra-text"> 120</span>
+                            </div>
+                        </div>
+                        <div class="infra-item">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18"
+                                    fill="none">
+                                    <path
+                                        d="M10 0.666504L0 6.49984L10 12.3332L18.3333 7.47209V13.5832H20V6.49984L10 0.666504ZM3.33252 10.2419V13.9999C4.85287 16.024 7.27343 17.3333 9.99983 17.3333C12.7262 17.3333 15.1467 16.024 16.6671 13.9999L16.6667 10.2426L10.0003 14.1314L3.33252 10.2419Z"
+                                        fill="#A51D38" />
+                                </svg>
+                                <span class="infra-text"> Escuelas</span>
+                            </div>
+                            <div class="infra-text-container">
+                                <span class="infra-text"> 1,001</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="side-menu-dropdown" onclick="toggleElement('risks-dropdown')">
+                    <div class="side-menu-dropdown-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                            <g clip-path="url(#clip0_425_9257)">
+                                <path
+                                    d="M4.00001 20.5V14.5C4.00001 10.0817 7.58173 6.5 12 6.5C16.4183 6.5 20 10.0817 20 14.5V20.5H21V22.5H3.00001V20.5H4.00001ZM6.00001 20.5H18V14.5C18 11.1863 15.3137 8.5 12 8.5C8.6863 8.5 6.00001 11.1863 6.00001 14.5V20.5ZM11 2.5H13V5.5H11V2.5ZM19.7782 5.30761L21.1924 6.72183L19.0711 8.84315L17.6569 7.42893L19.7782 5.30761ZM2.80762 6.72183L4.22183 5.30761L6.34315 7.42893L4.92894 8.84315L2.80762 6.72183ZM7.00001 14.5C7.00001 11.7386 9.23858 9.5 12 9.5V11.5C10.3432 11.5 9.00001 12.8431 9.00001 14.5H7.00001Z"
+                                    fill="#484848" />
+                                <rect x="1.5" y="21.5" width="294" height="390" fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_425_9257">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <h5> Peligros y Riesgos</h4>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <path
+                            d="M12.0002 13.6722L16.9502 8.72217L18.3642 10.1362L12.0002 16.5002L5.63623 10.1362L7.05023 8.72217L12.0002 13.6722Z"
+                            fill="#484848" />
+                    </svg>
+                </div>
+
+                <!-- Dropdown Risjs -->
+
+                <div id="risks-dropdown" class="side-menu-dropdown-content  hide-item">
+
+                    <div class="risks-search-container">
+                        <div class="search">
+                            <div style="position: relative;">
+                                <input type="text" class="search-input" placeholder="Busqueda por tema" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                    fill="none" class="search-icon">
+                                    <path
+                                        d="M13.5233 12.4628L16.7355 15.6743L15.6743 16.7355L12.4628 13.5233C11.2678 14.4812 9.7815 15.0022 8.25 15C4.524 15 1.5 11.976 1.5 8.25C1.5 4.524 4.524 1.5 8.25 1.5C11.976 1.5 15 4.524 15 8.25C15.0022 9.7815 14.4812 11.2678 13.5233 12.4628ZM12.0188 11.9063C12.9706 10.9274 13.5022 9.61532 13.5 8.25C13.5 5.349 11.1503 3 8.25 3C5.349 3 3 5.349 3 8.25C3 11.1503 5.349 13.5 8.25 13.5C9.61532 13.5022 10.9274 12.9706 11.9063 12.0188L12.0188 11.9063V11.9063Z"
+                                        fill="#484848" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="risks-buttons-container">
+                            <div class="risks-button">
+                                <span class="risks-text"> Seleccionados</span>
+                                <span class="risks-text-circle risks-text"> 0</span>
+                            </div>
+                            <span class="risks-text"> Limpiar</span>
+                        </div>
+                    </div>
+
+                    <div class="risks-categories-container">
+                        <div class="risks-item">
+                            <span class="risks-text"> Categoría</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none" style="cursor: pointer;" >
+                                <path
+                                    d="M9.16699 9.1665V4.1665H10.8337V9.1665H15.8337V10.8332H10.8337V15.8332H9.16699V10.8332H4.16699V9.1665H9.16699Z"
+                                    fill="#55212E" />
+                            </svg>
+                        </div>
+
+                        <div class="risks-children" id="risks-children-1">
+                            <div>
+                                <div>
+
+                                </div>
+                                <div>
+                                    
+                                </div>
+
+                            </div>
+
+                        </div>
+                       
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>

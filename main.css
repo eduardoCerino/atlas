@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Light.otf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Book.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Medium.otf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('assets/fonts/Gotham-Black.otf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+p,
+h5 {
+    margin-bottom: 0 !important;
+}
+
+
+* {
+    font-family: Gotham;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+/* ---- Botones ---- */
+.btn-primary {
+    background-color: #55212E !important;
+    border-color: #55212E !important;
+}
+
+.btn-primary:hover {
+    background-color: #4D1E2A !important;
+    border-color: #4D1E2A !important;
+}
+
+.btn-link {
+    color: #55212E !important;
+    text-decoration: none !important;
+}
+
+.btn-outline-primary {
+    color: #55212E !important;
+    border-color: #55212E !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #4D1E2A !important;
+    color: white !important;
+}
+
+.btn:hover svg path {
+    fill: white; 
+}
+
+.hide-item {
+    display: none !important;
+}

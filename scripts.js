@@ -1,0 +1,64 @@
+ 
+ 
+ /* Function to change menu option */
+function selectMenuItem(menuId) {
+    const menuItems = document.querySelectorAll('.menu-item');
+    menuItems.forEach(item => item.classList.remove('menu-selected'));
+    
+    const selectedItem = document.getElementById(menuId);
+    selectedItem.classList.add('menu-selected');
+}
+
+/* Function to collapse botton menu */
+function collapseMenu() {
+    const menuItems = document.querySelectorAll('.menu-item');
+    const menuLines = document.querySelectorAll('.menu-separator');
+
+    menuItems.forEach(item => item.classList.toggle('hide-item'));
+    menuLines.forEach(line => line.classList.toggle('hide-item'));
+}
+
+/* Function to show/hide  anyelements */
+function toggleElement(elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.toggle('hide-item');
+}
+
+
+/* Function to collapse side bar menu */
+
+function collapseSideBar() {
+    const sideBar = document.getElementById('side-menu');
+    sideBar.classList.toggle('hide-sidebar');
+
+    const sideMenuContainer = document.getElementById('side-menu-container');
+    sideMenuContainer.classList.toggle('hide-sidebar-container');   
+}
+
+/* Function to toogle image src */
+function toogleImageSrc(imageId) {
+    const sumaIcon = 'icono-resta.png';
+    const restaIcon = 'icono-mas.png';
+
+    const image = document.getElementById(imageId);
+    const currentSrc = image.src;
+
+    if (currentSrc.includes(sumaIcon)) {
+        console.log("includes resta");
+        image.src = './assets/images/icono-mas.png';
+    } else {
+        console.log("includes suma");
+        image.src = './assets/images/icono-resta.png';
+    }
+}
+
+
+/*  Hide div after 5 seconds when page is loaded */
+
+window.onload = function() {
+    setTimeout(function() {
+        const alertDiv = document.getElementById('popover-container');
+        alertDiv.classList.add('hide-item');
+    }, 5000);
+}
+
