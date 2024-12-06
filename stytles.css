@@ -829,11 +829,13 @@ input {
 
 .rainbow-slider {
     border-radius: 20px;
-    background: linear-gradient(90deg, #F70202 0%, #FA6508 33.33%, #FFE313 66.67%, #41EB32 100%);
+    background: linear-gradient(90deg, #41EB32 0%, #FFE313 33.33%, #FA6508 66.67%, #F70202 100%);
     height: 8.148px;
     align-self: stretch;
     width: 100%;
 }
+
+
 
 .sizes-item-2 {
     display: flex;
