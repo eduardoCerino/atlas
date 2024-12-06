@@ -162,6 +162,23 @@
     background: var(--Foundation-gray-gray-50, #EEEFF6);
 }
 
+.infra-btns{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;  
+}
+
+
+.infra-btn button {
+    display: flex;
+    padding: 4px 8px !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+}
+
 
 /* Risks */
 
