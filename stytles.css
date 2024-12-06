@@ -384,8 +384,42 @@ a {
     display: none;
 }
 
+.zoom-message {   
+    right: 70px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.message-icon {
+    display: flex;
+    padding: 14px 0px;
+    align-items: center;
+    align-self: stretch;
+}
+
+.message-content {
+    display: flex;
+    padding: 4px 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 4px;
+    background: var(--Foundation-Grey-grey-500, #1A1A1A);
+}
+
+.message-content p {
+    color: var(--Gray-White, #FFF);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 21px */
+}
+
 @media (max-width: 767px) {
-   .zoom-3, .zoom-2 {
+
+    .zoom-3,
+    .zoom-2 {
         display: none;
     }
 
