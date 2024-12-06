@@ -36,49 +36,6 @@
 }
 
 
-/* Side menu dropdown */
-
-.side-menu-dropdown-header h5 {
-    color: var(--Body-text-medium, #484848);
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-    /* 25.2px */
-}
-
-.side-menu-dropdown-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    gap: 8px;
-
-}
-
-.side-menu-dropdown {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    width: 100%;
-    padding: var(--Spacing-12, 12px) 24px;
-    border-bottom: 1px solid var(--Foundation-gray-gray-100, #E6E6E6);
-}
-
-.side-menu-content {
-    padding: 0px;
-}
-
-.side-menu-dropdown-content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 0px 24px;
-    width: 100%;
-
-}
-
 /* Poblation */
 
 .poblation-container {
