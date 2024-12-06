@@ -53,12 +53,50 @@ function toogleImageSrc(imageId) {
 }
 
 
-/*  Hide div after 5 seconds when page is loaded */
-
 window.onload = function() {
+    let input = document.getElementById('searchinput');
+
+    input.addEventListener('input', (event) => {
+        if (event.target.value.length > 0) {
+            document.getElementById('search-icon').style.display = 'none';
+            document.getElementById('cancel-icon').style.display = 'block';
+            document.getElementById('search-result').style.display = 'flex';
+        } 
+
+        if (event.target.value.length === 0) {
+            document.getElementById('search-icon').style.display = 'block';
+            document.getElementById('cancel-icon').style.display = 'none';
+            document.getElementById('search-result').style.display = 'none';
+        }
+
+
+    });
+
+/*  Hide element after 5 seconds when page is loaded */
+
     setTimeout(function() {
         const alertDiv = document.getElementById('popover-container');
         alertDiv.classList.add('hide-item');
     }, 5000);
 }
+
+
+/*  Function to show search in mobile and hide options */
+
+function showSearch() {
+    const options= document.getElementById('options');
+    options.classList.toggle('hide-item');
+    const searchMobile= document.getElementById('search-mobile');
+    searchMobile.classList.toggle('hide-item');
+    const search= document.getElementById('search');
+    search.style.display = 'flex';
+    search.style.width = '100%';
+    search.style.justifyContent = 'center';
+
+}
+
+
+
+
+
 

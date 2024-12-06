@@ -148,9 +148,35 @@ a {
 }
 
 .card {
-    z-index: 1000;
-    /* ---- BORRAR ---- */
+    z-index: 1000000;
+    width: 367px;
 }
+
+.card-img-top {
+    border-radius: var(--Spacing-8, 8px);
+}
+
+@media (max-width: 1280px) {
+    .card {
+        width: 100%;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-img-top {
+        height: 207px;
+        align-self: stretch;
+        object-fit: cover;
+    }
+}
+
+
 
 /* ---- Menu  ----*/
 
@@ -209,7 +235,7 @@ a {
     display: none !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1280px) {
     .menu {
         width: 100%;
     }
@@ -234,6 +260,7 @@ a {
     border: 1px solid var(--Components-Popover-Border, rgba(0, 0, 0, 0.20));
     position: absolute;
     bottom: 120px;
+    z-index: 1000;
 
 }
 
@@ -384,7 +411,7 @@ a {
     display: none;
 }
 
-.zoom-message {   
+.zoom-message {
     right: 70px;
     display: inline-flex;
     align-items: center;
@@ -416,7 +443,7 @@ a {
     /* 21px */
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1280px) {
 
     .zoom-3,
     .zoom-2 {
@@ -430,6 +457,10 @@ a {
     .zoom-0 {
         bottom: 170px;
         display: flex;
+    }
+
+    .zoom-message {
+        display: none;
     }
 }
 
@@ -554,6 +585,11 @@ a {
     /* 16.8px */
 }
 
+@media (max-width: 1280px) {
+    .help {
+        width: 90vw;
+    }
+}
 
 /* ---- Navigation  ----*/
 
@@ -620,6 +656,60 @@ input {
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
+
+}
+
+.search-mobile {
+    display: none;
+}
+
+.search-result {
+    display: none;
+    width: 328px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: var(--Spacing-2, 2px);
+    background: var(--Neutral-White, #FFF);
+    box-shadow: -2px 4px 13.3px 0px rgba(0, 0, 0, 0.20);
+
+    position: fixed;
+    top: 70px;
+    left: 80px;
+    z-index: 1000;
+}
+
+.search-result p {
+    color: var(--Body-text-medium, #484848);
+
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 19.6px */
+}
+
+@media (max-width: 1280px) {
+    .search {
+        display: none;
+        margin: 10px;
+    }
+
+    .navigation-container {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .search-mobile {
+        display: flex;
+    }
+    
+    .search-result {
+        left: 0;
+        margin: 10px;
+        width: 100%;
+    }
 
 }
 
