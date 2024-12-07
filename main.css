@@ -150,3 +150,8 @@ a {
     line-height: 140%;
     /* 16.8px */
 }
+
+
+.rotate-image {
+    transform: rotate(180deg);
+}

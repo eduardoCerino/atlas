@@ -96,6 +96,11 @@ function showSearch() {
 }
 
 
+/* Function to rotate image */
+function rotateImage(imageId) {
+    const image = document.getElementById(imageId);
+    image.classList.toggle('rotate-image');
+}
 
 
 

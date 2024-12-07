@@ -385,7 +385,7 @@
             <div class="side-menu-content">
 
 
-                <div class="side-menu-dropdown" onclick="toggleElement('fenomenos-dropdown')">
+                <div class="side-menu-dropdown" onclick="toggleElement('geologicos-dropdown'); rotateImage('geologicos-icon')">
                     <div class="side-menu-dropdown-header">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
@@ -394,13 +394,13 @@
                         </svg>
                         <h5> Fenómenos geológicos</h4>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" id="geologicos-icon">
                         <path
                             d="M12.0002 13.6722L16.9502 8.72217L18.3642 10.1362L12.0002 16.5002L5.63623 10.1362L7.05023 8.72217L12.0002 13.6722Z"
                             fill="#484848" />
                     </svg>
                 </div>
-                <div id="fenomenos-dropdown" class="side-menu-dropdown-content  hide-item">
+                <div id="geologicos-dropdown" class="side-menu-dropdown-content  hide-item">
                     <div class="side-menu-item">
                         <div class="side-menu-item-title">
                             <div class="side-menu-item-title-icon">
@@ -489,7 +489,8 @@
 
                 </div>
 
-                <div class="side-menu-dropdown" onclick="toggleElement('hidrometeoro-dropdown')">
+                <div class="side-menu-dropdown"
+                    onclick="toggleElement('hidrometeoro-dropdown'); rotateImage('hidrometeoro-icon')">
                     <div class="side-menu-dropdown-header">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path
@@ -498,7 +499,8 @@
                         </svg>
                         <h5> Fenómenos hidrometeorológicos</h4>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <svg id="hidrometeoro-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+                        viewBox="0 0 24 25" fill="none">
                         <path
                             d="M12.0002 13.6722L16.9502 8.72217L18.3642 10.1362L12.0002 16.5002L5.63623 10.1362L7.05023 8.72217L12.0002 13.6722Z"
                             fill="#484848" />
