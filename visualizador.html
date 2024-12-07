@@ -659,13 +659,13 @@
                     </div>
                 </div>
 
-              
+
 
                 <div style="width: 100%;">
                     <div class="title-dropdown">
                         <p> Capas de Peligro</p>
                     </div>
-    
+
                     <div class="side-menu-dropdown" onclick="toggleElement('risks-dropdown');rotateImage('risks-icon')">
                         <div class="side-menu-dropdown-header">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
@@ -732,15 +732,20 @@
                                 <div class="checkbox-container">
 
                                     <div class="checkbox-content">
-                                        <input type="checkbox" id="checkbox" class="checkbox" />
+                                        <input type="checkbox" id="checkbox" class="checkbox" onchange="changeCheckbox('checkbox-empty', 'checkbox-complete')">
                                         <label for="checkbox" class="checkbox">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                viewBox="0 0 20 20" fill="none">
+                                                viewBox="0 0 20 20" fill="none"  id="checkbox-empty">
                                                 <path
                                                     d="M3.33333 2.5H16.6667C16.8877 2.5 17.0996 2.5878 17.2559 2.74408C17.4122 2.90036 17.5 3.11232 17.5 3.33333V16.6667C17.5 16.8877 17.4122 17.0996 17.2559 17.2559C17.0996 17.4122 16.8877 17.5 16.6667 17.5H3.33333C3.11232 17.5 2.90036 17.4122 2.74408 17.2559C2.5878 17.0996 2.5 16.8877 2.5 16.6667V3.33333C2.5 3.11232 2.5878 2.90036 2.74408 2.74408C2.90036 2.5878 3.11232 2.5 3.33333 2.5ZM4.16667 4.16667V15.8333H15.8333V4.16667H4.16667Z"
                                                     fill="#8A8A8A" />
                                             </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" id="checkbox-complete" style="width: 20px; height:20px;" class="hide-item">
+                                                <path d="M3 2.25H15C15.1989 2.25 15.3897 2.32902 15.5303 2.46967C15.671 2.61032 15.75 2.80109 15.75 3V15C15.75 15.1989 15.671 15.3897 15.5303 15.5303C15.3897 15.671 15.1989 15.75 15 15.75H3C2.80109 15.75 2.61032 15.671 2.46967 15.5303C2.32902 15.3897 2.25 15.1989 2.25 15V3C2.25 2.80109 2.32902 2.61032 2.46967 2.46967C2.61032 2.32902 2.80109 2.25 3 2.25V2.25ZM8.25225 12L13.5547 6.69675L12.4943 5.63625L8.25225 9.879L6.1305 7.75725L5.07 8.81775L8.25225 12Z" fill="#81172C"/>
+                                              </svg>
                                         </label>
+
+                                       
 
                                         <p>Peligro de la zona</p>
                                     </div>

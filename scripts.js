@@ -102,6 +102,17 @@ function rotateImage(imageId) {
     image.classList.toggle('rotate-image');
 }
 
+/* Function to change checbox svg */
+
+function changeCheckbox(checkboxEmptyId, checkboxCheckedId) {
+    const checkboxEmpty = document.getElementById(checkboxEmptyId);
+    const checkboxChecked = document.getElementById(checkboxCheckedId);
+
+    checkboxEmpty.classList.toggle('hide-item');
+    checkboxChecked.classList.toggle('hide-item');
+}
+
+
 
 
 
