@@ -752,19 +752,23 @@
 
 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                        fill="none">
+                                        fill="none"
+                                        onclick="toggleElement('opacity-1');toggleElement('opacity-2');rotateImage('category-1')"
+                                        id="category-1" style="cursor: pointer;">
+                                        >
+                                        >
                                         <path
                                             d="M10.0005 9.0235L5.87577 13.1483L4.69727 11.9698L10.0005 6.6665L15.3039 11.9698L14.1254 13.1483L10.0005 9.0235Z"
                                             fill="#333333" />
                                     </svg>
                                 </div>
 
-                                <div class="opacity">
+                                <div class="opacity" id="opacity-1">
                                     <p>Opacidad de capa</p>
                                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                                 </div>
 
-                                <div class="opacity">
+                                <div class="opacity" id="opacity-2">
                                     <p>Simbología</p>
                                     <div class="raimbow-container">
                                         <div class="rainbow-slider"></div>
