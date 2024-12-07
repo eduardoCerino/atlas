@@ -57,6 +57,9 @@ function toogleImageSrc(imageId) {
 
 
 window.onload = function() {
+
+
+
     let input = document.getElementById('searchinput');
 
     input.addEventListener('input', (event) => {
@@ -78,7 +81,7 @@ window.onload = function() {
 /*  Hide element after 5 seconds when page is loaded */
 
     setTimeout(function() {
-        const alertDiv = document.getElementById('popover-container');
+        const alertDiv = document.getElementById('popover');
         alertDiv.classList.add('hide-item');
     }, 5000);
 }

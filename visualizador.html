@@ -32,14 +32,17 @@
         <!-- Card Modal -->
         <div class="card" style="width: 367px;" id="card-modal">
             <div>
-                <img src="./assets/images/Container.png" class="card-img-top" alt="..." style="padding: 16px;" />
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    style="position: absolute; right: 16px; top: 16px; cursor: pointer;"
-                    onclick="toggleElement('card-modal')">
-                    <path
-                        d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
-                        fill="black" />
-                </svg>
+                <div class="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        style=" cursor: pointer;" onclick="toggleElement('card-modal')">
+                        <path
+                            d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"
+                            fill="black" />
+                    </svg>
+                </div>
+
+                <img src="./assets/images/card-visualizador.png" class="card-img-top" alt="..." />
+
             </div>
             <div class="card-body">
                 <h5 class="card-title"> Bienvenido al Visualizador </h5>
@@ -269,17 +272,45 @@
         </div>
 
         <!-- Popover info -->
-        <div class="popover-container-2 " id="popover-container">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;" id="popover">
+            <div class="popover-container" id="popover-container">
+                <div class="popover-header">
+                    <div class="popover-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path
+                                d="M24.4853 23.152L16 31.6373L7.51467 23.152C5.83646 21.4737 4.69358 19.3355 4.23057 17.0078C3.76756 14.68 4.00521 12.2672 4.91346 10.0745C5.82172 7.88181 7.35979 6.00767 9.33318 4.6891C11.3066 3.37053 13.6266 2.66675 16 2.66675C18.3734 2.66675 20.6934 3.37053 22.6668 4.6891C24.6402 6.00767 26.1783 7.88181 27.0865 10.0745C27.9948 12.2672 28.2324 14.68 27.7694 17.0078C27.3064 19.3355 26.1636 21.4737 24.4853 23.152V23.152ZM16 20C17.4145 20 18.771 19.4381 19.7712 18.4379C20.7714 17.4377 21.3333 16.0811 21.3333 14.6666C21.3333 13.2522 20.7714 11.8956 19.7712 10.8954C18.771 9.89521 17.4145 9.33331 16 9.33331C14.5855 9.33331 13.229 9.89521 12.2288 10.8954C11.2286 11.8956 10.6667 13.2522 10.6667 14.6666C10.6667 16.0811 11.2286 17.4377 12.2288 18.4379C13.229 19.4381 14.5855 20 16 20V20ZM16 17.3333C15.2928 17.3333 14.6145 17.0524 14.1144 16.5523C13.6143 16.0522 13.3333 15.3739 13.3333 14.6666C13.3333 13.9594 13.6143 13.2811 14.1144 12.781C14.6145 12.2809 15.2928 12 16 12C16.7072 12 17.3855 12.2809 17.8856 12.781C18.3857 13.2811 18.6667 13.9594 18.6667 14.6666C18.6667 15.3739 18.3857 16.0522 17.8856 16.5523C17.3855 17.0524 16.7072 17.3333 16 17.3333Z"
+                                fill="#F8E9EC" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="popover-content">
+                    <p class="popover-text">
+                        Selecciona un punto de interés para conocer los peligros de esa zona
+                    </p>
 
 
-            <div class="popover-content">
-                <p class="popover-text">
-                    Selecciona una opción de la barra de herramientas
-                    para trazar sobre el mapa y puedas visualizar el análisis
-                    de la zona
-                </p>
+
+                </div>
+
+                
+
             </div>
 
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none" style="margin-top: -1px;">
+                <path d="M0 1.00098L8 9.00098L16 1.00098L0 1.00098Z" fill="white"/>
+                <path d="M0 1.00098L8 9.00098L16 1.00098L0 1.00098Z" fill="black" fill-opacity="0.2"/>
+                <path d="M0.5 0.000976562L8 7.50098L15.5 0.000976562L0.5 0.000976562Z" fill="white"/>
+              </svg>
+
+
+            <div class="popover-icon" style="margin-top: 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path
+                        d="M24.4853 23.152L16 31.6373L7.51467 23.152C5.83646 21.4737 4.69358 19.3355 4.23057 17.0078C3.76756 14.68 4.00521 12.2672 4.91346 10.0745C5.82172 7.88181 7.35979 6.00767 9.33318 4.6891C11.3066 3.37053 13.6266 2.66675 16 2.66675C18.3734 2.66675 20.6934 3.37053 22.6668 4.6891C24.6402 6.00767 26.1783 7.88181 27.0865 10.0745C27.9948 12.2672 28.2324 14.68 27.7694 17.0078C27.3064 19.3355 26.1636 21.4737 24.4853 23.152V23.152ZM16 20C17.4145 20 18.771 19.4381 19.7712 18.4379C20.7714 17.4377 21.3333 16.0811 21.3333 14.6666C21.3333 13.2522 20.7714 11.8956 19.7712 10.8954C18.771 9.89521 17.4145 9.33331 16 9.33331C14.5855 9.33331 13.229 9.89521 12.2288 10.8954C11.2286 11.8956 10.6667 13.2522 10.6667 14.6666C10.6667 16.0811 11.2286 17.4377 12.2288 18.4379C13.229 19.4381 14.5855 20 16 20V20ZM16 17.3333C15.2928 17.3333 14.6145 17.0524 14.1144 16.5523C13.6143 16.0522 13.3333 15.3739 13.3333 14.6666C13.3333 13.9594 13.6143 13.2811 14.1144 12.781C14.6145 12.2809 15.2928 12 16 12C16.7072 12 17.3855 12.2809 17.8856 12.781C18.3857 13.2811 18.6667 13.9594 18.6667 14.6666C18.6667 15.3739 18.3857 16.0522 17.8856 16.5523C17.3855 17.0524 16.7072 17.3333 16 17.3333Z"
+                        fill="#F8E9EC" />
+                </svg>
+            </div>
         </div>
 
 
@@ -720,14 +751,18 @@
                         <div class="risks-categories-container">
                             <div class="risks-item">
                                 <span class="risks-text"> Categoría</span>
-                                <svg  id="risk-icon-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                    fill="none" style="cursor: pointer;" onclick="toggleElement('risks-children-1'); changeCheckbox('risk-icon-1', 'risk-icon-2')">
+                                <svg id="risk-icon-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 20 20" fill="none" style="cursor: pointer;"
+                                    onclick="toggleElement('risks-children-1'); changeCheckbox('risk-icon-1', 'risk-icon-2')">
                                     <path
                                         d="M9.16699 9.1665V4.1665H10.8337V9.1665H15.8337V10.8332H10.8337V15.8332H9.16699V10.8332H4.16699V9.1665H9.16699Z"
                                         fill="#55212E" />
                                 </svg>
-                                <svg id="risk-icon-2"  onclick="toggleElement('risks-children-1');changeCheckbox('risk-icon-1', 'risk-icon-2')" style="cursor: pointer;"  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="hide-item">
-                                    <path d="M4.16602 9.1665H15.8327V10.8332H4.16602V9.1665Z" fill="#55212E"/>
+                                <svg id="risk-icon-2"
+                                    onclick="toggleElement('risks-children-1');changeCheckbox('risk-icon-1', 'risk-icon-2')"
+                                    style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 20 20" fill="none" class="hide-item">
+                                    <path d="M4.16602 9.1665H15.8327V10.8332H4.16602V9.1665Z" fill="#55212E" />
                                 </svg>
                             </div>
 
@@ -735,20 +770,25 @@
                                 <div class="checkbox-container">
 
                                     <div class="checkbox-content">
-                                        <input type="checkbox" id="checkbox" class="checkbox" onchange="changeCheckbox('checkbox-empty', 'checkbox-complete')">
+                                        <input type="checkbox" id="checkbox" class="checkbox"
+                                            onchange="changeCheckbox('checkbox-empty', 'checkbox-complete')">
                                         <label for="checkbox" class="checkbox">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                viewBox="0 0 20 20" fill="none"  id="checkbox-empty">
+                                                viewBox="0 0 20 20" fill="none" id="checkbox-empty">
                                                 <path
                                                     d="M3.33333 2.5H16.6667C16.8877 2.5 17.0996 2.5878 17.2559 2.74408C17.4122 2.90036 17.5 3.11232 17.5 3.33333V16.6667C17.5 16.8877 17.4122 17.0996 17.2559 17.2559C17.0996 17.4122 16.8877 17.5 16.6667 17.5H3.33333C3.11232 17.5 2.90036 17.4122 2.74408 17.2559C2.5878 17.0996 2.5 16.8877 2.5 16.6667V3.33333C2.5 3.11232 2.5878 2.90036 2.74408 2.74408C2.90036 2.5878 3.11232 2.5 3.33333 2.5ZM4.16667 4.16667V15.8333H15.8333V4.16667H4.16667Z"
                                                     fill="#8A8A8A" />
                                             </svg>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" id="checkbox-complete" style="width: 20px; height:20px;" class="hide-item">
-                                                <path d="M3 2.25H15C15.1989 2.25 15.3897 2.32902 15.5303 2.46967C15.671 2.61032 15.75 2.80109 15.75 3V15C15.75 15.1989 15.671 15.3897 15.5303 15.5303C15.3897 15.671 15.1989 15.75 15 15.75H3C2.80109 15.75 2.61032 15.671 2.46967 15.5303C2.32902 15.3897 2.25 15.1989 2.25 15V3C2.25 2.80109 2.32902 2.61032 2.46967 2.46967C2.61032 2.32902 2.80109 2.25 3 2.25V2.25ZM8.25225 12L13.5547 6.69675L12.4943 5.63625L8.25225 9.879L6.1305 7.75725L5.07 8.81775L8.25225 12Z" fill="#81172C"/>
-                                              </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                viewBox="0 0 18 18" fill="none" id="checkbox-complete"
+                                                style="width: 20px; height:20px;" class="hide-item">
+                                                <path
+                                                    d="M3 2.25H15C15.1989 2.25 15.3897 2.32902 15.5303 2.46967C15.671 2.61032 15.75 2.80109 15.75 3V15C15.75 15.1989 15.671 15.3897 15.5303 15.5303C15.3897 15.671 15.1989 15.75 15 15.75H3C2.80109 15.75 2.61032 15.671 2.46967 15.5303C2.32902 15.3897 2.25 15.1989 2.25 15V3C2.25 2.80109 2.32902 2.61032 2.46967 2.46967C2.61032 2.32902 2.80109 2.25 3 2.25V2.25ZM8.25225 12L13.5547 6.69675L12.4943 5.63625L8.25225 9.879L6.1305 7.75725L5.07 8.81775L8.25225 12Z"
+                                                    fill="#81172C" />
+                                            </svg>
                                         </label>
 
-                                       
+
 
                                         <p>Peligro de la zona</p>
                                     </div>

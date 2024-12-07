@@ -155,3 +155,9 @@ a {
 .rotate-image {
     transform: rotate(180deg);
 }
+
+
+.card-body{
+    padding: 16px 0px 0px 0px !important;
+}
+  
