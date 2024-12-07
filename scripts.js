@@ -147,6 +147,22 @@ function showMobileMenu() {
     const sideBtn = document.getElementsByClassName('sidemenu-collapse');
     sideBtn[0].style.display = 'none';
 
+    const svgElements = document.querySelectorAll('.side-menu-dropdown-header svg');
+    svgElements.forEach(element => element.style.display = 'none');
+
+    const menuHeader = document.getElementsByClassName('side-menu-header-title');
+    menuHeader[0].style.backgroundColor = '#ffffff';
+    menuHeader[0].style.borderRadius = '20px';
+
+    const menuHeaderContainer = document.getElementsByClassName('side-menu');
+    menuHeaderContainer[0].style.borderRadius = '20px';
+
+
+    const menuTitle = document.getElementsByClassName('side-menu-header-title-text');
+    menuTitle[0].style.color = '#55212E';
+
+    const menuDropdown = document.querySelectorAll('.side-menu-dropdown-header h5');
+    menuDropdown.forEach(element => element.style.fontSize = '16px');
 }
 
 
