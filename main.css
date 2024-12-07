@@ -83,6 +83,7 @@ a {
 }
 
 
+
 /* Side menu dropdown */
 
 .side-menu-dropdown-header h5 {
@@ -161,3 +162,13 @@ a {
     padding: 16px 0px 0px 0px !important;
 }
   
+
+.icon-close{
+    display: none;
+}
+
+@media (max-width: 1280px) {
+    .icon-close{
+        display: flex;
+    }
+}
