@@ -124,8 +124,26 @@ function showMobileMenu() {
     mobileMenu.style.display = 'flex';
     mobileMenu.style.marginTop = '800px';
     mobileMenu.style.width = '100%';
+    mobileMenu.style.maxHeight = '80vh';
+    mobileMenu.style.overflow = 'hidden';
+    mobileMenu.style.paddingTop = '200px';
+    const zooms = document.getElementsByClassName('zoom');
+    // hide all zooms
+    for (let i = 0; i < zooms.length; i++) {
+        zooms[i].style.display = 'none';
+    }
+
     const content = document.getElementsByClassName('content');
-    content[0].style.display = 'none';
+    content[0].style.width = '0%';
+    content[0].style.padding = '0px';
+
+    const popover = document.getElementById('popover');
+    popover.style.display = 'none';
+
+ 
+    const menuBottom = document.getElementsByClassName('menu-container');
+    menuBottom[0].style.display = 'none';
+
     const sideBtn = document.getElementsByClassName('sidemenu-collapse');
     sideBtn[0].style.display = 'none';
 
