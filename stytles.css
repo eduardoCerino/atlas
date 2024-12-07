@@ -730,7 +730,6 @@ input {
 
 .side-menu {
     display: flex;
-    gap: 16px;
     background-color: white;
     height: 100vh;
     width: 350px;
@@ -745,9 +744,9 @@ input {
 
 .side-menu-header-title-text {
     color: var(--Foundation-Grey-White, #FFF);
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 140%;
 }
 
@@ -765,7 +764,6 @@ input {
     padding: 0px var(--Spacing-16, 16px);
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
     flex: 1 0 0;
     align-self: stretch;
     overflow: auto;
@@ -957,14 +955,16 @@ input {
     height: 16px;
     flex-shrink: 0;
     border-radius: 2px;
-    background: var(--Foundation-Sucess-success-500, #488711);}
+    background: var(--Foundation-Sucess-success-500, #488711);
+}
 
 .blue-square {
     width: 16px;
     height: 16px;
     flex-shrink: 0;
     border-radius: 2px;
-    background: var(--Foundation-Info-info-400, #338EBF);}
+    background: var(--Foundation-Info-info-400, #338EBF);
+}
 
 .simbology-text {
     display: flex;

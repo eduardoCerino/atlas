@@ -215,6 +215,26 @@
     margin-top: 8px;
 }
 
+.title-dropdown {
+    display: flex;
+    padding: var(--Spacing-12, 12px) 24px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    border-bottom: 1px solid var(--Foundation-gray-gray-100, #E6E6E6);
+    background: var(--Foundation-primary-primary-50, #EEE9EA);
+}
+
+.title-dropdown p {
+    color: var(--Body-text-medium, #484848);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+/* Checkbox */
+
 .checkbox-container {
     display: flex;
     padding: 4px 0px;
@@ -281,4 +301,3 @@ input[type="range"]::-ms-thumb {
     cursor: pointer;
     border: none;
 }
-
