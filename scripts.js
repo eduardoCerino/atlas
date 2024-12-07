@@ -165,4 +165,49 @@ function showMobileMenu() {
     menuDropdown.forEach(element => element.style.fontSize = '16px');
 }
 
+/* Function to hide menu in mobile */
+function closeMobileMenu() {
+    const mobileMenu = document.getElementById('side-menu-container');
+    mobileMenu.style.display = 'none';
+    mobileMenu.style.marginTop = '';
+    mobileMenu.style.width = '';
+    mobileMenu.style.maxHeight = '';
+    mobileMenu.style.overflow = '';
+    mobileMenu.style.paddingTop = '';
+
+    const zooms = document.getElementsByClassName('zoom');
+    // show all zooms
+    for (let i = 0; i < zooms.length; i++) {
+        zooms[i].style.display = '';
+    }
+
+    const content = document.getElementsByClassName('content');
+    content[0].style.width = '';
+    content[0].style.padding = '';
+
+    const popover = document.getElementById('popover');
+    popover.style.display = '';
+
+    const menuBottom = document.getElementsByClassName('menu-container');
+    menuBottom[0].style.display = '';
+
+    const sideBtn = document.getElementsByClassName('sidemenu-collapse');
+    sideBtn[0].style.display = '';
+
+    const svgElements = document.querySelectorAll('.side-menu-dropdown-header svg');
+    svgElements.forEach(element => element.style.display = '');
+
+    const menuHeader = document.getElementsByClassName('side-menu-header-title');
+    menuHeader[0].style.backgroundColor = '';
+    menuHeader[0].style.borderRadius = '';
+
+    const menuHeaderContainer = document.getElementsByClassName('side-menu');
+    menuHeaderContainer[0].style.borderRadius = '';
+
+    const menuTitle = document.getElementsByClassName('side-menu-header-title-text');
+    menuTitle[0].style.color = '';
+
+    const menuDropdown = document.querySelectorAll('.side-menu-dropdown-header h5');
+    menuDropdown.forEach(element => element.style.fontSize = '');
+}
 
