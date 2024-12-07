@@ -7,7 +7,7 @@ ul {
     margin-bottom: 0 !important;
 }
 
-nav{
+nav {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -81,12 +81,12 @@ nav{
         padding: 0px 20px;
     }
 
-    .hero-img{
+    .hero-img {
         background-image: url("./assets/images/bg-hero-mobile.png");
         background-repeat: round;
     }
 
-  
+
 
 }
 
@@ -157,7 +157,8 @@ nav{
         width: 100%;
     }
 
-    .info1-right-img, .info1-right-img img {
+    .info1-right-img,
+    .info1-right-img img {
         width: 100%;
     }
 }
@@ -167,11 +168,14 @@ nav{
         flex-direction: column;
         max-width: 600px;
     }
+
     .info-h2 {
         width: 100%;
         font-size: 28px;
     }
-    .info1-right-img, .info1-right-img img {
+
+    .info1-right-img,
+    .info1-right-img img {
         width: 100%;
     }
 
@@ -183,136 +187,144 @@ nav{
         width: 100%;
     }
 
-  
+
 }
 
 
-/* ---- Mapas ---- */
+/* ----More info ---- */
 
-.mapas {
+.more-container {
+    background: rgba(238, 233, 234, 0.40);
+    flex-shrink: 0;
+    padding: 100px 80px;
+}
+
+.more-main {
     display: flex;
-    height: 742px;
-    padding: 80px 100px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
+    gap: 18px;
     align-self: stretch;
 }
 
-.mapas-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 25px;
-    align-self: stretch;
-}
+.more-container h3 {
+    color: var(--Foundation-Danger-danger-700, #81172C);
 
-.mapas-container h2 {
-    color: var(--Body-text-primary, #55212E);
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
+    /* 67.2px */
+    margin-bottom: 32px;
 }
 
-.mapas-container p {
-    color: var(--Body-text-strong, #000);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-}
-
-.mapas-content {
+.more-item {
     display: flex;
+    width: 534px;
+    padding: 24px;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 48px;
-    align-self: stretch;
+    gap: 16px;
+    border-radius: 12px;
+    background: var(--Foundation-Grey-White, #FFF);
 }
 
-.mapas-item {
+.more-item img {
+    height: 284px;
+    align-self: stretch;
+    width: 484.481px;
+    height: 284px;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+.more-item-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.more-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.more-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
     flex: 1 0 0;
 }
 
-.mapas-principal {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    align-self: stretch;
-    width: 516px;
-}
-
-.mapas-principal h3 {
+.more-text-container h2 {
     color: var(--Body-text-secondary, #956036);
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 140%;
+    /* 33.6px */
 }
 
-.mapas-principal p {
-    color: var(--Body-text-medium, #484848);
+.more-text-container p {
+    color: var(--Body-text-medium-light, #666);
+
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 140%;
-    align-self: stretch;
-}
-
-.mapas-item img {
-    width: 516px;
-    height: 228px;
-    flex-shrink: 0;
-    border-radius: 8px;
+    /* 19.6px */
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-    .mapas-content {
-        flex-direction: column;
+    .more-container {
+        padding: 100px 40px;
     }
 
-    .mapas {
+    .more-item img {
+        width: 100%;
         height: auto;
     }
 }
 
 @media (max-width: 767px) {
-    .mapas-content {
+    .more-container {
+        padding: 56px 20px;
+    }
+
+    .more-main {
         flex-direction: column;
     }
-    .mapas {
-        height: auto;
-        padding: 56px 20px;
-      }
 
-      .mapas-container h2{
-        font-size: 32px;
-      }
-
-      .mapas-item img {
+    .more-item {
         width: 100%;
-        height: 228px;
+    }
+
+    .more-item img {
+        width: 100%;
+        height: 91px;
         object-fit: cover;
-      } 
+    }
 
-      .mapas-item {
+    .more-item-content {
         width: 100%;
-      }
+    }
 
-      .mapas-principal {
-        width: 100%;
-      }
+    .more-container h3 {
+        font-size: 32px;
+    }
+
+    .more-text-container h2 {
+        font-size: 24px;
+    }
+
+    .more-text-container p {
+        font-size: 12px;
+    }
 }
-
-
-
-
 
 
 /* ----Glosario ---- */
@@ -489,11 +501,12 @@ nav{
 
     }
 
-    .glosario-faqs-title h2{
+    .glosario-faqs-title h2 {
         font-size: 32px;
     }
 
-    .glosario-faqs-container, .glosario-item-container {
+    .glosario-faqs-container,
+    .glosario-item-container {
         width: 100%;
     }
 }
@@ -599,9 +612,9 @@ span {
     .footer {
         flex-direction: column;
     }
- 
 
-   
+
+
 }
 
 @media (max-width: 767px) {
@@ -613,6 +626,7 @@ span {
     .footer-right {
         flex-direction: column;
     }
+
     .footer-left-text p {
         margin-top: 24px;
     }
