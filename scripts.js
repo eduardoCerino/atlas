@@ -53,6 +53,9 @@ function toogleImageSrc(imageId) {
 }
 
 
+
+
+
 window.onload = function() {
     let input = document.getElementById('searchinput');
 
@@ -111,8 +114,6 @@ function changeCheckbox(checkboxEmptyId, checkboxCheckedId) {
     checkboxEmpty.classList.toggle('hide-item');
     checkboxChecked.classList.toggle('hide-item');
 }
-
-
 
 
 

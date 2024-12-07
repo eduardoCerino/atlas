@@ -720,15 +720,18 @@
                         <div class="risks-categories-container">
                             <div class="risks-item">
                                 <span class="risks-text"> Categoría</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                    fill="none" style="cursor: pointer;">
+                                <svg  id="risk-icon-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                    fill="none" style="cursor: pointer;" onclick="toggleElement('risks-children-1'); changeCheckbox('risk-icon-1', 'risk-icon-2')">
                                     <path
                                         d="M9.16699 9.1665V4.1665H10.8337V9.1665H15.8337V10.8332H10.8337V15.8332H9.16699V10.8332H4.16699V9.1665H9.16699Z"
                                         fill="#55212E" />
                                 </svg>
+                                <svg id="risk-icon-2"  onclick="toggleElement('risks-children-1');changeCheckbox('risk-icon-1', 'risk-icon-2')" style="cursor: pointer;"  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="hide-item">
+                                    <path d="M4.16602 9.1665H15.8327V10.8332H4.16602V9.1665Z" fill="#55212E"/>
+                                </svg>
                             </div>
 
-                            <div class="risks-children" id="risks-children-1">
+                            <div class="risks-children hide-item" id="risks-children-1">
                                 <div class="checkbox-container">
 
                                     <div class="checkbox-content">
@@ -763,12 +766,12 @@
                                     </svg>
                                 </div>
 
-                                <div class="opacity" id="opacity-1">
+                                <div class="opacity hide-item" id="opacity-1">
                                     <p>Opacidad de capa</p>
                                     <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                                 </div>
 
-                                <div class="opacity" id="opacity-2">
+                                <div class="opacity hide-item" id="opacity-2">
                                     <p>Simbología</p>
                                     <div class="raimbow-container">
                                         <div class="rainbow-slider"></div>
