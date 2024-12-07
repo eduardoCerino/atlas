@@ -249,7 +249,15 @@ a {
     }
 
     #side-menu-container {
-        /* display: none; */
+         display: none; 
+    }
+
+    .side-menu-header-title {
+        width: 100% !important;
+    }
+
+    .side-menu{
+        width: 100% !important;
     }
 }
 

@@ -118,5 +118,17 @@ function changeCheckbox(checkboxEmptyId, checkboxCheckedId) {
     checkboxChecked.classList.toggle('hide-item');
 }
 
+/* Function to show menu in mobile */
+function showMobileMenu() {
+    const mobileMenu = document.getElementById('side-menu-container');
+    mobileMenu.style.display = 'flex';
+    mobileMenu.style.marginTop = '800px';
+    mobileMenu.style.width = '100%';
+    const content = document.getElementsByClassName('content');
+    content[0].style.display = 'none';
+    const sideBtn = document.getElementsByClassName('sidemenu-collapse');
+    sideBtn[0].style.display = 'none';
+
+}
 
 
