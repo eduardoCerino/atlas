@@ -84,7 +84,7 @@ nav {
     justify-content: center;
 
     position: absolute;
-    bottom: -150px;
+    bottom: -190px;
     z-index: 10;
 }
 
@@ -488,7 +488,7 @@ nav {
     /* 19.6px */
 }
 
-@media (max-width: 1024px) and (min-width: 768px) {
+@media (max-width: 1098px) and (min-width: 768px) {
     .more-container {
         padding: 100px 40px;
     }
