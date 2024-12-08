@@ -171,4 +171,9 @@ a {
     .icon-close{
         display: flex;
     }
+
+    #menu-ruler{
+        display: flex !important;
+        visibility: visible !important;
+    }
 }
