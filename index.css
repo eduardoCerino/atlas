@@ -75,50 +75,26 @@ nav {
 }
 
 .hero {
-    position: relative; /* Necesario para posicionar el efecto */
-    flex-shrink: 0;
-    background: var(--Body-text-primary, #55212E);
+    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    overflow: hidden; /* Para evitar que el blur sobresalga */
-}
-
-.hero-blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Ocupa todo el ancho */
-    height: 100%; /* Ocupa toda la altura */
-    background: linear-gradient(
-        to right,
-        rgba(85, 33, 46, 1) 0%, /* Color del fondo sólido */
-        rgba(85, 33, 46, 0) 100% /* Transparente */
-    );
-    filter: blur(30px); /* Ajusta el nivel de desenfoque */
-    z-index: 0; /* Debajo del contenido principal */
-    pointer-events: none; /* No afecta la interacción */
-}
-
-.hero-content,
-.hero-img {
-    position: relative; /* Para que queden encima del blur */
-    z-index: 1;
+    background: var(--Body-text-primary, #55212E);
 }
 
 .hero-content {
-    width: 537px;
-    padding: 0px 60px;
     display: flex;
+    width: 537px;
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
     justify-content: center;
+    padding: 0px 60px;
 }
 
 .hero-content h2 {
     color: var(--Foundation-primary-primary-50, #EEE9EA);
     font-size: 48px;
+    font-style: normal;
     font-weight: 700;
     line-height: 140%;
 }
@@ -126,16 +102,74 @@ nav {
 .hero-content p {
     color: var(--Foundation-gray-gray-50, #EEEFF6);
     font-size: 16px;
+    font-style: normal;
     font-weight: 400;
     line-height: 140%;
+}
+
+.hero-image-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-img {
     width: 808px;
     height: 489px;
     flex-shrink: 0;
+    position: relative;
 }
 
+.hero-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(85, 33, 46, 1) 1%, rgba(85, 33, 46, 0) 100%);
+    z-index: 1;
+
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .hero-content {
+        width: 100%;
+        padding: 30px 40px;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        flex-direction: column-reverse;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-blur {
+        background:   linear-gradient(0deg, rgba(85, 33, 46, 1) 1%, rgba(85, 33, 46, 0) 100%);
+
+    }
+}
 
 /* ----Atlas ---- */
 
