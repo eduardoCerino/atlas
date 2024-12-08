@@ -38,7 +38,6 @@ function collapseSideBar() {
 /* Function to toogle image src */
 function toogleImageSrc(imageId) {
     const sumaIcon = 'icono-resta.png';
-    const restaIcon = 'icono-mas.png';
 
     const image = document.getElementById(imageId);
     const currentSrc = image.src;

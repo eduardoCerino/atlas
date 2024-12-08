@@ -36,6 +36,16 @@ nav {
     /* 19.6px */
 }
 
+.logo {
+    width: 82px;
+    height: 38px;
+}
+
+.logo-estado {
+    width: 88.046px;
+height: 35.61px;
+}
+
 @media (max-width: 767px) {
     .navbar-container {
         padding: 0px 20px;
