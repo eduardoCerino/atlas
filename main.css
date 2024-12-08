@@ -167,13 +167,19 @@ a {
     display: none;
 }
 
+
+#menu-ruler{
+    display: none;
+    visibility: hidden;
+}
+
 @media (max-width: 1280px) {
     .icon-close{
         display: flex;
     }
 
     #menu-ruler{
-        display: flex !important;
-        visibility: visible !important;
+        display: flex ;
+        visibility: visible ;
     }
 }
