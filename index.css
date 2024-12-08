@@ -243,7 +243,7 @@ nav {
 }
 
 .hero-img {
-    width: 808px;
+    /* width: 808px; */
     height: 489px;
     flex-shrink: 0;
     position: relative;
@@ -317,6 +317,7 @@ nav {
     gap: 16px;
     flex-shrink: 0;
     padding: 250px 80px 98px 80px;
+    flex-wrap: wrap;
 }
 
 .atlas-text {
@@ -411,7 +412,6 @@ nav {
 
 .more-main {
     display: flex;
-    align-items: center;
     gap: 18px;
     align-self: stretch;
 }
@@ -429,7 +429,6 @@ nav {
 
 .more-item {
     display: flex;
-    width: 534px;
     padding: 24px;
     flex-direction: column;
     align-items: flex-start;
@@ -439,12 +438,12 @@ nav {
 }
 
 .more-item img {
-    height: 284px;
     align-self: stretch;
-    width: 484.481px;
-    height: 284px;
+    max-height: 284px;
     flex-shrink: 0;
     border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
 }
 
 .more-item-content {
@@ -725,7 +724,7 @@ nav {
 
 .footer {
     display: flex;
-    padding: 56px 100px;
+    padding: 56px 80px;
     align-items: flex-start;
     gap: 56px;
     align-self: stretch;
@@ -746,6 +745,7 @@ nav {
     align-items: flex-start;
     gap: 16px;
     flex: 1 0 0;
+    flex-wrap: wrap;
 }
 
 .footer-left-images {
@@ -821,6 +821,8 @@ span {
 @media (max-width: 1024px) and (min-width: 768px) {
     .footer {
         flex-direction: column;
+        padding: 56px 50px;
+
     }
 
 
