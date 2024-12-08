@@ -211,3 +211,21 @@ function closeMobileMenu() {
     menuDropdown.forEach(element => element.style.fontSize = '');
 }
 
+
+
+/* Function to change svg color */
+
+function changeSvgColor(svgId) {
+    const svg = document.getElementById(svgId);
+
+    // Use `getAttribute` to get the current fill color
+    const currentColor = svg.getAttribute('fill');
+
+    // Toggle between the colors
+    if (currentColor === '#666666') {
+        svg.setAttribute('fill', '#81172C');
+    } else {
+        svg.setAttribute('fill', '#666666');
+    }
+}
+
