@@ -394,7 +394,7 @@ a {
 /* ----  Zooms/Icons  ----*/
 
 .zoom-container {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
     z-index: 1000;
@@ -457,6 +457,10 @@ a {
 }
 
 @media (max-width: 1280px) {
+
+    .zoom-container {
+        position: fixed;
+    }
 
     .zoom-3,
     .zoom-2 {
