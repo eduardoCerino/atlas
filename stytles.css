@@ -646,7 +646,8 @@ a {
     align-items: center;
     gap: 4px;
     align-self: stretch;
-    padding-right: 60px;
+    padding-left: 45px;
+    padding-right: 40px;
 }
 
 input {
@@ -670,7 +671,7 @@ input {
 
 .search-icon {
     position: absolute;
-    right: 16px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
 

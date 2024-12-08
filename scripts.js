@@ -64,13 +64,13 @@ window.onload = function() {
 
     input.addEventListener('input', (event) => {
         if (event.target.value.length > 0) {
-            document.getElementById('search-icon').style.display = 'none';
             document.getElementById('cancel-icon').style.display = 'block';
+            document.getElementById('cancel-icon').style.right = '16px';
+            document.getElementById('cancel-icon').style.left = 'auto';
             document.getElementById('search-result').style.display = 'flex';
         } 
 
         if (event.target.value.length === 0) {
-            document.getElementById('search-icon').style.display = 'block';
             document.getElementById('cancel-icon').style.display = 'none';
             document.getElementById('search-result').style.display = 'none';
         }
