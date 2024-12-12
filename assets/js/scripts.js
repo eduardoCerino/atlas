@@ -61,7 +61,7 @@ window.onload = function() {
 
     let input = document.getElementById('searchinput');
 
-    input.addEventListener('input', (event) => {
+    input?.addEventListener('input', (event) => {
         if (event.target.value.length > 0) {
             document.getElementById('cancel-icon').style.display = 'block';
             document.getElementById('cancel-icon').style.right = '16px';
