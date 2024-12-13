@@ -62,11 +62,13 @@ window.onload = function() {
         }
     });
 
-    /*  Hide element after 5 seconds when page is loaded */
-    setTimeout(function() {
-        const alertDiv = document.getElementById('popover');
-        alertDiv.classList.add('hide-item');
-    }, 5000);
+    if(input != null) {
+        /*  Hide element after 5 seconds when page is loaded */
+        setTimeout(function() {
+            const alertDiv = document.getElementById('popover');
+            alertDiv.classList.add('hide-item');
+        }, 5000);
+    }
 }
 
 
