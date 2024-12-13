@@ -1,5 +1,3 @@
- 
- 
  /* Function to change menu option */
 function selectMenuItem(menuId) {
     const menuItems = document.querySelectorAll('.menu-item');
@@ -24,9 +22,7 @@ function toggleElement(elementId) {
     element.classList.toggle('hide-item');
 }
 
-
 /* Function to collapse side bar menu */
-
 function collapseSideBar() {
     const sideBar = document.getElementById('side-menu');
     sideBar.classList.toggle('hide-sidebar');
@@ -51,34 +47,22 @@ function toogleImageSrc(imageId) {
     }
 }
 
-
-
-
-
 window.onload = function() {
-
-
-
     let input = document.getElementById('searchinput');
-
     input?.addEventListener('input', (event) => {
         if (event.target.value.length > 0) {
             document.getElementById('cancel-icon').style.display = 'block';
             document.getElementById('cancel-icon').style.right = '16px';
             document.getElementById('cancel-icon').style.left = 'auto';
             document.getElementById('search-result').style.display = 'flex';
-        } 
-
+        }
         if (event.target.value.length === 0) {
             document.getElementById('cancel-icon').style.display = 'none';
             document.getElementById('search-result').style.display = 'none';
         }
-
-
     });
 
-/*  Hide element after 5 seconds when page is loaded */
-
+    /*  Hide element after 5 seconds when page is loaded */
     setTimeout(function() {
         const alertDiv = document.getElementById('popover');
         alertDiv.classList.add('hide-item');
@@ -87,7 +71,6 @@ window.onload = function() {
 
 
 /*  Function to show search in mobile and hide options */
-
 function showSearch() {
     const options= document.getElementById('options');
     options.classList.toggle('hide-item');
@@ -100,7 +83,6 @@ function showSearch() {
 
 }
 
-
 /* Function to rotate image */
 function rotateImage(imageId) {
     const image = document.getElementById(imageId);
@@ -108,7 +90,6 @@ function rotateImage(imageId) {
 }
 
 /* Function to change checbox svg */
-
 function changeCheckbox(checkboxEmptyId, checkboxCheckedId) {
     const checkboxEmpty = document.getElementById(checkboxEmptyId);
     const checkboxChecked = document.getElementById(checkboxCheckedId);
@@ -210,10 +191,7 @@ function closeMobileMenu() {
     menuDropdown.forEach(element => element.style.fontSize = '');
 }
 
-
-
 /* Function to change svg color */
-
 function changeSvgColor(svgId) {
     const svg = document.getElementById(svgId);
 
@@ -227,4 +205,3 @@ function changeSvgColor(svgId) {
         svg.setAttribute('fill', '#666666');
     }
 }
-
