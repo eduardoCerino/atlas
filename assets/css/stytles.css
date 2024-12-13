@@ -431,14 +431,13 @@ a {
 
 .zoom-1 {
     bottom: 110px;
-
 }
 
-.zoom-2 {
+.zoom-2, .zoom-stack {
     bottom: 180px;
 }
 
-.zoom-0 {
+.zoom-0, .zoom-mobile {
     display: none;
 }
 
@@ -490,6 +489,15 @@ a {
 
     .zoom-0 {
         bottom: 170px;
+        display: flex;
+    }
+
+    .zoom-stack {
+        bottom: 155px;
+    }
+
+    .zoom-mobile {
+        bottom: 220px;
         display: flex;
     }
 
