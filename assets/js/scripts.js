@@ -108,6 +108,8 @@ function showMobileMenu() {
     document.getElementById('popover').classList.add('show-mobile-menu');
     document.getElementById('menu-container').classList.add('show-mobile-menu');
     document.getElementById('sidemenu-collapse').classList.add('show-mobile-menu');
+    document.getElementById('card-modal').classList.add('hide-item');
+    document.getElementById('tooltip-container').classList.add('hide-item');
 }
 
 /* Function to hide menu in mobile */
