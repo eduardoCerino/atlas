@@ -160,7 +160,7 @@ a {
     
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
     .card {
         width: 100%;
     }
@@ -239,7 +239,7 @@ a {
     display: none !important;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
     .menu {
         width: 100%;
     }
@@ -456,7 +456,7 @@ a {
     /* 21px */
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
 
     .zoom-container {
         position: fixed;
@@ -602,7 +602,7 @@ a {
     /* 16.8px */
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
     .help {
         width: 90vw;
     }
@@ -708,7 +708,7 @@ input {
     /* 19.6px */
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
     .search {
         display: none;
         margin: 10px;

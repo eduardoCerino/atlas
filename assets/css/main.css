@@ -173,7 +173,7 @@ a {
     visibility: hidden;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1024px) {
     .icon-close{
         display: flex;
     }
