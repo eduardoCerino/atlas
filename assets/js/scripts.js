@@ -102,95 +102,22 @@ function changeCheckbox(checkboxEmptyId, checkboxCheckedId) {
 
 /* Function to show menu in mobile */
 function showMobileMenu() {
-    const mobileMenu = document.getElementById('side-menu-container');
-    mobileMenu.style.display = 'flex';
-    mobileMenu.style.marginTop = '800px';
-    mobileMenu.style.width = '100%';
-    mobileMenu.style.maxHeight = '80vh';
-    mobileMenu.style.overflow = 'hidden';
-    mobileMenu.style.paddingTop = '200px';
-    const zooms = document.getElementsByClassName('zoom');
-    // hide all zooms
-    for (let i = 0; i < zooms.length; i++) {
-        zooms[i].style.display = 'none';
-    }
-
-    const content = document.getElementsByClassName('content');
-    content[0].style.width = '0%';
-    content[0].style.padding = '0px';
-
-    const popover = document.getElementById('popover');
-    popover.style.display = 'none';
-
- 
-    const menuBottom = document.getElementsByClassName('menu-container');
-    menuBottom[0].style.display = 'none';
-
-    const sideBtn = document.getElementsByClassName('sidemenu-collapse');
-    sideBtn[0].style.display = 'none';
-
-    const svgElements = document.querySelectorAll('.side-menu-dropdown-header svg');
-    svgElements.forEach(element => element.style.display = 'none');
-
-    const menuHeader = document.getElementsByClassName('side-menu-header-title');
-    menuHeader[0].style.backgroundColor = '#ffffff';
-    menuHeader[0].style.borderRadius = '20px';
-
-    const menuHeaderContainer = document.getElementsByClassName('side-menu');
-    menuHeaderContainer[0].style.borderRadius = '20px';
-
-
-    const menuTitle = document.getElementsByClassName('side-menu-header-title-text');
-    menuTitle[0].style.color = '#55212E';
-
-    const menuDropdown = document.querySelectorAll('.side-menu-dropdown-header h5');
-    menuDropdown.forEach(element => element.style.fontSize = '16px');
+    document.getElementById('side-menu-container').classList.add('show-mobile-menu');
+    document.getElementById('zoom-icons').classList.add('show-mobile-menu');
+    document.getElementById('content').classList.add('show-mobile-menu');
+    document.getElementById('popover').classList.add('show-mobile-menu');
+    document.getElementById('menu-container').classList.add('show-mobile-menu');
+    document.getElementById('sidemenu-collapse').classList.add('show-mobile-menu');
 }
 
 /* Function to hide menu in mobile */
 function closeMobileMenu() {
-    const mobileMenu = document.getElementById('side-menu-container');
-    mobileMenu.style.display = 'none';
-    mobileMenu.style.marginTop = '';
-    mobileMenu.style.width = '';
-    mobileMenu.style.maxHeight = '';
-    mobileMenu.style.overflow = '';
-    mobileMenu.style.paddingTop = '';
-
-    const zooms = document.getElementsByClassName('zoom');
-    // show all zooms
-    for (let i = 0; i < zooms.length; i++) {
-        zooms[i].style.display = '';
-    }
-
-    const content = document.getElementsByClassName('content');
-    content[0].style.width = '';
-    content[0].style.padding = '';
-
-    const popover = document.getElementById('popover');
-    popover.style.display = '';
-
-    const menuBottom = document.getElementsByClassName('menu-container');
-    menuBottom[0].style.display = '';
-
-    const sideBtn = document.getElementsByClassName('sidemenu-collapse');
-    sideBtn[0].style.display = '';
-
-    const svgElements = document.querySelectorAll('.side-menu-dropdown-header svg');
-    svgElements.forEach(element => element.style.display = '');
-
-    const menuHeader = document.getElementsByClassName('side-menu-header-title');
-    menuHeader[0].style.backgroundColor = '';
-    menuHeader[0].style.borderRadius = '';
-
-    const menuHeaderContainer = document.getElementsByClassName('side-menu');
-    menuHeaderContainer[0].style.borderRadius = '';
-
-    const menuTitle = document.getElementsByClassName('side-menu-header-title-text');
-    menuTitle[0].style.color = '';
-
-    const menuDropdown = document.querySelectorAll('.side-menu-dropdown-header h5');
-    menuDropdown.forEach(element => element.style.fontSize = '');
+    document.getElementById('side-menu-container').classList.remove('show-mobile-menu');
+    document.getElementById('zoom-icons').classList.remove('show-mobile-menu');
+    document.getElementById('content').classList.remove('show-mobile-menu');
+    document.getElementById('popover').classList.remove('show-mobile-menu');
+    document.getElementById('menu-container').classList.remove('show-mobile-menu');
+    document.getElementById('sidemenu-collapse').classList.remove('show-mobile-menu');
 }
 
 /* Function to change svg color */

@@ -38,7 +38,6 @@ h5 {
     margin-bottom: 0 !important;
 }
 
-
 * {
     font-family: Gotham;
 }
@@ -46,7 +45,6 @@ h5 {
 a {
     text-decoration: none !important;
 }
-
 
 /* ---- Botones ---- */
 .btn-primary {
@@ -82,10 +80,7 @@ a {
     display: none !important;
 }
 
-
-
 /* Side menu dropdown */
-
 .side-menu-dropdown-header h5 {
     color: var(--Body-text-medium, #484848);
     font-size: 18px;
@@ -126,7 +121,6 @@ a {
     width: 100%;
 }
 
-
 .raimbow-info{
     width: 100%;
     justify-content: flex-end;
@@ -135,6 +129,7 @@ a {
     flex-direction: column;
     padding-left: 200px;
 }
+
 .opacity {
     display: flex;
     flex-direction: column;
@@ -152,21 +147,17 @@ a {
     /* 16.8px */
 }
 
-
 .rotate-image {
     transform: rotate(180deg);
 }
-
 
 .card-body{
     padding: 16px 0px 0px 0px !important;
 }
   
-
 .icon-close{
     display: none;
 }
-
 
 #menu-ruler{
     display: none;
