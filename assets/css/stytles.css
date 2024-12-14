@@ -1,51 +1,3 @@
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-Light.otf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-Book.otf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-Medium.otf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-Bold.otf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gotham';
-    src: url('../fonts/Gotham-Black.otf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
-p,
-h5 {
-    margin-bottom: 0 !important;
-}
-
-* {
-    font-family: Gotham;
-}
-
-a {
-    text-decoration: none !important;
-}
-
 /* Borrar, es para representar el mapa */
 .main {
     background-image: url('../images/Mapa.png');
@@ -105,36 +57,6 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
-}
-
-/* ---- Botones ---- */
-.btn-primary {
-    background-color: #55212E !important;
-    border-color: #55212E !important;
-}
-
-.btn-primary:hover {
-    background-color: #4D1E2A !important;
-    border-color: #4D1E2A !important;
-}
-
-.btn-link {
-    color: #55212E !important;
-    text-decoration: none !important;
-}
-
-.btn-outline-primary {
-    color: #55212E !important;
-    border-color: #55212E !important;
-}
-
-.btn-outline-primary:hover {
-    background-color: #4D1E2A !important;
-    color: white !important;
-}
-
-.btn:hover svg path {
-    fill: white;
 }
 
 /* ---- Cards ---- */
@@ -224,10 +146,6 @@ a {
     position: absolute;
     top: -10px;
     left: calc(50% - 30px);
-}
-
-.hide-item {
-    display: none !important;
 }
 
 @media (max-width: 1024px) {
@@ -586,7 +504,7 @@ a {
     width: 433px;
     max-height: 437px;
     /* Limita la altura del contenedor */
-    overflow-y: auto;/
+    overflow-y: auto;
 }
 
 .help-title {
