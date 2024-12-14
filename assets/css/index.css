@@ -619,27 +619,11 @@ height: 35.61px;
     align-self: stretch;
 }
 
-.glosariio-faqs-title {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    align-self: stretch;
-}
-
 .glosario-faqs-title h2 {
     color: var(--Body-text-secondary, #956036);
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
-    line-height: 140%;
-}
-
-.glosariio-faqs-title p {
-    color: var(--Body-text-strong, #000);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
     line-height: 140%;
 }
 
@@ -710,10 +694,6 @@ height: 35.61px;
 }
 
 @media (max-width: 767px) {
-    .texto {
-        flex-direction: column;
-    }
-
     .glosario {
         padding: 56px 20px;
         flex-direction: column;
