@@ -1,7 +1,7 @@
 .main {
-    background-image: none;
+    display: flex;
     background: var(--Body-text-primary, #55212E);
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 30px;
 }
@@ -19,9 +19,9 @@
 }
 
 @media (max-width: 767px) {
-    .content {
-        padding: 60px 16px;
-        height: auto;
+    #content {
+        display: flex;
+        padding: 16px;
         align-items: center;
         align-self: stretch;
     }
@@ -29,7 +29,6 @@
 
 .login-title {
     color: var(--Body-text-primary, #55212E);
-    font-family: Gotham;
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
@@ -39,7 +38,6 @@
 
 .login-text {
     color: var(--Body-text-medium-light, #666);
-    font-family: Gotham;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -73,7 +71,6 @@
 
 .input-container label {
     color: var(--Body-text-strong, #000);
-    font-family: Gotham;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -93,39 +90,10 @@
 
 .input-container a {
     color: var(--Foundation-Danger-danger-700, #81172C);
-    font-family: Gotham;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 140%;
-}
-
-/* Checkbox */
-
-.checkbox-container {
-    display: flex;
-    padding: 4px 0px;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-}
-
-.checkbox-content {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.checkbox-content .checkbox-conten p {
-    color: var(--Body-Text-Body-Color, #212529);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-}
-
-input[type="checkbox"] {
-    display: none;
 }
 
 .login-form-container a {

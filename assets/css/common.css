@@ -33,13 +33,18 @@
     font-style: normal;
 }
 
+body {
+    height: 100vh;
+    min-height: 767px;
+}
+
 p,
 h5 {
     margin-bottom: 0 !important;
 }
 
 * {
-    font-family: Gotham;
+    font-family: Gotham !important;
 }
 
 a {
@@ -78,4 +83,35 @@ a {
 
 .hide-item {
     display: none !important;
+}
+
+.opacity {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.opacity p {
+    color: var(--Body-text-medium, #484848);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 16.8px */
+}
+
+.rotate-image {
+    transform: rotate(180deg);
+}
+
+.mobile-icon-close {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .mobile-icon-close {
+        display: flex;
+    }
 }

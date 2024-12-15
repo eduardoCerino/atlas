@@ -7,8 +7,9 @@
     <title>Document</title>
     <!--  Hoja de estilos externa -->
     <link href="../assets/css/common.css" rel="stylesheet">
-    <link href="../assets/css/stytles.css" rel="stylesheet">
-    <link href="../assets/css/visualizador.css" rel="stylesheet">
+    <link href="../assets/css/forms.css" rel="stylesheet">
+    <link href="../assets/css/map-controls.css" rel="stylesheet">
+    <link href="../assets/css/map-side-menu.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="../assets/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap JS -->
@@ -392,7 +393,7 @@
             <div class="side-menu-header">
                 <div class="side-menu-header-title">
                     <h5 class="side-menu-header-title-text">Análisis de población y riesgo</h5>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" onclick="closeMobileMenu()"  class="icon-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" onclick="closeMobileMenu()"  class="mobile-icon-close">
                         <path d="M12.0007 11.0865L16.9505 6.13672L18.3647 7.55093L13.4149 12.5007L18.3647 17.4504L16.9505 18.8646L12.0007 13.9149L7.05094 18.8646L5.63672 17.4504L10.5865 12.5007L5.63672 7.55093L7.05094 6.13672L12.0007 11.0865Z" fill="#55212E"/>
                       </svg>
                 </div>
@@ -515,7 +516,7 @@
                             </div>
                             <div class="raimbow-stats">
                                 <div class="ranbow-color">
-                                    <div class="square-red"></div>
+                                    <div class="red-square"></div>
                                     <p> Alto</p>
                                 </div>
                                 <p> 52,136</p>
@@ -525,7 +526,6 @@
                     </div>
 
                 </div>
-
 
                 <div class="side-menu-dropdown" onclick="toggleElement('infra-dropdown');rotateImage('infra-icon')">
                     <div class="side-menu-dropdown-header">
@@ -546,7 +546,6 @@
 
                 <!-- Dropdown Infra -->
                 <div id="infra-dropdown" class="side-menu-dropdown-content  hide-item">
-
                     <div class="infra-container">
                         <div class="infra-item">
                             <div>
@@ -751,8 +750,6 @@
                         </button>
                     </div>
                 </div>
-
-
 
                 <div style="width: 100%;">
                     <div class="title-dropdown">
