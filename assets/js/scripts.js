@@ -1,4 +1,22 @@
- /* Function to change menu option */
+/* Function to dynamically load html content */
+function loadHTMLComponent(targetId, component) {
+    fetch(component)
+    .then(response => {
+        if (!response.ok) {
+        throw new Error('No se pudo cargar el archivo HTML');
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById(targetId).innerHTML = data;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById(targetId).innerHTML = '<p>Error al cargar el contenido.</p>';
+    });
+}
+
+/* Function to change menu option */
 function selectMenuItem(menuId) {
     const menuItems = document.querySelectorAll('.menu-item');
     menuItems.forEach(item => item.classList.remove('menu-selected'));
