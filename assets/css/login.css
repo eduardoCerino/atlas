@@ -103,16 +103,9 @@
 }
 
 .login-form-container button {
-    display: flex;
     height: 43px;
     padding: 8px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
     align-self: stretch;
-    border-radius: 4.8px;
-    border: 1px solid var(--Foundation-primary-primary-500, #55212E);
-    background-color: var(--Foundation-Danger-danger-700, #81172C) !important;
 }
 
 .login-footer {
