@@ -643,37 +643,35 @@
 
 /* ---- Side Menu Content Components  ----*/
 .side-menu-page {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
 }
 
 .side-menu-nav-bar {
-    width: 100%;
-    position: fixed;
-    display: block;
+    display: flex;
+    flex-direction: row;
     padding: 8px 21px;
     background-color: #EEE9EA;
     gap: 12px;
     overflow-x: auto;
     white-space: nowrap;
+    min-height: 54px;
 }
 
 .side-menu-nav-bar button {
-    display: inline-block;
     white-space: nowrap;
 }
 
 .side-menu-page-content {
-    display: block;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
     padding: 8px 21px;
     overflow-y: auto;
 }
 
 .big-container .side-menu-content {
     overflow: none;
-} 
-
-@media (max-width: 1024px) {
-
 }
