@@ -17,7 +17,8 @@
             <img src="../../assets/images/confirm-icon.svg" alt="">
             <h6>Se guardó con éxito la emergencia</h6>
             <div class="responsive-column" style="gap: 24px;">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-primary" type="button"
+                onclick="loadHTMLComponent('side-menu-content', 'componentes/new-emergency.html')">
                     Crear emergencia
                 </button>
                 <button class="btn btn-outline-secondary" type="button">
@@ -26,25 +27,5 @@
             </div>
         </div>
         
-    </div>
-    
-    <div class="see-map-button-wrapper">
-        <button class="btn btn-secondary btn-see-map" type="button" onclick="showMap()">
-            <span>Ver Mapa</span>
-            <img src="../../assets/images/icono-mapa.svg" alt="">
-        </button>
-    </div>
-    <!-- footer buttons -->
-    <div class="side-menu-page-footer-buttons">
-        <button class="btn btn-outline-secondary" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/normal-emergency-1.html')">
-            <img src="../../assets/images/back-arrow.svg" alt="">
-            Anterior
-        </button>
-        <button class="btn btn-primary" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/emergency-done.html')">
-            Guardar
-            <img src="../../assets/images/next-arrow.svg" alt="">
-        </button>
     </div>
 </div>

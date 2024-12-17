@@ -764,7 +764,7 @@
     margin: 24px 0px;
 }
 
-.new-emergency-radio-group {
+.responsive-radio-group {
     display: flex;
     flex-direction: row;
     gap: 32px;
@@ -774,7 +774,7 @@
     .new-emergency-box {
         max-height: 310px !important;
     }
-    .new-emergency-radio-group {
+    .responsive-radio-group {
         display: flex;
         flex-direction: column;
     }
@@ -840,4 +840,58 @@
     flex: 1 0 0;
     align-self: stretch;
     background-color: #F5F5F5;
+}
+
+/* Contenedor de la grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
+    gap: 20px;
+}
+
+/* Estilo de cada checkbox-container */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.checkbox-text {
+    font-size: 14px;
+}
+
+.gray-box {
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #F7F7F7;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }

@@ -219,3 +219,13 @@ function changeSvgColor(svgId) {
         svg.setAttribute('fill', '#666666');
     }
 }
+
+/* Check emergency type */
+function goToEmergencyCreationPage() {
+    const normalRadio = document.getElementById('normal-emergency');
+    if(normalRadio != null && normalRadio.checked) {
+        loadHTMLComponent('side-menu-content', 'componentes/normal-emergency-1.html');
+    } else {
+        loadHTMLComponent('side-menu-content', 'componentes/mayor-emergency-1.html');
+    }
+}

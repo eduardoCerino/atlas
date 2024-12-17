@@ -19,7 +19,7 @@
         <div class="new-emergency-box">
             <h6>Nueva emergencia</h6>
             <p>Define el tipo de la emergencia</p>
-            <div class="new-emergency-radio-group">
+            <div class="responsive-radio-group">
                 <div class="radio-container">
                     <input type="radio" id="mayor-emergency" name="new-emergency">
                     <label for="mayor-emergency" class="radio-label">
@@ -28,7 +28,7 @@
                     </label>
                 </div>
                 <div class="radio-container">
-                    <input type="radio" id="normal-emergency" name="new-emergency">
+                    <input type="radio" checked id="normal-emergency" name="new-emergency">
                     <label for="normal-emergency" class="radio-label">
                         <div class="radio-icon"></div>
                         <span class="radio-text">Emergencia normal</span>
@@ -50,7 +50,7 @@
             Anterior
         </button>
         <button class="btn btn-primary" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/normal-emergency-1.html')">
+            onclick="goToEmergencyCreationPage()">
             Comenzar
             <img src="../../assets/images/next-arrow.svg" alt="">
         </button>
