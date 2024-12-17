@@ -1,0 +1,143 @@
+<!-- pagina principal del gestor de emergencias -->
+<div class="side-menu-page">
+    <div class="side-menu-nav-bar">
+            <button class="btn btn-primary" type="button">
+                Crear emergencia
+            </button>
+            <button class="btn" type="button">
+                Consulta de emergencia
+            </button>
+            <button class="btn" type="button">
+                Emergencia sistémica
+            </button>
+    </div>
+    <div class="side-menu-page-content">
+        <div class="page-title-with-stepper">
+            <h6>Registrar emergencia normal</h6>
+            <div class="title-stepper"><b>Paso 2</b> de 2</div>
+        </div>
+
+        <h5>Afectaciones</h5>
+        <div class="responsive-column small-select">
+            <div>
+                <label class="custom-input-label">Desaparecidos</label>
+                <select class="form-select" aria-label="Desaparecidos">
+                    <option selected>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div>
+                <label class="custom-input-label">Lesionados</label>
+                <select class="form-select" aria-label="Lesionados">
+                    <option selected>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div>
+                <label class="custom-input-label">Afectaciones</label>
+                <select class="form-select" aria-label="Afectaciones">
+                    <option selected>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div>
+                <label class="custom-input-label">Fallecidos</label>
+                <select class="form-select" aria-label="Fallecidos">
+                    <option selected>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        </div>
+
+        <h5>Infraestructura y equipamiento</h5>
+        <div class="responsive-column small-select">
+            <div>
+                <label class="custom-input-label">Escuelas</label>
+                <select class="form-select" aria-label="Escuelas">
+                    <option selected>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div>
+                <label class="custom-input-label">Hospitales</label>
+                <select class="form-select" aria-label="Hospitales">
+                    <option selected>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div>
+                <label class="custom-input-label">Oficinas públicas</label>
+                <select class="form-select" aria-label="OficinasPublicas">
+                    <option selected>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="text-input-container">
+            <label>Dependencias a las que se pidió apoyo *</label>
+            <input type="text" placeholder="Ingresa las dependencias" />
+        </div>
+
+        <div class="textarea-container">
+            <label class="custom-input-label">Observaciones de seguimiento *</label>
+            <textarea placeholder="Agrega las observaciones necesarias"></textarea>
+            <span class="textarea-count">0/1000</span>
+        </div>
+
+        <div style="display: flex; justify-content: end;">
+            <button class="btn btn-outline-secondary">
+                Ver análisis
+            </button>
+        </div>
+        
+    </div>
+    
+    <div class="see-map-button-wrapper">
+        <button class="btn btn-secondary btn-see-map" type="button" onclick="showMap()">
+            <span>Ver Mapa</span>
+            <img src="../../assets/images/icono-mapa.svg" alt="">
+        </button>
+    </div>
+    <!-- footer buttons -->
+    <div class="side-menu-page-footer-buttons">
+        <button class="btn btn-outline-secondary" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/normal-emergency-1.html')">
+            <img src="../../assets/images/back-arrow.svg" alt="">
+            Anterior
+        </button>
+        <button class="btn btn-primary" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/emergency-saved.html')">
+            Guardar
+            <img src="../../assets/images/next-arrow.svg" alt="">
+        </button>
+    </div>
+</div>

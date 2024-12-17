@@ -12,6 +12,47 @@
             </button>
     </div>
     <div class="side-menu-page-content">
-        
+        <div style="display:flex;flex-direction: column; gap: 12px;">
+            <h5>Bienvenido a la Gestión de emergencias</h5>
+            <p>Para comenzar crea una emergencia. Dentro del menú también puedes encontrar más opciones con las que debas trabajar.</p>
+        </div>  
+        <div class="new-emergency-box">
+            <h6>Nueva emergencia</h6>
+            <p>Define el tipo de la emergencia</p>
+            <div class="new-emergency-radio-group">
+                <div class="radio-container">
+                    <input type="radio" id="mayor-emergency" name="new-emergency">
+                    <label for="mayor-emergency" class="radio-label">
+                        <div class="radio-icon"></div>
+                        <span class="radio-text">Emergencia mayor</span>
+                    </label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="normal-emergency" name="new-emergency">
+                    <label for="normal-emergency" class="radio-label">
+                        <div class="radio-icon"></div>
+                        <span class="radio-text">Emergencia normal</span>
+                    </label>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="see-map-button-wrapper">
+        <button class="btn btn-secondary btn-see-map" type="button" onclick="showMap()">
+            <span>Ver Mapa</span>
+            <img src="../../assets/images/icono-mapa.svg" alt="">
+        </button>
+    </div>
+    <!-- footer buttons -->
+    <div class="side-menu-page-footer-buttons">
+        <button class="btn btn-outline-secondary" type="button">
+            <img src="../../assets/images/back-arrow.svg" alt="">
+            Anterior
+        </button>
+        <button class="btn btn-primary" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/normal-emergency-1.html')">
+            Comenzar
+            <img src="../../assets/images/next-arrow.svg" alt="">
+        </button>
     </div>
 </div>

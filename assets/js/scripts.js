@@ -8,12 +8,68 @@ function loadHTMLComponent(targetId, component) {
         return response.text();
     })
     .then(data => {
-        document.getElementById(targetId).innerHTML = data;
+        const target = document.getElementById(targetId);
+        if (!target) {
+            console.error('El elemento objetivo no existe.');
+            return;
+        }
+
+        target.classList.add('fade-in-component');
+        target.classList.remove('show');
+
+        target.innerHTML = '';
+        target.innerHTML = data;
+        void target.offsetWidth;
+
+        setTimeout(() => {
+            target.classList.add('show');
+        }, 200);
     })
     .catch(error => {
         console.error('Error:', error);
         document.getElementById(targetId).innerHTML = '<p>Error al cargar el contenido.</p>';
     });
+}
+
+/* Removable Component */
+function addRemovableComponent(targetId, component) {
+    var target = document.getElementById(targetId);
+    if(target != null) {
+        fetch(component)
+        .then(response => {
+            if (!response.ok) {
+            throw new Error('No se pudo cargar el archivo HTML');
+            }
+            return response.text();
+        })
+        .then(data => {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = data;
+            const content = tempContainer.firstElementChild;
+
+            content.addEventListener('removeComponent', () => {
+                console.log(`Eliminando el componente con ID: ${wrapper.id}`);
+                wrapper.classList.add('fade-out-component');
+                wrapper.addEventListener('transitionend', () => {
+                    content.remove();
+                });
+            });
+
+            target.appendChild(content);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+}
+
+function selfRemove(id) {
+    const component = document.getElementById(id);
+    if (component) {
+        component.dispatchEvent(
+            new CustomEvent('removeComponent')
+        );
+    }
 }
 
 /* Function to change menu option */
@@ -84,7 +140,9 @@ window.onload = function() {
         /*  Hide element after 5 seconds when page is loaded */
         setTimeout(function() {
             const alertDiv = document.getElementById('popover');
-            alertDiv.classList.add('hide-item');
+            if(alertDiv != null) {
+                alertDiv.classList.add('hide-item');
+            }
         }, 5000);
     }
 }
@@ -116,6 +174,13 @@ function changeCheckbox(checkboxEmptyId, checkboxCheckedId) {
 
     checkboxEmpty.classList.toggle('hide-item');
     checkboxChecked.classList.toggle('hide-item');
+}
+
+function showMap() {
+    document.getElementById('side-menu-container').classList.add('show-map');
+}
+function hideMap() {
+    document.getElementById('side-menu-container').classList.remove('show-map');
 }
 
 /* Function to show menu in mobile */

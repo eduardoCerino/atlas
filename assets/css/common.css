@@ -57,6 +57,11 @@ a {
     border-color: #81172C !important;
 }
 
+.btn-secondary {
+    background-color: #956036 !important;
+    border-color: #956036 !important;
+}
+
 button.btn-primary,
 button.btn-navbar,
 button.btn-outline-primary,
@@ -122,4 +127,52 @@ button.btn-outline-secondary {
     .mobile-icon-close {
         display: flex;
     }
+}
+
+.responsive-column {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 1024px) {
+    .responsive-column {
+        flex-direction: column;
+    }
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.fill-mobile-space {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .fill-mobile-space {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .mobile-align-right {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+.fade-in-component {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in-component.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fade-out-component {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.5s ease;
 }

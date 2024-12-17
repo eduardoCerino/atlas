@@ -1,0 +1,18 @@
+<svg width="102" height="103" viewBox="0 0 102 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Círculo -->
+    <circle cx="51" cy="51.5" r="51" fill="#B5203E"/>
+
+    <!-- Figura centrada -->
+    <g transform="translate(13, 13)">
+        <g clip-path="url(#clip0_669_40058)">
+            <g>
+                <path d="M31.818 47.3034L60.2296 18.8887L64.6033 23.2592L31.818 56.0445L12.1475 36.3739L16.518 32.0034L31.818 47.3034Z" fill="#F8E9EC"/>
+            </g>
+        </g>
+        <defs>
+            <clipPath id="clip0_669_40058">
+                <rect width="74.1818" height="74.1818" fill="white" transform="translate(0.90918 0.408203)"/>
+            </clipPath>
+        </defs>
+    </g>
+</svg>

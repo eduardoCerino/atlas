@@ -1,33 +1,12 @@
-/* Checkbox */
-.checkbox-container {
-    display: flex;
-    padding: 4px 0px;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-}
-
-.checkbox-content {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.checkbox-content p {
-    color: var(--Body-Text-Body-Color, #212529);
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-    /* 19.6px */
-}
-
-input[type="checkbox"] {
-    display: none;
-}
-
-.checkbox svg{
-    cursor: pointer;
+/* remove focus border effect */
+input:focus,
+textarea:focus,
+select:focus
+{
+    box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+    border: 1px solid #E8E8E8 !important;
 }
 
 /* Input Range */
@@ -67,4 +46,186 @@ input[type="range"]::-ms-thumb {
     border-radius: 50%;
     cursor: pointer;
     border: none;
+}
+
+/* radio button */
+.radio-container input[type="radio"] {
+    display: none;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.radio-icon {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/radio-unchecked.svg');
+}
+
+.radio-container input[type="radio"]:checked + .radio-label .radio-icon {
+    background-image: url('../images/radio-checked.svg');
+}
+
+.radio-text {
+    color: #212529;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+/* checkbox button */
+.checkbox-container input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.checkbox-icon {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/checkbox-unchecked.svg');
+}
+
+.checkbox-container input[type="checkbox"]:checked + .checkbox-label .checkbox-icon {
+    background-image: url('../images/checkbox-checked.svg');
+}
+
+.checkbox-text {
+    color: #212529;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+/* text field */
+.text-input-container,
+.search-input-container,
+.image-picker-container,
+.textarea-container
+ {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 140%;
+    gap: 5px;
+    /* 19.6px */
+}
+
+.text-input-container label,
+.search-input-container label {
+    color: #000;
+    font-weight: 500;
+}
+
+.text-input-container input,
+.select-container select,
+.search-input-container input,
+.dropdown-with-checkbox .btn-select,
+.dropdown-menu-container .btn-select,
+.textarea-container textarea,
+.form-select
+{
+    color: #666 !important;
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    border-radius: 4px;
+    border: 1px solid #E8E8E8 !important;
+    background-color: #FFF !important;
+    min-height: 38px;
+    padding: 8px 12px;    
+}
+
+.search-input-container {
+    position: relative;
+}
+
+.search-input-container input {
+    padding-left: 40px;
+}
+
+.search-input-container img {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Dropdown with checkbox */
+.dropdown-menu-container,
+.dropdown-with-checkbox {
+    position: relative;
+}
+
+.dropdown-with-checkbox .btn-select,
+.dropdown-menu-container .btn-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    text-align: start;
+}
+
+.dropdown-with-checkbox .dropdown-menu.show,
+.dropdown-menu-container .dropdown-menu.show {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    padding: 8px 16px;
+    gap: 8px;
+}
+
+.textarea-container textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+.textarea-container .textarea-count {
+    width: 100%;
+    text-align: right;
+    color: var(--Body-text-medium, #484848);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.image-picker-container-box {
+    min-height: 150px;
+    display: flex;
+    padding: 16px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    border-radius: 2px;
+    border: 1px solid var(--Gray-500, #ADB5BD);
+    background-color: var(--Gray-100, #F8F9FA);
+    color: var(--Body-Text-Body-Color, #212529);
+    text-align: center;
+    font-family: Gotham;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
 }
