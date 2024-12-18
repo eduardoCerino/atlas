@@ -1,15 +1,18 @@
 <!-- pagina principal del gestor de emergencias -->
 <div class="side-menu-page">
     <div class="side-menu-nav-bar">
-            <button class="btn btn-primary" type="button">
-                Crear emergencia
-            </button>
-            <button class="btn" type="button">
-                Consulta de emergencia
-            </button>
-            <button class="btn" type="button">
-                Emergencia sistémica
-            </button>
+        <button class="btn btn-primary" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/new-emergency.html')">
+            Crear emergencia
+        </button>
+        <button class="btn" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency.html')">
+            Consulta de emergencia
+        </button>
+        <button class="btn" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/systemic-emergency.html')">
+            Emergencia sistémica
+        </button>
     </div>
     <div class="side-menu-page-content">
         <div style="display:flex;flex-direction: column; gap: 12px;">

@@ -1,0 +1,76 @@
+<!-- pagina principal del gestor de emergencias -->
+<div class="side-menu-page">
+    <div class="side-menu-nav-bar">
+        <button class="btn" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/new-emergency.html')">
+            Crear emergencia
+        </button>
+        <button class="btn" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency.html')">
+            Consulta de emergencia
+        </button>
+        <button class="btn btn-primary" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/systemic-emergency.html')">
+            Emergencia sistémica
+        </button>
+    </div>
+    <div class="side-menu-page-content">
+        <h4>Consulta de emergencias sistémicas</h4>
+        
+        <div class="accordion accordion-flush gray-box p-0" id="filters">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                <button class="accordion-button gray-box gap-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-filters" aria-expanded="true" aria-controls="flush-filters">
+                    <img src="../../assets/images/filter-icon.svg" alt="">
+                    Filtros
+                </button>
+                </h2>
+
+                <div id="flush-filters" class="accordion-collapse collapse show gray-box p-0" data-bs-parent="#filters">
+                    <div class="accordion-body p-0">
+                        <div class="d-flex flex-column p-2 flex-lg-row" style="gap: 16px;">
+                            <div class="d-flex d-row" style="gap: 16px;">
+                                <div class="d-flex flex-column w-100">
+                                    <label class="custom-input-label">Fecha de inicio</label>
+                                    <input type="date" id="start" name="trip-start" value="2024-12-17" min="2018-01-01" max="2024-12-31" />
+                                </div>
+
+                                <div class="d-flex flex-column w-100">
+                                    <label class="custom-input-label">Fecha fin</label>
+                                    <input type="date" id="start" name="trip-start" value="2024-12-17" min="2018-01-01" max="2024-12-31" />
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <label class="custom-input-label">Estatus</label>
+                                <select class="form-select" aria-label="estatus">
+                                    <option selected>Selecciona una opción</option>
+                                    <option value="1">Estado 1</option>
+                                    <option value="2">Estado 2</option>
+                                    <option value="3">Estado 3</option>
+                                    <option value="4">Estado 4</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex w-100 justify-content-end p-2" style="gap: 16px;">
+                            <button class="btn btn-outline-secondary" type="button"
+                                onclick="clearAllRemovableComponents('emergencies-list')">
+                                Limpiar
+                            </button>
+                            <button class="btn btn-primary" type="button"
+                                onclick="populateWithRemovableComponents('emergencies-list', 3, 'componentes/view-emergency.html')">
+                                Aplicar filtros
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="emergencies-list">
+        </div>
+        
+    </div>
+</div>

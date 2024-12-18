@@ -1,0 +1,103 @@
+<!-- pagina principal del gestor de emergencias -->
+<div class="side-menu-page">
+    <div class="side-menu-nav-bar">
+        <button class="btn" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/new-emergency.html')">
+            Crear emergencia
+        </button>
+        <button class="btn" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency.html')">
+            Consulta de emergencia
+        </button>
+        <button class="btn btn-primary" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/systemic-emergency.html')">
+            Emergencia sistémica
+        </button>
+    </div>
+    <div class="side-menu-page-content">
+        
+        <div class="d-flex justify-content-between responsive-column">
+            <div class="mobile-align-left">
+                <button class="btn" type="button"
+                    onclick="loadHTMLComponent('side-menu-content', 'componentes/systemic-emergency.html')">
+                    <img src="../../assets/images/back-arrow.svg" alt="">
+                    Detalle de la emergencia sistémica
+                </button>
+            </div>
+
+            <div class="mobile-align-right">
+                <button class="btn btn-outline-secondary" type="button">
+                    <img src="../../assets/images/download-icon.svg" alt="">
+                    Imprimir PAI
+                </button>
+            </div>
+        </div>
+        
+        <p>Plan de seguimiento</p>
+
+        <div class="d-flex flex-row">
+            <div class="search-input-container">
+                <input type="text" placeholder="Buscar objetivo" />
+                <img src="../../assets/images/search-icon.svg" alt="">
+            </div>
+
+            <button class="btn btn-outline-secondary" type="button">
+                Ordenar
+                <img src="../../assets/images/sort-icon.svg" alt="">
+            </button>
+        </div>
+
+        <div class="plan-follow-up">
+            <div class="row table-header ">
+                <label class="col-2">Objetivo</label>
+                <span class="col"></span>
+                <label class="col-2 text-end">Acciones</label>
+            </div>
+            <div class="accordion accordion-flush" id="target-accordion">
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseData" aria-expanded="true" aria-controls="collapseData">
+                    Nombre del objetivo
+                    </button>
+                </h2>
+                <div id="collapseData" class="accordion-collapse collapse show" data-bs-parent="#target-accordion">
+                    <div class="accordion-body p-0">
+                        <div class="row table-header mobile-hidden">
+                            <label class="col-2">Dependencia</label>
+                            <label class="col">Recurso</label>
+                            <label class="col">Cantidad</label>
+                            <label class="col">Avance</label>
+                            <label class="col-4">Observaciones</label>
+                            <label class="col-2 text-end">Acciones</label>
+                        </div>
+                        <div class="row table-row">
+                            <label class="col-2">Bomberos</label>
+                            <label class="col">Equipo</label>
+                            <label class="col text-center">2</label>
+                            <label class="col"></label>
+                            <label class="col-4">Lorem ipsum dolor sit amet</label>
+                            <label class="col-2">
+                                <button>
+                                    <img src="../../assets/images/green-dot-icon.svg" alt="">
+                                </button>
+                                <button>
+                                    <img src="../../assets/images/print-icon.svg" alt="">
+                                </button>
+                                <button>
+                                    <img src="../../assets/images/send-email-icon.svg" alt="">
+                                </button>
+                                <button>
+                                    <img src="../../assets/images/see-pai-icon.svg" alt="">
+                                </button>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

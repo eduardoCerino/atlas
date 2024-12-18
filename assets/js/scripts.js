@@ -45,17 +45,16 @@ function addRemovableComponent(targetId, component) {
         .then(data => {
             const wrapper = document.createElement('div');
             wrapper.innerHTML = data;
-            const content = tempContainer.firstElementChild;
+            wrapper.classList.add('removable-component');
 
-            content.addEventListener('removeComponent', () => {
-                console.log(`Eliminando el componente con ID: ${wrapper.id}`);
+            wrapper.addEventListener('removeComponent', () => {
                 wrapper.classList.add('fade-out-component');
                 wrapper.addEventListener('transitionend', () => {
-                    content.remove();
+                    wrapper.remove();
                 });
             });
 
-            target.appendChild(content);
+            target.appendChild(wrapper);
         })
         .catch(error => {
             console.error('Error:', error);
@@ -63,13 +62,62 @@ function addRemovableComponent(targetId, component) {
     }
 }
 
-function selfRemove(id) {
-    const component = document.getElementById(id);
-    if (component) {
-        component.dispatchEvent(
-            new CustomEvent('removeComponent')
-        );
+/*
+    This should be called from a component added
+    with addRemovableComponent function
+*/
+function selfRemove(callerThis) {
+    const maxDepth = 30;
+    let depth = 1;
+    let parent = callerThis.parentElement;
+    while(parent){
+        if (parent.classList.contains('removable-component')) {
+            parent.dispatchEvent(
+                new CustomEvent('removeComponent')
+            );
+            break;
+        } else {
+            parent = parent.parentElement;
+        }
+        depth++;
+        if(depth > maxDepth) {
+            break;
+        }
     }
+    if(parent == null || depth > maxDepth) {
+        console.warn("selfRemove Error: removable-component not found in hierarchy");
+    }
+}
+
+/* replace removable component */
+function replaceRemovableComponent(callerThis, component) {
+    const maxDepth = 30;
+    let depth = 1;
+    let parent = callerThis.parentElement;
+    while(parent){
+        if (parent.classList.contains('removable-component')) {
+            //since removable components root doesnt have ids we need to add one
+            let id = generateUniqueId();
+            parent.id = id;
+            //since we keep the root node we already have the removeComponent
+            //event listener and the next component will keep the removable structure
+            loadHTMLComponent(id, component);
+            break;
+        } else {
+            parent = parent.parentElement;
+        }
+        depth++;
+        if(depth > maxDepth) {
+            break;
+        }
+    }
+    if(parent == null || depth > maxDepth) {
+        console.warn("selfRemove Error: removable-component not found in hierarchy");
+    }
+}
+
+function generateUniqueId() {
+    return 'id-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
 }
 
 /* Function to change menu option */
@@ -229,3 +277,23 @@ function goToEmergencyCreationPage() {
         loadHTMLComponent('side-menu-content', 'componentes/mayor-emergency-1.html');
     }
 }
+
+/* popuate a target with required components */
+function populateWithRemovableComponents(id, count, component) {
+    for(let item = 1; item <= count; item++) {
+        addRemovableComponent(id, component);
+    }
+}
+
+/* clear all target removable components */
+function clearAllRemovableComponents(targetId) {
+    const target = document.getElementById(targetId);
+    const removableComponents = target.querySelectorAll('.removable-component');
+
+    removableComponents.forEach((component) => {
+        component.dispatchEvent(new CustomEvent('removeComponent'));
+    });
+
+    console.log(`${removableComponents.length} componentes removidos.`);
+}
+

@@ -154,6 +154,11 @@ button.btn-outline-secondary {
         flex-grow: 1;
     }
 
+    .mobile-align-left {
+        display: flex;
+        justify-content: start;
+    }
+
     .mobile-align-right {
         display: flex;
         justify-content: end;
@@ -175,4 +180,10 @@ button.btn-outline-secondary {
     opacity: 0;
     transform: scale(0.9);
     transition: all 0.5s ease;
+}
+
+@media (max-width: 1024px) {
+    .mobile-hidden {
+        display: none !important;
+    }
 }
