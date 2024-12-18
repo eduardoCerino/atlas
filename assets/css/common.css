@@ -182,8 +182,15 @@ button.btn-outline-secondary {
     transition: all 0.5s ease;
 }
 
+.mobile-only-flex {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .mobile-hidden {
         display: none !important;
+    }
+    .mobile-only-flex {
+        display: flex !important;
     }
 }

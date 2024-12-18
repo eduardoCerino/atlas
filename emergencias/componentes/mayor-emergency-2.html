@@ -6,7 +6,7 @@
             Crear emergencia
         </button>
         <button class="btn" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency.html')">
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency-1.html')">
             Consulta de emergencia
         </button>
         <button class="btn" type="button"
@@ -19,7 +19,52 @@
             <h6>Plan de acción</h6>
             <div class="title-stepper"><b>Paso 2</b> de 4</div>
         </div>
-        
+
+        <div class="d-flex responsive-column gap-2">
+            <div class="search-input-container">
+                <input type="text" placeholder="Buscar objetivo" />
+                <img src="../../assets/images/search-icon.svg" alt="">
+            </div>
+
+            <div class="d-flex mobile-align-right" >
+                <button class="btn btn-outline-secondary" type="button">
+                    Ordenar
+                    <img src="../../assets/images/sort-icon.svg" alt="">
+                </button>
+            </div>
+
+            <div class="flex-grow-1" style="display: flex; justify-content: end;">
+                <button class="btn btn-primary" type="button">
+                    Agregar Objetivo
+                </button>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="row table-header">
+                <label class="col-4">Objetivo</label>
+                <span class="col"></span>
+                <label class="col-4 text-end">Acciones</label>
+            </div>
+            <div class="row">
+                <div class="col-4 px-1">
+                    <select class="form-select" style="min-width: 230px;" aria-label="Tipo de emergencia">
+                        <option selected>Selecciona un objetivo</option>
+                        <option value="1">Objetivo</option>
+                        <option value="2">Objetivo</option>
+                        <option value="3">Objetivo</option>
+                        <option value="4">Objetivo</option>
+                        <option value="5">Objetivo</option>
+                    </select>
+                </div>
+                <span class="col"></span>
+                <div class="col-4 px-1 text-end">
+                    <button class="btn" style="color: #81172C;" type="button">Guardar</button>
+                </div>
+            </div>
+            
+        </div>
+
     </div>
     
     <div class="see-map-button-wrapper">

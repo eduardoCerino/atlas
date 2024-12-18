@@ -1,0 +1,42 @@
+<!-- pagina principal del gestor de emergencias -->
+<div class="side-menu-page">
+    <div class="side-menu-nav-bar">
+        <button class="btn" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/new-emergency.html')">
+            Crear emergencia
+        </button>
+        <button class="btn btn-primary" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency-1.html')">
+            Consulta de emergencia
+        </button>
+        <button class="btn" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/systemic-emergency.html')">
+            Emergencia sistémica
+        </button>
+    </div>
+    <div class="side-menu-page-content">
+        <div class="page-title">
+            <h6>Consulta de emergencias</h6>
+        </div>
+        
+        
+    
+    <div class="see-map-button-wrapper">
+        <button class="btn btn-secondary btn-see-map" type="button" onclick="showMap()">
+            <span>Ver Mapa</span>
+            <img src="../../assets/images/icono-mapa.svg" alt="">
+        </button>
+    </div>
+    <!-- footer buttons -->
+    <div class="side-menu-page-footer-buttons">
+        <button class="btn btn-outline-secondary" type="button"
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/new-emergency.html')">
+            <img src="../../assets/images/back-arrow.svg" alt="">
+            Anterior
+        </button>
+        <button class="btn btn-primary" type="button">
+            Continuar
+            <img src="../../assets/images/next-arrow.svg" alt="">
+        </button>
+    </div>
+</div>

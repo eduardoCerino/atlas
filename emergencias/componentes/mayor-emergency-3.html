@@ -6,7 +6,7 @@
             Crear emergencia
         </button>
         <button class="btn" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency.html')">
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency-1.html')">
             Consulta de emergencia
         </button>
         <button class="btn" type="button"
@@ -20,6 +20,74 @@
             <div class="title-stepper"><b>Paso 3</b> de 4</div>
         </div>
         
+        <p class="custom-input-label" style="color: #55212E;">Estatus de mensaje </p>
+        <div class="responsive-radio-group">
+            <div class="radio-container">
+                <input type="radio" id="mayor-emergency" name="new-emergency">
+                <label for="mayor-emergency" class="radio-label">
+                    <div class="radio-icon"></div>
+                    <span class="radio-text">Real</span>
+                </label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" checked id="normal-emergency" name="new-emergency">
+                <label for="normal-emergency" class="radio-label">
+                    <div class="radio-icon"></div>
+                    <span class="radio-text">Simulacro</span>
+                </label>
+            </div>
+        </div>
+
+        <p class="custom-input-label" style="color: #55212E;">Severidad de la alerta</p>
+        <div class="responsive-radio-group">
+            <div class="radio-container">
+                <input type="radio" id="mayor-emergency" name="new-emergency">
+                <label for="mayor-emergency" class="radio-label">
+                    <div class="radio-icon"></div>
+                    <span class="radio-text">Extremo</span>
+                </label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" checked id="normal-emergency" name="new-emergency">
+                <label for="normal-emergency" class="radio-label">
+                    <div class="radio-icon"></div>
+                    <span class="radio-text">Grave</span>
+                </label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" checked id="normal-emergency" name="new-emergency">
+                <label for="normal-emergency" class="radio-label">
+                    <div class="radio-icon"></div>
+                    <span class="radio-text">Moderado</span>
+                </label>
+            </div>
+        </div>
+
+        <p class="custom-input-label" style="color: #55212E;">Tipo de mensaje</p>
+        <div class="responsive-radio-group">
+            <div class="radio-container">
+                <input type="radio" id="mayor-emergency" name="new-emergency">
+                <label for="mayor-emergency" class="radio-label">
+                    <div class="radio-icon"></div>
+                    <span class="radio-text">Alerta</span>
+                </label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" checked id="normal-emergency" name="new-emergency">
+                <label for="normal-emergency" class="radio-label">
+                    <div class="radio-icon"></div>
+                    <span class="radio-text">Actualizar</span>
+                </label>
+            </div>
+            <div class="radio-container">
+                <input type="radio" checked id="normal-emergency" name="new-emergency">
+                <label for="normal-emergency" class="radio-label">
+                    <div class="radio-icon"></div>
+                    <span class="radio-text">Cancelar</span>
+                </label>
+            </div>
+        </div>
+
     </div>
     
     <div class="see-map-button-wrapper">

@@ -6,7 +6,7 @@
             Crear emergencia
         </button>
         <button class="btn" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency.html')">
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency-1.html')">
             Consulta de emergencia
         </button>
         <button class="btn btn-primary" type="button"
@@ -51,9 +51,9 @@
 
         <div class="plan-follow-up">
             <div class="row table-header ">
-                <label class="col-2">Objetivo</label>
+                <label class="col-4">Objetivo</label>
                 <span class="col"></span>
-                <label class="col-2 text-end">Acciones</label>
+                <label class="col-4 text-end">Acciones</label>
             </div>
             <div class="accordion accordion-flush" id="target-accordion">
                 <div class="accordion-item">
@@ -65,7 +65,7 @@
                 </h2>
                 <div id="collapseData" class="accordion-collapse collapse show" data-bs-parent="#target-accordion">
                     <div class="accordion-body p-0">
-                        <div class="row table-header mobile-hidden">
+                        <div class="responsive-column row table-header mobile-hidden">
                             <label class="col-2">Dependencia</label>
                             <label class="col">Recurso</label>
                             <label class="col">Cantidad</label>
@@ -73,10 +73,16 @@
                             <label class="col-4">Observaciones</label>
                             <label class="col-2 text-end">Acciones</label>
                         </div>
-                        <div class="row table-row">
-                            <label class="col-2">Bomberos</label>
-                            <label class="col">Equipo</label>
-                            <label class="col text-center">2</label>
+                        <div class="row table-row responsive-column">
+                            <label class="col-2">
+                                Bomberos
+                            </label>
+                            <label class="col">
+                                Equipo
+                            </label>
+                            <label class="col text-lg-center">
+                                2
+                            </label>
                             <label class="col p-0">
                                 <div class="btn-group">
                                     <button class="btn btn-sm position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
