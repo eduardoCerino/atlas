@@ -35,16 +35,18 @@
         
         <p>Plan de seguimiento</p>
 
-        <div class="d-flex flex-row">
+        <div class="d-flex responsive-column gap-2">
             <div class="search-input-container">
                 <input type="text" placeholder="Buscar objetivo" />
                 <img src="../../assets/images/search-icon.svg" alt="">
             </div>
 
-            <button class="btn btn-outline-secondary" type="button">
-                Ordenar
-                <img src="../../assets/images/sort-icon.svg" alt="">
-            </button>
+            <div class="d-flex mobile-align-right" >
+                <button class="btn btn-outline-secondary" type="button">
+                    Ordenar
+                    <img src="../../assets/images/sort-icon.svg" alt="">
+                </button>
+            </div>
         </div>
 
         <div class="plan-follow-up">
@@ -67,7 +69,7 @@
                             <label class="col-2">Dependencia</label>
                             <label class="col">Recurso</label>
                             <label class="col">Cantidad</label>
-                            <label class="col">Avance</label>
+                            <label class="col p-0">Avance</label>
                             <label class="col-4">Observaciones</label>
                             <label class="col-2 text-end">Acciones</label>
                         </div>
@@ -75,7 +77,19 @@
                             <label class="col-2">Bomberos</label>
                             <label class="col">Equipo</label>
                             <label class="col text-center">2</label>
-                            <label class="col"></label>
+                            <label class="col p-0">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <label class="rounded-pill px-1" style="color: #fff; background-color: #6D9F41;">100%</label>
+                                        <i class="position-absolute" style="right: -15px;"><img src="../../assets/images/select-icon.svg" alt=""></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item">100%</a></li>
+                                        <li><a class="dropdown-item">50%</a></li>
+                                        <li><a class="dropdown-item">0%</a></li>
+                                    </ul>
+                                </div>
+                            </label>
                             <label class="col-4">Lorem ipsum dolor sit amet</label>
                             <label class="col-2">
                                 <button>
@@ -98,6 +112,131 @@
             </div>
         </div>
 
+        <div class="d-flex flex-column w-100 gap-2">
+            <div class="checkbox-container py-2">
+                <input type="checkbox" checked id="emergency-1">
+                <label for="emergency-1" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text fw-bold">Tipo de emergencia</span>
+                </label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-2">
+                <label for="emergency-2" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-3">
+                <label for="emergency-3" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-4">
+                <label for="emergency-4" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-4">
+                <label for="emergency-4" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+        </div>
+
+        <div class="d-flex flex-column w-100 gap-2">
+            <div class="checkbox-container py-2">
+                <input type="checkbox" checked id="emergency-1">
+                <label for="emergency-1" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text fw-bold">Tipo de emergencia</span>
+                </label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-2">
+                <label for="emergency-2" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-3">
+                <label for="emergency-3" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-4">
+                <label for="emergency-4" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-4">
+                <label for="emergency-4" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+        </div>
+
+        <div class="d-flex flex-column w-100 gap-2">
+            <div class="checkbox-container py-2">
+                <input type="checkbox" checked id="emergency-1">
+                <label for="emergency-1" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text fw-bold">Tipo de emergencia</span>
+                </label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-2">
+                <label for="emergency-2" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-3">
+                <label for="emergency-3" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-4">
+                <label for="emergency-4" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="emergency-4">
+                <label for="emergency-4" class="checkbox-label">
+                    <div class="checkbox-icon"></div>
+                    <span class="checkbox-text">Instalación</span>
+                </label>
+            </div>
+            <span class="d-flex w-100 gray-divider"></span>
+        </div>
 
     </div>
 </div>

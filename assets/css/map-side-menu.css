@@ -1028,3 +1028,7 @@
     border: unset;
     background-color: unset;
 }
+
+.gray-divider {
+    border-bottom: 1px solid var(--Foundation-Grey-grey-50, #E8E8E8);
+}
