@@ -152,9 +152,6 @@
             </div>
         </div>
 
-
-
-
         <!-- Help -->
         <div class="help-container hide-item" id="help-container">
             <div class="help">
@@ -343,18 +340,11 @@
                         </svg>
                     </div>
                 </div>
-
                 <div class="popover-content">
                     <p class="popover-text">
                         Selecciona un punto de interés para conocer los peligros de esa zona
                     </p>
-
-
-
                 </div>
-
-                
-
             </div>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" viewBox="0 0 16 9" fill="none" style="margin-top: -1px;">
@@ -362,7 +352,6 @@
                 <path d="M0 1.00098L8 9.00098L16 1.00098L0 1.00098Z" fill="black" fill-opacity="0.2"/>
                 <path d="M0.5 0.000976562L8 7.50098L15.5 0.000976562L0.5 0.000976562Z" fill="white"/>
               </svg>
-
 
             <div class="popover-icon" style="margin-top: 10px;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -390,19 +379,288 @@
 
         <div class="side-menu" id="side-menu">
 
-            <div class="side-menu-header">
+            <div class="side-menu-header" style="display: none;">
                 <div class="side-menu-header-title">
                     <h5 class="side-menu-header-title-text">Análisis de población y riesgo</h5>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" onclick="closeMobileMenu()"  class="mobile-icon-close">
-                        <path d="M12.0007 11.0865L16.9505 6.13672L18.3647 7.55093L13.4149 12.5007L18.3647 17.4504L16.9505 18.8646L12.0007 13.9149L7.05094 18.8646L5.63672 17.4504L10.5865 12.5007L5.63672 7.55093L7.05094 6.13672L12.0007 11.0865Z" fill="#55212E"/>
-                      </svg>
+                    
                 </div>
             </div>
 
             <div class="side-menu-content">
+                <div class="side-menu-header-title">
+                    <h5 class="side-menu-header-title-text">Capas de Peligro</h5>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" onclick="closeMobileMenu()"  class="mobile-icon-close">
+                        <path d="M12.0007 11.0865L16.9505 6.13672L18.3647 7.55093L13.4149 12.5007L18.3647 17.4504L16.9505 18.8646L12.0007 13.9149L7.05094 18.8646L5.63672 17.4504L10.5865 12.5007L5.63672 7.55093L7.05094 6.13672L12.0007 11.0865Z" fill="#55212E"/>
+                      </svg>
+                </div>
 
-                <div class="title-dropdown">
-                    <p> Análisis</p>
+                <div class="side-menu-dropdown" onclick="toggleElement('risks-dropdown');rotateImage('risks-icon')">
+                    <div class="side-menu-dropdown-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                            fill="none">
+                            <g clip-path="url(#clip0_425_9257)">
+                                <path
+                                    d="M4.00001 20.5V14.5C4.00001 10.0817 7.58173 6.5 12 6.5C16.4183 6.5 20 10.0817 20 14.5V20.5H21V22.5H3.00001V20.5H4.00001ZM6.00001 20.5H18V14.5C18 11.1863 15.3137 8.5 12 8.5C8.6863 8.5 6.00001 11.1863 6.00001 14.5V20.5ZM11 2.5H13V5.5H11V2.5ZM19.7782 5.30761L21.1924 6.72183L19.0711 8.84315L17.6569 7.42893L19.7782 5.30761ZM2.80762 6.72183L4.22183 5.30761L6.34315 7.42893L4.92894 8.84315L2.80762 6.72183ZM7.00001 14.5C7.00001 11.7386 9.23858 9.5 12 9.5V11.5C10.3432 11.5 9.00001 12.8431 9.00001 14.5H7.00001Z"
+                                    fill="#484848" />
+                                <rect x="1.5" y="21.5" width="294" height="390" fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_425_9257">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <h5> Peligros y Riesgos</h4>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"
+                        id="risks-icon">
+                        <path
+                            d="M12.0002 13.6722L16.9502 8.72217L18.3642 10.1362L12.0002 16.5002L5.63623 10.1362L7.05023 8.72217L12.0002 13.6722Z"
+                            fill="#484848" />
+                    </svg>
+                </div>
+                <!-- Dropdown Risjs -->
+
+                <div id="risks-dropdown" class="side-menu-dropdown-content  hide-item">
+
+                    <div class="risks-search-container">
+                        <div class="search">
+                            <div style="position: relative;">
+                                <input type="text" class="search-input" placeholder="Busqueda por tema" />
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
+                                    fill="none" class="search-icon">
+                                    <path
+                                        d="M13.5233 12.4628L16.7355 15.6743L15.6743 16.7355L12.4628 13.5233C11.2678 14.4812 9.7815 15.0022 8.25 15C4.524 15 1.5 11.976 1.5 8.25C1.5 4.524 4.524 1.5 8.25 1.5C11.976 1.5 15 4.524 15 8.25C15.0022 9.7815 14.4812 11.2678 13.5233 12.4628ZM12.0188 11.9063C12.9706 10.9274 13.5022 9.61532 13.5 8.25C13.5 5.349 11.1503 3 8.25 3C5.349 3 3 5.349 3 8.25C3 11.1503 5.349 13.5 8.25 13.5C9.61532 13.5022 10.9274 12.9706 11.9063 12.0188L12.0188 11.9063V11.9063Z"
+                                        fill="#484848" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="risks-buttons-container">
+                            <div class="risks-button">
+                                <span class="risks-text"> Seleccionados</span>
+                                <span class="risks-text-circle risks-text"> 0</span>
+                            </div>
+                            <span class="risks-text"> Limpiar</span>
+                        </div>
+                    </div>
+
+                    <div class="risks-categories-container">
+                        <div class="side-menu-dropdown" onclick="toggleElement('geologicos-dropdown'); rotateImage('geologicos-icon')">
+                            <div class="side-menu-dropdown-header">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M13.5752 1.60024C13.341 1.60824 13.1216 1.7172 12.9752 1.90024L10.3189 5.21896L7.75028 2.78152C7.05284 2.13976 6.01604 3.02872 6.54404 3.81592L9.20964 7.65656C9.51572 8.09752 10.1607 8.11784 10.494 7.6972C10.76 7.36136 11.2002 6.61272 12.0002 6.61272C12.8002 6.61272 13.2688 7.39784 13.5064 7.69704C13.7864 8.04968 14.3021 8.102 14.6471 7.81272L17.3159 5.57208C18.0212 4.97352 17.3168 3.85448 16.4722 4.23144L14.4002 5.1628V2.40024C14.4005 1.94856 14.0268 1.58632 13.5752 1.60024ZM8.0002 9.60024L3.32212 19.0783C3.19908 19.2014 3.2002 19.4479 3.2002 19.694C3.2002 20.5556 3.81412 20.8002 4.30644 20.8002H19.694C20.3093 20.8002 20.8002 20.5554 20.8002 19.694C20.8002 19.4479 20.8015 19.3246 20.6783 19.0783L16.0002 9.60024C15.2002 9.60024 14.4002 10.4002 14.4002 11.2002V12.0002C14.4002 12.4434 14.0434 12.8002 13.6002 12.8002C13.157 12.8002 12.8002 12.4434 12.8002 12.0002V11.2002C12.8002 10.7585 12.4421 10.4002 12.0002 10.4002C11.5583 10.4002 11.2002 10.7585 11.2002 11.2002V14.4002C11.2002 14.8434 10.8434 15.2002 10.4002 15.2002C9.957 15.2002 9.60019 14.8434 9.60019 14.4002V11.2002C9.60019 10.4002 8.8002 9.60024 8.0002 9.60024Z"
+                                        fill="#484848" />
+                                </svg>
+                                <h5> Fenómenos geológicos</h4>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none" id="geologicos-icon">
+                                <path
+                                    d="M12.0002 13.6722L16.9502 8.72217L18.3642 10.1362L12.0002 16.5002L5.63623 10.1362L7.05023 8.72217L12.0002 13.6722Z"
+                                    fill="#484848" />
+                            </svg>
+                        </div>
+                        <div id="geologicos-dropdown" class="side-menu-dropdown-content  hide-item">
+                            <div class="side-menu-item">
+                                <div class="side-menu-item-title">
+                                    <div class="side-menu-item-title-icon">
+        
+                                        <h5>Lluvias torrenciales</h5>
+        
+                                    </div>
+                                    <div class="side-menu-item-title-icon-right">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 16 16"
+                                            fill="none">
+                                            <path
+                                                d="M8.66667 7.99992H10.6667L8 10.6666L5.33333 7.99992H7.33333V5.33325H8.66667V7.99992ZM10 2.66659H3.33333V13.3333H12.6667V5.33325H10V2.66659ZM2 1.99459C2 1.62925 2.298 1.33325 2.666 1.33325H10.6667L14 4.66659V13.9953C14.0006 14.0828 13.984 14.1696 13.951 14.2507C13.9181 14.3319 13.8695 14.4057 13.808 14.468C13.7466 14.5304 13.6734 14.58 13.5928 14.6141C13.5121 14.6481 13.4255 14.666 13.338 14.6666H2.662C2.48692 14.6654 2.31934 14.5953 2.19548 14.4716C2.07161 14.3478 2.0014 14.1803 2 14.0053V1.99459Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="side-menu-item-content">
+                                    <div class="opacity">
+                                        <p>Simbología</p>
+                                        <div class="raimbow-container">
+                                            <div class="rainbow-slider"></div>
+        
+                                        </div>
+                                        <div class="raimbow-info">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5"
+                                                fill="none">
+                                                <path d="M4.16602 0.148438L8.16602 4.14844H0.166016L4.16602 0.148438Z"
+                                                    fill="#545454" />
+                                            </svg>
+                                            <p style="font-weight: 400;"> Nivel alto</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-menu-item">
+                                <div class="side-menu-item-title">
+                                    <div class="side-menu-item-title-icon">
+        
+                                        <h5>Lluvias torrenciales</h5>
+        
+                                    </div>
+                                    <div class="side-menu-item-title-icon-right">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 16 16"
+                                            fill="none">
+                                            <path
+                                                d="M8.66667 7.99992H10.6667L8 10.6666L5.33333 7.99992H7.33333V5.33325H8.66667V7.99992ZM10 2.66659H3.33333V13.3333H12.6667V5.33325H10V2.66659ZM2 1.99459C2 1.62925 2.298 1.33325 2.666 1.33325H10.6667L14 4.66659V13.9953C14.0006 14.0828 13.984 14.1696 13.951 14.2507C13.9181 14.3319 13.8695 14.4057 13.808 14.468C13.7466 14.5304 13.6734 14.58 13.5928 14.6141C13.5121 14.6481 13.4255 14.666 13.338 14.6666H2.662C2.48692 14.6654 2.31934 14.5953 2.19548 14.4716C2.07161 14.3478 2.0014 14.1803 2 14.0053V1.99459Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="side-menu-item-content">
+                                    <div class="opacity">
+                                        <p>Simbología</p>
+        
+                                        <div class="simbology-item">
+                                            <div class="simblogy-content">
+                                                <div class="red-square"></div>
+                                                <div class="simbology-text">
+                                                    <p>Item</p>
+                                                </div>
+                                            </div>
+                                            <p> 52,136 </p>
+                                        </div>
+                                        <div class="simbology-item">
+                                            <div class="simblogy-content">
+                                                <div class="green-square"></div>
+                                                <div class="simbology-text">
+                                                    <p>Item</p>
+                                                </div>
+                                            </div>
+                                            <p> 52,136 </p>
+                                        </div>
+                                        <div class="simbology-item">
+                                            <div class="simblogy-content">
+                                                <div class="blue-square"></div>
+                                                <div class="simbology-text">
+                                                    <p>Item</p>
+                                                </div>
+                                            </div>
+                                            <p> 52,136 </p>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <div class="side-menu-dropdown"
+                            onclick="toggleElement('hidrometeoro-dropdown'); rotateImage('hidrometeoro-icon')">
+                            <div class="side-menu-dropdown-header">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M16.9884 18L18.2044 16.42C18.3753 16.198 18.4806 15.9325 18.5084 15.6537C18.5362 15.3749 18.4853 15.0938 18.3615 14.8424C18.2378 14.5911 18.0461 14.3794 17.8082 14.2313C17.5702 14.0833 17.2956 14.0049 17.0154 14.005H15.0004V10.029C15.0006 9.71552 14.9025 9.40986 14.72 9.15497C14.5376 8.90009 14.2798 8.70878 13.983 8.60793C13.6862 8.50707 13.3652 8.50175 13.0652 8.5927C12.7652 8.68365 12.5013 8.8663 12.3104 9.115L5.94541 17.396C4.2349 16.6882 2.82269 15.4093 1.94938 13.777C1.07606 12.1448 0.795673 10.2603 1.15597 8.44454C1.51627 6.62878 2.49497 4.9941 3.92533 3.81899C5.3557 2.64388 7.14924 2.00105 9.00041 2C10.6125 1.99991 12.187 2.48665 13.5177 3.39648C14.8485 4.30631 15.8735 5.59682 16.4584 7.099C17.2108 6.95429 17.985 6.96836 18.7316 7.14031C19.4782 7.31225 20.1806 7.63827 20.7939 8.09749C21.4071 8.5567 21.9177 9.13897 22.2928 9.80698C22.668 10.475 22.8994 11.214 22.9723 11.9767C23.0452 12.7393 22.958 13.5088 22.7162 14.2358C22.4744 14.9627 22.0834 15.6312 21.5682 16.1983C21.0531 16.7653 20.4251 17.2185 19.7246 17.5288C19.0241 17.8391 18.2665 17.9996 17.5004 18H16.9884ZM13.0004 16.005H16.0004L11.0004 22.505V18.005H8.00041L13.0004 11.5V16.005Z"
+                                        fill="#484848" />
+                                </svg>
+                                <h5> Fenómenos hidrometeorológicos</h4>
+                            </div>
+                            <svg id="hidrometeoro-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="25"
+                                viewBox="0 0 24 25" fill="none">
+                                <path
+                                    d="M12.0002 13.6722L16.9502 8.72217L18.3642 10.1362L12.0002 16.5002L5.63623 10.1362L7.05023 8.72217L12.0002 13.6722Z"
+                                    fill="#484848" />
+                            </svg>
+                        </div>
+                        <div id="hidrometeoro-dropdown" class="side-menu-dropdown-content  hide-item">
+                            <div class="side-menu-item">
+                                <div class="side-menu-item-title">
+                                    <div class="side-menu-item-title-icon">
+        
+                                        <h5>Lluvias torrenciales</h5>
+        
+                                    </div>
+                                    <div class="side-menu-item-title-icon-right">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 16 16"
+                                            fill="none">
+                                            <path
+                                                d="M8.66667 7.99992H10.6667L8 10.6666L5.33333 7.99992H7.33333V5.33325H8.66667V7.99992ZM10 2.66659H3.33333V13.3333H12.6667V5.33325H10V2.66659ZM2 1.99459C2 1.62925 2.298 1.33325 2.666 1.33325H10.6667L14 4.66659V13.9953C14.0006 14.0828 13.984 14.1696 13.951 14.2507C13.9181 14.3319 13.8695 14.4057 13.808 14.468C13.7466 14.5304 13.6734 14.58 13.5928 14.6141C13.5121 14.6481 13.4255 14.666 13.338 14.6666H2.662C2.48692 14.6654 2.31934 14.5953 2.19548 14.4716C2.07161 14.3478 2.0014 14.1803 2 14.0053V1.99459Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="side-menu-item-content">
+                                    <div class="opacity">
+                                        <p>Simbología</p>
+                                        <div class="raimbow-container">
+                                            <div class="rainbow-slider"></div>
+        
+                                        </div>
+                                        <div class="raimbow-info">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5"
+                                                fill="none">
+                                                <path d="M4.16602 0.148438L8.16602 4.14844H0.166016L4.16602 0.148438Z"
+                                                    fill="#545454" />
+                                            </svg>
+                                            <p style="font-weight: 400;"> Nivel alto</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-menu-item">
+                                <div class="side-menu-item-title">
+                                    <div class="side-menu-item-title-icon">
+        
+                                        <h5>Lluvias torrenciales</h5>
+        
+                                    </div>
+                                    <div class="side-menu-item-title-icon-right">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 16 16"
+                                            fill="none">
+                                            <path
+                                                d="M8.66667 7.99992H10.6667L8 10.6666L5.33333 7.99992H7.33333V5.33325H8.66667V7.99992ZM10 2.66659H3.33333V13.3333H12.6667V5.33325H10V2.66659ZM2 1.99459C2 1.62925 2.298 1.33325 2.666 1.33325H10.6667L14 4.66659V13.9953C14.0006 14.0828 13.984 14.1696 13.951 14.2507C13.9181 14.3319 13.8695 14.4057 13.808 14.468C13.7466 14.5304 13.6734 14.58 13.5928 14.6141C13.5121 14.6481 13.4255 14.666 13.338 14.6666H2.662C2.48692 14.6654 2.31934 14.5953 2.19548 14.4716C2.07161 14.3478 2.0014 14.1803 2 14.0053V1.99459Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="side-menu-item-content">
+                                    <div class="opacity">
+                                        <p>Simbología</p>
+        
+                                        <div class="simbology-item">
+                                            <div class="simblogy-content">
+                                                <div class="red-square"></div>
+                                                <div class="simbology-text">
+                                                    <p>Item</p>
+                                                </div>
+                                            </div>
+                                            <p> 52,136 </p>
+                                        </div>
+                                        <div class="simbology-item">
+                                            <div class="simblogy-content">
+                                                <div class="green-square"></div>
+                                                <div class="simbology-text">
+                                                    <p>Item</p>
+                                                </div>
+                                            </div>
+                                            <p> 52,136 </p>
+                                        </div>
+                                        <div class="simbology-item">
+                                            <div class="simblogy-content">
+                                                <div class="blue-square"></div>
+                                                <div class="simbology-text">
+                                                    <p>Item</p>
+                                                </div>
+                                            </div>
+                                            <p> 52,136 </p>
+                                        </div>
+        
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="side-menu-header-title">
+                    <h5 class="side-menu-header-title-text">Análisis de exposición</h5>
                 </div>
 
                 <div class="side-menu-dropdown"
@@ -526,6 +784,7 @@
                     </div>
 
                 </div>
+
 
                 <div class="side-menu-dropdown" onclick="toggleElement('infra-dropdown');rotateImage('infra-icon')">
                     <div class="side-menu-dropdown-header">
@@ -747,148 +1006,6 @@
                         <button type="button" class="btn btn-outline-primary btn-sm">
                             <span> Reporte en PDF </span>
                         </button>
-                    </div>
-                </div>
-
-                <div style="width: 100%;">
-                    <div class="title-dropdown">
-                        <p> Capas de Peligro</p>
-                    </div>
-
-                    <div class="side-menu-dropdown" onclick="toggleElement('risks-dropdown');rotateImage('risks-icon')">
-                        <div class="side-menu-dropdown-header">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
-                                fill="none">
-                                <g clip-path="url(#clip0_425_9257)">
-                                    <path
-                                        d="M4.00001 20.5V14.5C4.00001 10.0817 7.58173 6.5 12 6.5C16.4183 6.5 20 10.0817 20 14.5V20.5H21V22.5H3.00001V20.5H4.00001ZM6.00001 20.5H18V14.5C18 11.1863 15.3137 8.5 12 8.5C8.6863 8.5 6.00001 11.1863 6.00001 14.5V20.5ZM11 2.5H13V5.5H11V2.5ZM19.7782 5.30761L21.1924 6.72183L19.0711 8.84315L17.6569 7.42893L19.7782 5.30761ZM2.80762 6.72183L4.22183 5.30761L6.34315 7.42893L4.92894 8.84315L2.80762 6.72183ZM7.00001 14.5C7.00001 11.7386 9.23858 9.5 12 9.5V11.5C10.3432 11.5 9.00001 12.8431 9.00001 14.5H7.00001Z"
-                                        fill="#484848" />
-                                    <rect x="1.5" y="21.5" width="294" height="390" fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_425_9257">
-                                        <rect width="24" height="24" fill="white" transform="translate(0 0.5)" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <h5> Peligros y Riesgos</h4>
-                        </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none"
-                            id="risks-icon">
-                            <path
-                                d="M12.0002 13.6722L16.9502 8.72217L18.3642 10.1362L12.0002 16.5002L5.63623 10.1362L7.05023 8.72217L12.0002 13.6722Z"
-                                fill="#484848" />
-                        </svg>
-                    </div>
-                    <!-- Dropdown Risjs -->
-
-                    <div id="risks-dropdown" class="side-menu-dropdown-content  hide-item">
-
-                        <div class="risks-search-container">
-                            <div class="search">
-                                <div style="position: relative;">
-                                    <input type="text" class="search-input" placeholder="Busqueda por tema" />
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"
-                                        fill="none" class="search-icon">
-                                        <path
-                                            d="M13.5233 12.4628L16.7355 15.6743L15.6743 16.7355L12.4628 13.5233C11.2678 14.4812 9.7815 15.0022 8.25 15C4.524 15 1.5 11.976 1.5 8.25C1.5 4.524 4.524 1.5 8.25 1.5C11.976 1.5 15 4.524 15 8.25C15.0022 9.7815 14.4812 11.2678 13.5233 12.4628ZM12.0188 11.9063C12.9706 10.9274 13.5022 9.61532 13.5 8.25C13.5 5.349 11.1503 3 8.25 3C5.349 3 3 5.349 3 8.25C3 11.1503 5.349 13.5 8.25 13.5C9.61532 13.5022 10.9274 12.9706 11.9063 12.0188L12.0188 11.9063V11.9063Z"
-                                            fill="#484848" />
-                                    </svg>
-                                </div>
-                            </div>
-
-                            <div class="risks-buttons-container">
-                                <div class="risks-button">
-                                    <span class="risks-text"> Seleccionados</span>
-                                    <span class="risks-text-circle risks-text"> 0</span>
-                                </div>
-                                <span class="risks-text"> Limpiar</span>
-                            </div>
-                        </div>
-
-                        <div class="risks-categories-container">
-                            <div class="risks-item">
-                                <span class="risks-text"> Categoría</span>
-                                <svg id="risk-icon-1" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 20 20" fill="none" style="cursor: pointer;"
-                                    onclick="toggleElement('risks-children-1'); changeCheckbox('risk-icon-1', 'risk-icon-2')">
-                                    <path
-                                        d="M9.16699 9.1665V4.1665H10.8337V9.1665H15.8337V10.8332H10.8337V15.8332H9.16699V10.8332H4.16699V9.1665H9.16699Z"
-                                        fill="#55212E" />
-                                </svg>
-                                <svg id="risk-icon-2"
-                                    onclick="toggleElement('risks-children-1');changeCheckbox('risk-icon-1', 'risk-icon-2')"
-                                    style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                    viewBox="0 0 20 20" fill="none" class="hide-item">
-                                    <path d="M4.16602 9.1665H15.8327V10.8332H4.16602V9.1665Z" fill="#55212E" />
-                                </svg>
-                            </div>
-
-                            <div class="risks-children hide-item" id="risks-children-1">
-                                <div class="checkbox-container">
-
-                                    <div class="checkbox-content">
-                                        <input type="checkbox" id="checkbox" class="checkbox"
-                                            onchange="changeCheckbox('checkbox-empty', 'checkbox-complete')">
-                                        <label for="checkbox" class="checkbox">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                viewBox="0 0 20 20" fill="none" id="checkbox-empty">
-                                                <path
-                                                    d="M3.33333 2.5H16.6667C16.8877 2.5 17.0996 2.5878 17.2559 2.74408C17.4122 2.90036 17.5 3.11232 17.5 3.33333V16.6667C17.5 16.8877 17.4122 17.0996 17.2559 17.2559C17.0996 17.4122 16.8877 17.5 16.6667 17.5H3.33333C3.11232 17.5 2.90036 17.4122 2.74408 17.2559C2.5878 17.0996 2.5 16.8877 2.5 16.6667V3.33333C2.5 3.11232 2.5878 2.90036 2.74408 2.74408C2.90036 2.5878 3.11232 2.5 3.33333 2.5ZM4.16667 4.16667V15.8333H15.8333V4.16667H4.16667Z"
-                                                    fill="#8A8A8A" />
-                                            </svg>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                                viewBox="0 0 18 18" fill="none" id="checkbox-complete"
-                                                style="width: 20px; height:20px;" class="hide-item">
-                                                <path
-                                                    d="M3 2.25H15C15.1989 2.25 15.3897 2.32902 15.5303 2.46967C15.671 2.61032 15.75 2.80109 15.75 3V15C15.75 15.1989 15.671 15.3897 15.5303 15.5303C15.3897 15.671 15.1989 15.75 15 15.75H3C2.80109 15.75 2.61032 15.671 2.46967 15.5303C2.32902 15.3897 2.25 15.1989 2.25 15V3C2.25 2.80109 2.32902 2.61032 2.46967 2.46967C2.61032 2.32902 2.80109 2.25 3 2.25V2.25ZM8.25225 12L13.5547 6.69675L12.4943 5.63625L8.25225 9.879L6.1305 7.75725L5.07 8.81775L8.25225 12Z"
-                                                    fill="#81172C" />
-                                            </svg>
-                                        </label>
-
-
-
-                                        <p>Peligro de la zona</p>
-                                    </div>
-
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                                        fill="none"
-                                        onclick="toggleElement('opacity-1');toggleElement('opacity-2');rotateImage('category-1')"
-                                        id="category-1" style="cursor: pointer;">
-                                        >
-                                        >
-                                        <path
-                                            d="M10.0005 9.0235L5.87577 13.1483L4.69727 11.9698L10.0005 6.6665L15.3039 11.9698L14.1254 13.1483L10.0005 9.0235Z"
-                                            fill="#333333" />
-                                    </svg>
-                                </div>
-
-                                <div class="opacity hide-item" id="opacity-1">
-                                    <p>Opacidad de capa</p>
-                                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                                </div>
-
-                                <div class="opacity hide-item" id="opacity-2">
-                                    <p>Simbología</p>
-                                    <div class="raimbow-container">
-                                        <div class="rainbow-slider"></div>
-
-                                    </div>
-                                    <div class="raimbow-info">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="5" viewBox="0 0 9 5"
-                                            fill="none">
-                                            <path d="M4.16602 0.148438L8.16602 4.14844H0.166016L4.16602 0.148438Z"
-                                                fill="#545454" />
-                                        </svg>
-                                        <p style="font-weight: 400;"> Nivel alto</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
                     </div>
                 </div>
 
