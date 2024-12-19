@@ -200,3 +200,13 @@ button.btn-link  {
         display: flex !important;
     }
 }
+
+.hidden-content {
+    display: none !important;
+    pointer-events: none !important;;
+}
+
+.reveal-hidden-content .hidden-content {
+    display: unset !important;
+    pointer-events: auto !important;
+}

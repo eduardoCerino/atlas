@@ -2,29 +2,37 @@
 
     <div class="emergency-controls position-relative responsive-column justify-content-between w-100">
         <!-- emergency-state-dropdown -->
-        <div>
-            <div class="btn-group">
-                <label class="emergency-type" style="padding-right: 5px;">Emergencia mayor</label>
-                <button class="btn btn-secondary btn-sm  rounded-pill emergency-state-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <label>En progreso</label>
-                    <i><img src="../../assets/images/select-icon.svg" alt=""></i>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item">En progreso</a></li>
-                    <li><a class="dropdown-item">Cancelado</a></li>
-                </ul>
+        <div class="btn-group">
+
+            <!-- This checkbox requires unique id to work -->
+            <div class="checkbox-container">
+                <input type="checkbox" checked id="someUniqueId">
+                <label for="someUniqueId" class="checkbox-label">
+                    <div class="checkbox-icon hidden-content m-0"></div>
+                </label>
             </div>
+
+            <span class="emergency-type" style="padding-right: 5px;">Emergencia mayor</span>
+            <button class="btn btn-secondary btn-sm  rounded-pill emergency-state-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span>En progreso</span>
+                <i><img src="../../assets/images/select-icon.svg" alt=""></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item">En progreso</a></li>
+                <li><a class="dropdown-item">Cancelado</a></li>
+            </ul>
+
         </div>
 
         <!-- dates -->
         <div class="responsive-column emergency-dates-container">
-            <div class="d-flex mobile-align-right" style="gap: 8px">
-                <label class="custom-input-label">Fecha de inicio: </label>
-                <label>20/11/2024</label>
+            <div class="d-flex mobile-align-right" style="gap: 4px">
+                <span class="emergency-date-label">Fecha de inicio:</span>
+                <span class="emergency-date">20/11/2024</span>
             </div>
-            <div class="d-flex mobile-align-right" style="gap: 8px">
-                <label class="custom-input-label">Fecha fin: </label>
-                <label>20/11/2024</label>
+            <div class="d-flex mobile-align-right" style="gap: 4px">
+                <span class="emergency-date-label">Fecha fin:</span>
+                <span class="emergency-date">20/11/2024</span>
             </div>
         </div>
 
@@ -48,35 +56,24 @@
         </div>
     </div>
 
-    <p class="emergency-code"> Folio: 000246</p>
+    <span class="emergency-code"> Folio: 000246</span>
 
     <p class="emergency-data">Nombre de la emergencia</p>
 
     <div class="responsive-column row w-100" style="gap: 10px;">
         <div class="col">
-            <label>Tipo de emergencia:</label>
+            <span>Tipo de emergencia:</span>
             <p class="emergency-data">Tipo de emergencia</p>
         </div>
         <div class="col">
-            <label>Emergencias:</label>
+            <span>Emergencias:</span>
             <p class="emergency-data">Emergencia 1, Emergencia 2</p>
         </div>
     </div>
 
     <div>
-        <label>Ubicación:</label>
+        <span>Ubicación:</span>
         <p class="emergency-data">Nombre de la calle, CP, Colonia</p>
-    </div>
-
-    <div class="emergency-stats responsive-column">
-        <div>
-            <label>Emergencias mayores</label>
-            <p>12</p>
-        </div>
-        <div>
-            <label>Emergencias menores</label>
-            <p>4</p>
-        </div>
     </div>
 
     <div class="w-100 text-end">
@@ -89,7 +86,7 @@
 
     <div class="d-flex w-100 justify-content-end p-2">
         <button class="btn btn-primary" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/systemic-emergency-details-page.html')">
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/mayor-emergency-details-section.html')">
             Ver más detalles
         </button>
     </div>

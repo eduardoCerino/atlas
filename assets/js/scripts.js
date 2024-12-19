@@ -353,3 +353,14 @@ function hideEmergencyGroupOnMap() {
         ]);
     }, 600);
 }
+
+function revealHiddenContent(targetId, revert = false) {
+    const target = document.getElementById(targetId);
+    if(target) {
+        if(revert) {
+            target.classList.remove('reveal-hidden-content');
+        } else {
+            target.classList.add('reveal-hidden-content');
+        }
+    }
+}

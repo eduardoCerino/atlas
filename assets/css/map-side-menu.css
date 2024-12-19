@@ -817,6 +817,17 @@
     font-weight: 500 !important;
 }
 
+.emergency-date,
+.emergency-date-label {
+    color:  #484848 !important;
+    font-size: 12px !important;
+    font-style: normal !important;
+}
+
+.emergency-date-label {
+    font-weight: 500 !important;
+}
+
 .small-select {
     gap: 24px;
 }
@@ -898,13 +909,14 @@
 }
 
 .emergency-state-dropdown {
+    flex: unset !important;
     padding: 1px 6px !important;
     border-color: #B0D3E6 !important;
     background-color: #B0D3E6 !important;
 }
 
 .emergency-dates-container {
-    gap: 16px;
+    gap: 10px;
     margin-right: 36px;
 }
 
@@ -954,7 +966,7 @@
     background-color: #FFF;
 }
 
-.emergeny-box label {
+.emergeny-box span {
     color: #666;
     font-size: 12px;
     font-weight: 400;
@@ -968,11 +980,12 @@
 }
 
 .emergency-code {
-    color:#666;
-    font-size: 12px;
+    color:#666 !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
 }
 
-.emergency-state-dropdown > label {
+.emergency-state-dropdown > span {
     color: #00689F;
     font-weight: 500;
 }
@@ -1036,7 +1049,7 @@
     border-bottom: 1px solid var(--Foundation-Grey-grey-50, #E8E8E8);
 }
 
-label.emergency-type {
+span.emergency-type {
     display: flex;
     align-self: center;
     color: #55212E;
