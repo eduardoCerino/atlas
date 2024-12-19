@@ -189,7 +189,7 @@ button.btn-link  {
 }
 
 .mobile-only-flex {
-    display: none;
+    display: none !important;
 }
 
 @media (max-width: 1024px) {
@@ -209,4 +209,10 @@ button.btn-link  {
 .reveal-hidden-content .hidden-content {
     display: unset !important;
     pointer-events: auto !important;
+}
+
+.back-to-form {
+    color: #484848 !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
 }
