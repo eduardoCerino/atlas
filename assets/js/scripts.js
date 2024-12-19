@@ -297,3 +297,59 @@ function clearAllRemovableComponents(targetId) {
     console.log(`${removableComponents.length} componentes removidos.`);
 }
 
+/* popuate a target with required components */
+function randomPopulateWithRemovableComponents(id, count, components) {
+    for(let item = 1; item <= count; item++) {
+        let component = getRandomElementFromArray(components);
+        addRemovableComponent(id, component);
+    }
+}
+
+function getRandomElementFromArray(array) {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+}
+
+function showEmergencyOnMap() {
+    collapseSideBar();
+    showMap();
+    const alertDiv = document.getElementById('emergency-map-mark');
+    alertDiv.classList.remove('hide-item');
+    
+    /*  Hide element after 3 seconds when page is loaded */
+    setTimeout(function() {
+        const alertDiv = document.getElementById('emergency-map-mark');
+        if(alertDiv != null) {
+            alertDiv.classList.add('hide-item');
+        }
+    }, 3000);
+}
+
+function showEmergencyGroupOnMap() {
+    collapseSideBar();
+    showMap();
+    const alertDiv = document.getElementById('emergency-group-map-mark');
+    alertDiv.classList.remove('hide-item');
+}
+
+function hideEmergencyGroupOnMap() {
+    const sideBar = document.getElementById('side-menu');
+    sideBar.classList.remove('hide-sidebar');
+
+    const sideMenuContainer = document.getElementById('side-menu-container');
+    sideMenuContainer.classList.remove('hide-sidebar-container');
+
+    hideMap();
+    const alertDiv = document.getElementById('emergency-group-map-mark');
+    alertDiv.classList.add('hide-item');
+    //prepare emergencies-list node
+    loadHTMLComponent('consult-emergency-content', 'componentes/emergencies-list-component.html');
+
+    setTimeout(function() {
+        //populate emergencies-list node
+        randomPopulateWithRemovableComponents('emergencies-list', 6, [
+            'componentes/normal-emergency-component.html',
+            'componentes/mayor-emergency-component.html'
+        ]);
+    }, 600);
+}

@@ -230,3 +230,8 @@ input[type="date"],
     font-weight: 500;
     line-height: 140%;
 }
+
+.long-text-box {
+    max-height: 98px;
+    overflow-y: scroll;
+}

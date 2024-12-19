@@ -4,7 +4,7 @@
         <!-- emergency-state-dropdown -->
         <div>
             <div class="btn-group">
-                <label class="emergency-type" style="padding-right: 5px;">Emergencia normal</label>
+                <label class="emergency-type" style="padding-right: 5px;">Emergencia mayor</label>
                 <button class="btn btn-secondary btn-sm  rounded-pill emergency-state-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <label>En progreso</label>
                     <i><img src="../../assets/images/select-icon.svg" alt=""></i>
@@ -52,9 +52,21 @@
 
     <p class="emergency-data">Nombre de la emergencia</p>
 
-    <label>Descripción:</label>
+    <div class="responsive-column row w-100" style="gap: 10px;">
+        <div class="col">
+            <label>Tipo de emergencia:</label>
+            <p class="emergency-data">Tipo de emergencia</p>
+        </div>
+        <div class="col">
+            <label>Emergencias:</label>
+            <p class="emergency-data">Emergencia 1, Emergencia 2</p>
+        </div>
+    </div>
 
-    <p class="emergency-data">Una pipa chocó contra el semáforo, el chofer no controló el vehículo</p>
+    <div>
+        <label>Ubicación:</label>
+        <p class="emergency-data">Nombre de la calle, CP, Colonia</p>
+    </div>
 
     <div class="emergency-stats responsive-column">
         <div>

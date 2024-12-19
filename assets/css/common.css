@@ -65,7 +65,8 @@ a {
 button.btn-primary,
 button.btn-navbar,
 button.btn-outline-primary,
-button.btn-outline-secondary {
+button.btn-outline-secondary,
+button.btn-link  {
     font-weight:500 !important;
 }
 
@@ -92,6 +93,11 @@ button.btn-outline-secondary {
 
 .btn:hover svg path {
     fill: white; 
+}
+
+.btn-link {
+    color: #81172C !important;
+    text-decoration: none !important;
 }
 
 .hide-item {

@@ -20,20 +20,32 @@
             <h6>Consulta de emergencias</h6>
         </div>
 
-        <div class="d-flex w-100 justify-content-end p-2" style="gap: 16px;">
-            <button class="btn btn-outline-secondary" type="button"
-                onclick="clearAllRemovableComponents('emergencies-list')">
+        <div class="d-flex w-100 justify-content-end p-2 responsive-column" style="gap: 16px;">
+            <button class="btn btn-outline-secondary nowrap" type="button"
+                onclick="showEmergencyGroupOnMap()">
                 <img src="../../assets/images/edit-icon-secondary.svg" class="svg-primary" alt="">
                 Trazar área de consulta
             </button>
-            <button class="btn btn-primary" type="button"
-                onclick="populateWithRemovableComponents('emergencies-list', 1, 'componentes/normal-emergency-component.html')">
+            <button class="btn btn-primary nowrap" type="button"
+                onclick="loadHTMLComponent('side-menu-content', 'componentes/systemic-emergency-section.html')">
                 Crear emergencia sistémica
             </button>
         </div>
 
         
+        <div id="consult-emergency-content" class="d-flex flex-grow-1 flex-column">
+                <div class="emergency-list-empty" style="height: 430px;">
+                    <h6 class="text-center p-2">Aún no hay emergencias</h6>
+                    <p class="text-center p-2">Crea una emergencia para poder visualizarlas</p>
+                    <div class="responsive-column" style="gap: 24px;">
+                        <button class="btn btn-primary" type="button"
+                        onclick="loadHTMLComponent('side-menu-content', 'componentes/create-emergency-section.html')">
+                            Crear emergencia
+                        </button>
+                    </div>
+                </div>
 
+        </div>
 
 
     </div>

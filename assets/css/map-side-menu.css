@@ -751,7 +751,8 @@
 }
 
 /* ---- New emergency page ---- */
-.new-emergency-box {
+.new-emergency-box,
+.emergency-list-empty {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -772,7 +773,8 @@
 }
 
 @media (max-width: 1024px) {
-    .new-emergency-box {
+    .new-emergency-box,
+    .emergency-list-empty {
         max-height: 310px !important;
     }
     .responsive-radio-group {
@@ -830,7 +832,8 @@
     }
 }
 
-.emergency-saved-box {
+.emergency-saved-box
+{
     display: flex;
     padding: 16px;
     flex-direction: column;
@@ -1031,4 +1034,12 @@
 
 .gray-divider {
     border-bottom: 1px solid var(--Foundation-Grey-grey-50, #E8E8E8);
+}
+
+label.emergency-type {
+    display: flex;
+    align-self: center;
+    color: #55212E;
+    font-size: 12px;
+    font-weight: 500;
 }
