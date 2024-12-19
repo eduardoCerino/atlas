@@ -1,4 +1,4 @@
-<div>
+<div class="position-relative">
     <div class="accordion accordion-flush gray-box p-0" style="margin-bottom: 16px;" id="filters">
         <div class="accordion-item">
             <h2 class="accordion-header">
@@ -137,6 +137,57 @@
         </div>
     </div>
 
-    <div id="emergencies-list">
+    <div id="emergencies-list"></div>
+
+
+    <div id="create-systemic-emergency-form" class="hide-item">
+        <div class="slider-form">
+            <div class="responsive-column w-100 row p-0 m-0">
+                <div class="col m-0 p-0">
+                    <span class="custom-input-label">Seleccionados</span>
+                    <div></div>
+                </div>
+                <div class="col m-0 p-0 text-end">
+                    <button class="btn btn-link" type="button">
+                        Describir emergencia *
+                        <img src="../../assets/images/arrow-down-icon.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="responsive-column w-100 row p-0 m-0 gap-2">
+                <div class="text-input-container col m-0 p-0">
+                    <label class="custom-input-label">Nombre de la emergencia *</label>
+                    <input type="text" placeholder="Ingresa un nombre para la emergencia" />
+                </div>
+
+                <div class="d-flex flex-column text-input-container col m-0 p-0">
+                    <label  class="custom-input-label">Estatus</label>
+                    <select class="form-select" aria-label="estatus">
+                        <option selected>Selecciona una opción</option>
+                        <option value="1">Estado 1</option>
+                        <option value="2">Estado 2</option>
+                        <option value="3">Estado 3</option>
+                        <option value="4">Estado 4</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="textarea-container w-100">
+                <label class="custom-input-label">Descripcicón *</label>
+                <textarea placeholder="Agrega una descripción para la emergencia"></textarea>
+                <span class="textarea-count">0/1000</span>
+            </div>
+        
+            <div class="d-flex w-100 justify-content-end p-2">
+                <button class="btn btn-outline-secondary mx-3" type="button"
+                    onclick="closeCrearEmergenciaSlider()">
+                    Cancelar
+                </button>
+                <button class="btn btn-primary" type="button"
+                    onclick="closeCrearEmergenciaSlider()">
+                    Crear Emergencia
+                </button>
+            </div>
+        </div>
     </div>
 </div>

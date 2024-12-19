@@ -363,4 +363,27 @@ function revealHiddenContent(targetId, revert = false) {
             target.classList.add('reveal-hidden-content');
         }
     }
+    openCrearEmergenciaSlider();
+}
+
+function openCrearEmergenciaSlider() {
+    const target = document.getElementById("create-systemic-emergency-form");
+    target.classList.remove('hide-item');
+}
+
+function closeCrearEmergenciaSlider() {
+    const target = document.getElementById("create-systemic-emergency-form");
+    target.classList.add('hide-item');
+    showCambiosGuardadosToast();
+}
+
+function showCambiosGuardadosToast() {
+    const toastElement = document.getElementById('cambios-guardados-toast');
+    const toast = new bootstrap.Toast(toastElement);
+    toast.show();
+}
+
+function guardarCambiosEnEmergencia(objThis) {
+    replaceRemovableComponent(objThis, 'componentes/systemic-emergency-component.html')
+    showCambiosGuardadosToast();
 }

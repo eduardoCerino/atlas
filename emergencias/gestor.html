@@ -322,6 +322,20 @@
 
     <!-- Side menu -->
     <div class="side-menu-container big-container over-controls" id="side-menu-container">
+        
+        <!-- Cambios guardados Toast -->
+        <div class="toast-container top-0 end-0 p-0 p-lg-4 my-2 mx-3">
+            <div id="cambios-guardados-toast" class="toast align-items-center border-0"  role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body nowrap"">
+                        <img src="../assets/images/toast-confirm-icon.svg"/>
+                        Se guardaron los cambios correctamente
+                        <img src="../assets/images/close-icon.svg"data-bs-dismiss="toast" aria-label="Close" />
+                    </div>
+                  </div>
+            </div>
+          </div>
+
         <div id="sidemenu-collapse" onclick="collapseSideBar()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
