@@ -1056,3 +1056,13 @@ span.emergency-type {
     font-size: 12px;
     font-weight: 500;
 }
+
+.mini-textfield {
+    max-width: 110px;
+}
+
+@media (max-width: 1024px) {
+    .mini-textfield {
+        max-width: unset !important;
+    }
+}

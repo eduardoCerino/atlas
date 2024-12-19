@@ -20,7 +20,7 @@
             <div class="title-stepper"><b>Paso 2</b> de 4</div>
         </div>
 
-        <div class="d-flex responsive-column gap-2">
+        <div class="d-flex responsive-column gap-2 w-100">
             <div class="search-input-container">
                 <input type="text" placeholder="Buscar objetivo" />
                 <img src="../../assets/images/search-icon.svg" alt="">
@@ -41,29 +41,113 @@
             </div>
         </div>
 
-        <div>
-            <div class="row table-header">
+        <div class="plan-follow-up w-100">
+            <div class="row table-header m-0">
                 <label class="col-4">Objetivo</label>
                 <span class="col"></span>
                 <label class="col-4 text-end">Acciones</label>
             </div>
-            <div class="row" style="margin-top: 5px;">
-                <div class="col-4 px-1">
-                    <select class="form-select" style="min-width: 230px;" aria-label="Tipo de emergencia">
-                        <option selected>Selecciona un objetivo</option>
-                        <option value="1">Objetivo</option>
-                        <option value="2">Objetivo</option>
-                        <option value="3">Objetivo</option>
-                        <option value="4">Objetivo</option>
-                        <option value="5">Objetivo</option>
-                    </select>
+            <div class="accordion accordion-flush" id="target-accordion">
+                <div class="accordion-item">
+                <div class="accordion-header row m-0 p-2 justify-content-center">
+                    <div class="col-4 text-start m-0 p-0">
+                        <select class="form-select" style="width: 200px; height: 38px;" aria-label="Tipo de emergencia">
+                            <option selected>Nombre del objetivo</option>
+                            <option value="1">Objetivo 1</option>
+                            <option value="2">Objetivo 2</option>
+                            <option value="3">Objetivo 3</option>
+                            <option value="4">Objetivo 4</option>
+                            <option value="5">Objetivo 5</option>
+                        </select>
+                    </div>
+
+                    <div class="col m-0 p-0 text-end">
+                        <button class="btn btn-link mx-2" type="button">Guardar</button>
+                    </div>
+
+                    <button class="accordion-button col-1 m-0 p-0" style="width: auto;" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseData" aria-expanded="true" aria-controls="collapseData">
+                    </button>
                 </div>
-                <span class="col"></span>
-                <div class="col-4 px-1 text-end">
-                    <button class="btn" style="color: #81172C;" type="button">Guardar</button>
+                <div id="collapseData" class="accordion-collapse collapse show" data-bs-parent="#target-accordion">
+                    <div class="accordion-body p-0">
+                        <div class="responsive-column row table-header mobile-hidden p-2 m-0">
+                            <label class="col-2 p-0">Dependencia</label>
+                            <label class="col p-0 text-lg-center">Recurso</label>
+                            <label class="col p-0 text-lg-center">Cantidad</label>
+                            <label class="col-4 p-0">Observaciones</label>
+                            <label class="col-2 p-0 text-lg-center">Acciones</label>
+                        </div>
+
+                        <!-- responsive content row -->
+                        <div class="row table-row responsive-column justify-content-center p-0 m-0">
+                            <div  class="col-lg-2 row p-0 m-0">
+                                <label class="col-4 p-1 mobile-only-flex table-header">Dependencia</label>
+                                <label class="col p-1">
+                                    <select class="form-select" aria-label="dependencia">
+                                        <option selected>Bomberos</option>
+                                        <option value="1">Dependencia 1</option>
+                                        <option value="2">Dependencia 2</option>
+                                        <option value="3">Dependencia 3</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div  class="col-lg row p-0 m-0">
+                                <label class="col-4 p-1 mobile-only-flex table-header">Recurso</label>
+                                <label class="col p-1 text-lg-center">
+                                    <div class="search-input-container mini-textfield p-0">
+                                        <input type="text" class="p-1" placeholder="Escribe el recurso" />
+                                    </div>
+                                </label>
+                            </div>
+                            <div  class="col-lg row p-0 m-0">
+                                <label class="col-4 p-1 mobile-only-flex table-header">Cantidad</label>
+                                <label class="col p-1 text-lg-center">
+                                    <select class="form-select" aria-label="cantidad" style="max-width: 70px;">
+                                        <option selected>2</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div  class="col-lg-4 row p-0 m-0">
+                                <label class="col-4 p-1 mobile-only-flex table-header">Observaciones</label>
+                                <label class="col p-1 long-text-box">
+                                    <div class="search-input-container mini-textfield p-0" style="max-width: 200px;">
+                                        <input type="text" class="p-1" placeholder="Nama quis nulla. Integer malesuada." />
+                                    </div>
+                                </label>
+                            </div>
+                            <div  class="col-lg-2 row p-0 m-0">
+                                <label class="col-4 p-1 mobile-only-flex table-header">Dependencia</label>
+                                <div class="col p-1 text-lg-center">
+                                    <button>
+                                        <img src="../../assets/images/green-dot-icon.svg" alt="">
+                                    </button>
+                                    <button>
+                                        <img src="../../assets/images/print-icon.svg" alt="">
+                                    </button>
+                                    <button>
+                                        <img src="../../assets/images/send-email-icon.svg" alt="">
+                                    </button>
+                                    <button>
+                                        <img src="../../assets/images/see-pai-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-grow-1 my-2" style="display: flex; justify-content: end;">
+                            <button class="btn btn-outline-primary" type="button">
+                                <img src="../../assets/images/plus-icon-red.svg" alt="">
+                                Agregar otra dependencia
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
-            
         </div>
 
     </div>
@@ -83,7 +167,7 @@
         </button>
         <button class="btn btn-primary" type="button"
             onclick="loadHTMLComponent('side-menu-content', 'componentes/mayor-emergency-section-3.html')">
-            Continuar
+            Guardar PAI y Continuar
             <img src="../../assets/images/next-arrow.svg" alt="">
         </button>
     </div>
