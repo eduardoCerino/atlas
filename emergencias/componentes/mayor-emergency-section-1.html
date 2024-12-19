@@ -2,22 +2,22 @@
 <div class="side-menu-page">
     <div class="side-menu-nav-bar">
         <button class="btn btn-primary" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/new-emergency.html')">
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/create-emergency-section.html')">
             Crear emergencia
         </button>
         <button class="btn" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/check-emergency-1.html')">
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/consult-emergency-section.html')">
             Consulta de emergencia
         </button>
         <button class="btn" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/systemic-emergency.html')">
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/systemic-emergency-section.html')">
             Emergencia sistémica
         </button>
     </div>
     <div class="side-menu-page-content">
         <div class="page-title-with-stepper">
-            <h6>Registrar emergencia normal</h6>
-            <div class="title-stepper"><b>Paso 1</b> de 2</div>
+            <h6>Registrar emergencia mayor</h6>
+            <div class="title-stepper"><b>Paso 1</b> de 4</div>
         </div>
         
         <div class="text-input-container">
@@ -103,12 +103,6 @@
 
         </div>
 
-        <div class="textarea-container">
-            <label class="custom-input-label">Descripcicón *</label>
-            <textarea placeholder="Agrega una descripción para la emergencia"></textarea>
-            <span class="textarea-count">0/1000</span>
-        </div>
-
         <div class="image-picker-container">
             <label class="custom-input-label">Agrega fotos como evidencia *</label>
             <div class="image-picker-container-box">
@@ -136,12 +130,12 @@
     <!-- footer buttons -->
     <div class="side-menu-page-footer-buttons">
         <button class="btn btn-outline-secondary" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/new-emergency.html')">
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/create-emergency-section.html')">
             <img src="../../assets/images/back-arrow.svg" alt="">
             Anterior
         </button>
         <button class="btn btn-primary" type="button"
-            onclick="loadHTMLComponent('side-menu-content', 'componentes/normal-emergency-2.html')">
+            onclick="loadHTMLComponent('side-menu-content', 'componentes/mayor-emergency-section-2.html')">
             Continuar
             <img src="../../assets/images/next-arrow.svg" alt="">
         </button>

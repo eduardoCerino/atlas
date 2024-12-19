@@ -3,7 +3,7 @@ function loadHTMLComponent(targetId, component) {
     fetch(component)
     .then(response => {
         if (!response.ok) {
-        throw new Error('No se pudo cargar el archivo HTML');
+        throw new Error('No se pudo cargar el archivo ' + component);
         }
         return response.text();
     })
@@ -38,7 +38,7 @@ function addRemovableComponent(targetId, component) {
         fetch(component)
         .then(response => {
             if (!response.ok) {
-            throw new Error('No se pudo cargar el archivo HTML');
+            throw new Error('No se pudo cargar el archivo ' + component);
             }
             return response.text();
         })
@@ -272,9 +272,9 @@ function changeSvgColor(svgId) {
 function goToEmergencyCreationPage() {
     const normalRadio = document.getElementById('normal-emergency');
     if(normalRadio != null && normalRadio.checked) {
-        loadHTMLComponent('side-menu-content', 'componentes/normal-emergency-1.html');
+        loadHTMLComponent('side-menu-content', 'componentes/normal-emergency-section-1.html');
     } else {
-        loadHTMLComponent('side-menu-content', 'componentes/mayor-emergency-1.html');
+        loadHTMLComponent('side-menu-content', 'componentes/mayor-emergency-section-1.html');
     }
 }
 

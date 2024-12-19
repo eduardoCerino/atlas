@@ -1,0 +1,80 @@
+<div class="emergeny-box">
+    <div class="emergency-controls position-relative responsive-column justify-content-between w-100">
+        <!-- emergency-state-dropdown -->
+        <div>
+            <div class="btn-group">
+                <button class="btn btn-secondary btn-sm  rounded-pill emergency-state-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <label>En progreso</label>
+                    <i><img src="../../assets/images/select-icon.svg" alt=""></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item">En progreso</a></li>
+                    <li><a class="dropdown-item">Cancelado</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- dates -->
+        <div class="responsive-column emergency-dates-container">
+            <div class="d-flex mobile-align-right" style="gap: 8px">
+                <label class="custom-input-label">Fecha de inicio: </label>
+                <label>20/11/2024</label>
+            </div>
+            <div class="d-flex mobile-align-right" style="gap: 8px">
+                <label class="custom-input-label">Fecha fin: </label>
+                <label>20/11/2024</label>
+            </div>
+        </div>
+
+        <!-- three dots button -->
+        <div class="btn-group three-dots-container">
+            <button class="btn btn-three-dots" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../../assets/images/three-dots-icon.svg" alt="">
+            </button>
+            <ul class="dropdown-menu">
+                <li><button class="dropdown-item" disabled
+                    onclick="loadHTMLComponent('side-menu-content', 'componentes/edit-emergency.html')">
+                    <img src="../../assets/images/edit-icon.svg" alt="">
+                    Editar emergencia
+                </button></li>
+                <li><button class="dropdown-item"
+                    onclick="selfRemove(this)">
+                    <img src="../../assets/images/trash-icon.svg" alt="">
+                    Eliminar emergencia
+                </button></li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="emergency-code"> Folio: 000246</p>
+
+    <div class="text-input-container w-100">
+        <label>Nombre de la emergencia *</label>
+        <input type="text" placeholder="Ingresa un nombre para la emergencia" />
+    </div>
+
+    <div class="textarea-container w-100">
+        <label class="custom-input-label">Descripcicón *</label>
+        <textarea placeholder="Agrega una descripción para la emergencia"></textarea>
+        <span class="textarea-count">0/1000</span>
+    </div>
+
+    <div class="emergency-stats responsive-column">
+        <div>
+            <label>Emergencias mayores</label>
+            <p>12</p>
+        </div>
+        <div>
+            <label>Emergencias menores</label>
+            <p>4</p>
+        </div>
+    </div>
+
+    <div class="d-flex w-100 justify-content-end p-2">
+        <button class="btn btn-primary" type="button"
+            onclick="replaceRemovableComponent(this, 'componentes/systemic-emergency-component.html')">
+            Guardar cambios
+        </button>
+    </div>
+
+</div>

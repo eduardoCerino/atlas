@@ -1,0 +1,143 @@
+<div>
+    <div class="accordion accordion-flush gray-box p-0" id="filters">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button gray-box gap-1" type="button" data-bs-toggle="collapse" data-bs-target="#flush-filters" aria-expanded="true" aria-controls="flush-filters">
+                <img src="../../assets/images/filter-icon.svg" alt="">
+                Filtros
+            </button>
+            </h2>
+
+            <div id="flush-filters" class="accordion-collapse collapse show gray-box p-0" data-bs-parent="#filters">
+                <div class="accordion-body p-0">
+                    <div class="d-flex flex-column p-2 flex-lg-row" style="gap: 16px;">
+
+                        <!-- Start/End Date selectors -->
+                        <div class="d-flex d-row" style="gap: 16px;">
+                            <div class="d-flex flex-column w-100">
+                                <label class="custom-input-label">Fecha de inicio</label>
+                                <input type="date" id="start" name="trip-start" value="2024-12-17" min="2018-01-01" max="2024-12-31" />
+                            </div>
+
+                            <div class="d-flex flex-column w-100">
+                                <label class="custom-input-label">Fecha fin</label>
+                                <input type="date" id="start" name="trip-start" value="2024-12-17" min="2018-01-01" max="2024-12-31" />
+                            </div>
+                        </div>
+
+                        <!-- Status selectors -->
+                        <div class="d-flex flex-column">
+                            <label class="custom-input-label">Estatus</label>
+                            <select class="form-select" aria-label="estatus">
+                                <option selected>Selecciona una opción</option>
+                                <option value="1">Estado 1</option>
+                                <option value="2">Estado 2</option>
+                                <option value="3">Estado 3</option>
+                                <option value="4">Estado 4</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="responsive-column p-2" style="gap: 16px;">
+
+                        <div class="w-100">
+                            <label class="custom-input-label">Tipo de emergencia</label>
+                            <select class="form-select" aria-label="tipo-emergencia">
+                                <option selected>Selecciona una opción</option>
+                                <option value="1">Tipo 1 de emergencia</option>
+                                <option value="2">Tipo 2 de emergencia</option>
+                                <option value="3">Tipo 3 de emergencia</option>
+                                <option value="4">Tipo 4 de emergencia</option>
+                                <option value="5">Tipo 5 de emergencia</option>
+                            </select>
+                        </div>
+            
+                        <div class="select-container w-100">
+                            <label class="custom-input-label">Subtipo de emergencia</label>
+                            <div class="dropdown-with-checkbox">
+                                <button type="button" class="btn btn-select" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                    Selecciona una opción
+                                    <i><img src="../../assets/images/select-icon.svg" alt=""></i>
+                                </button>
+                                <form class="dropdown-menu">
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" id="subtipo-1">
+                                        <label for="subtipo-1" class="checkbox-label">
+                                            <div class="checkbox-icon"></div>
+                                            <span class="checkbox-text">Nombre de incidente</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" id="subtipo-2">
+                                        <label for="subtipo-2" class="checkbox-label"> 
+                                            <div class="checkbox-icon"></div>
+                                            <span class="checkbox-text">Nombre de incidente</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" id="subtipo-3">
+                                        <label for="subtipo-3" class="checkbox-label">
+                                            <div class="checkbox-icon"></div>
+                                            <span class="checkbox-text">Nombre de incidente</span>
+                                        </label>
+                                    </div>
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" id="subtipo-4">
+                                        <label for="subtipo-4" class="checkbox-label">
+                                            <div class="checkbox-icon"></div>
+                                            <span class="checkbox-text">Nombre de incidente</span>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+            
+                    </div>
+
+                    <div class="responsive-column p-2" style="gap: 16px;">
+
+                        <div class="w-100">
+                            <label class="custom-input-label">Municipio</label>
+                            <select class="form-select" aria-label="municipio">
+                                <option selected>Selecciona una opción</option>
+                                <option value="1">Opción 1 de municipio</option>
+                                <option value="2">Opción 2 de municipio</option>
+                                <option value="3">Opción 3 de municipio</option>
+                                <option value="4">Opción 4 de municipio</option>
+                                <option value="5">Opción 5 de municipio</option>
+                            </select>
+                        </div>
+
+                        <div class="w-100">
+                            <label class="custom-input-label">Colonia</label>
+                            <select class="form-select" aria-label="colonia">
+                                <option selected>Selecciona una opción</option>
+                                <option value="1">Opción 1 de Colonia</option>
+                                <option value="2">Opción 2 de Colonia</option>
+                                <option value="3">Opción 3 de Colonia</option>
+                                <option value="4">Opción 4 de Colonia</option>
+                                <option value="5">Opción 5 de Colonia</option>
+                            </select>
+                        </div>
+                    
+                    </div>
+                    
+                    <div class="d-flex w-100 justify-content-end p-2" style="gap: 16px;">
+                        <button class="btn btn-outline-secondary" type="button"
+                            onclick="clearAllRemovableComponents('emergencies-list')">
+                            Limpiar
+                        </button>
+                        <button class="btn btn-secondary" type="button"
+                            onclick="populateWithRemovableComponents('emergencies-list', 3, 'componentes/normal-emergency-component.html')">
+                            Aplicar filtros
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="emergencies-list">
+    </div>
+</div>
