@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--  Hoja de estilos externa -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/forms.css">
+    <link rel="stylesheet" href="../assets/css/console.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="../assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="../assets/bootstrap/popper.min.js"></script>
+    <script src="../assets/bootstrap/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <script src="../assets/js/scripts.js"></script>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="side-bar">
+            <div class="vertical-navbar">
+                <a href="../index.html">
+                    <span class="main-logo"></span>
+                </a>
+                <button class="btn btn-navbar selected">
+                    <span class="icon user-icon"></span>
+                    <p>Administradores</p>
+                </button>
+                <button class="btn btn-navbar">
+                    <span class="icon user-icon"></span>
+                    <p>Item</p>
+                </button>
+                <button class="btn btn-navbar">
+                    <span class="icon user-icon"></span>
+                    <p>Item</p>
+                </button>
+                <button class="btn btn-navbar">
+                    <span class="icon user-icon"></span>
+                    <p>Item</p>
+                </button>
+            </div>
+            <div class="user-menu">
+                <button class="btn btn-navbar">
+                    <span class="icon profile-icon"></span>
+                    <p>Perfil</p>
+                </button>
+                <span class="menu-divider"></span>
+                <button class="btn btn-navbar">
+                    <span class="icon exit-icon"></span>
+                    <p>Cerrar sesión</p>
+                </button>
+            </div>
+        </div>
+    
+        <div class="content">
+    
+            <div class="section-header">
+                <span class="icon profile-icon"></span>
+                <h5>Administradores</h5>
+            </div>
+    
+            <div class="section-content">
+    
+                <div class="table-controls">
+                    <span class="flex flex-grow-1">Mostrando 10 administradores</span>
+                    <div class="search-input-container nowrap small">
+                        <input type="text" placeholder="Buscar administrador" />
+                        <img src="../assets/images/search-icon.svg" alt="">
+                    </div>
+                    <button class="btn btn-outline-secondary nowrap btn-sm" type="button">
+                        Ordenar
+                        <img src="../assets/images/sort-icon.svg" alt="">
+                    </button>
+                    <button class="btn btn-primary nowrap btn-sm" type="button">
+                        <img src="../assets/images/plus-icon.svg" alt="">
+                        Agregar Objetivo
+                    </button>
+                </div>
+                
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <div class="checkbox-container">
+                                        <input type="checkbox" id="select-all">
+                                        <label for="select-all" class="checkbox-label">
+                                        <div class="checkbox-icon"></div>
+                                        </label>
+                                    </div>
+                                </th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellidos</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Permisos</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="select-1">
+                                    <label for="select-1" class="checkbox-label">
+                                    <div class="checkbox-icon"></div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>username</td>
+                            <td>lastname user</td>
+                            <td>Administrador</td>
+                            <td>Edicion, Lectura, Eliminación</td>
+                            <td>
+                                <div class="row-controls">
+                                    <button class="btn">
+                                        <img src="../assets/images/edit-icon.svg" alt="">
+                                    </button>
+                                    <button class="btn">
+                                        <img src="../assets/images/trash-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="select-2">
+                                    <label for="select-2" class="checkbox-label">
+                                    <div class="checkbox-icon"></div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>username</td>
+                            <td>lastname user</td>
+                            <td>Administrador</td>
+                            <td>Edicion, Lectura, Eliminación</td>
+                            <td>
+                                <div class="row-controls">
+                                    <button class="btn">
+                                        <img src="../assets/images/edit-icon.svg" alt="">
+                                    </button>
+                                    <button class="btn">
+                                        <img src="../assets/images/trash-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="select-3">
+                                    <label for="select-3" class="checkbox-label">
+                                    <div class="checkbox-icon"></div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>username</td>
+                            <td>lastname user</td>
+                            <td>Administrador</td>
+                            <td>Edicion, Lectura, Eliminación</td>
+                            <td>
+                                <div class="row-controls">
+                                    <button class="btn">
+                                        <img src="../assets/images/edit-icon.svg" alt="">
+                                    </button>
+                                    <button class="btn">
+                                        <img src="../assets/images/trash-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="select-4">
+                                    <label for="select-4" class="checkbox-label">
+                                    <div class="checkbox-icon"></div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>username</td>
+                            <td>lastname user</td>
+                            <td>Administrador</td>
+                            <td>Edicion, Lectura, Eliminación</td>
+                            <td>
+                                <div class="row-controls">
+                                    <button class="btn">
+                                        <img src="../assets/images/edit-icon.svg" alt="">
+                                    </button>
+                                    <button class="btn">
+                                        <img src="../assets/images/trash-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="select-5">
+                                    <label for="select-5" class="checkbox-label">
+                                    <div class="checkbox-icon"></div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>username</td>
+                            <td>lastname user</td>
+                            <td>Administrador</td>
+                            <td>Edicion, Lectura, Eliminación</td>
+                            <td>
+                                <div class="row-controls">
+                                    <button class="btn">
+                                        <img src="../assets/images/edit-icon.svg" alt="">
+                                    </button>
+                                    <button class="btn">
+                                        <img src="../assets/images/trash-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="select-6">
+                                    <label for="select-6" class="checkbox-label">
+                                    <div class="checkbox-icon"></div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>username</td>
+                            <td>lastname user</td>
+                            <td>Administrador</td>
+                            <td>Edicion, Lectura, Eliminación</td>
+                            <td>
+                                <div class="row-controls">
+                                    <button class="btn">
+                                        <img src="../assets/images/edit-icon.svg" alt="">
+                                    </button>
+                                    <button class="btn">
+                                        <img src="../assets/images/trash-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="select-7">
+                                    <label for="select-7" class="checkbox-label">
+                                    <div class="checkbox-icon"></div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>username</td>
+                            <td>lastname user</td>
+                            <td>Administrador</td>
+                            <td>Edicion, Lectura, Eliminación</td>
+                            <td>
+                                <div class="row-controls">
+                                    <button class="btn">
+                                        <img src="../assets/images/edit-icon.svg" alt="">
+                                    </button>
+                                    <button class="btn">
+                                        <img src="../assets/images/trash-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="select-8">
+                                    <label for="select-8" class="checkbox-label">
+                                    <div class="checkbox-icon"></div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>username</td>
+                            <td>lastname user</td>
+                            <td>Administrador</td>
+                            <td>Edicion, Lectura, Eliminación</td>
+                            <td>
+                                <div class="row-controls">
+                                    <button class="btn">
+                                        <img src="../assets/images/edit-icon.svg" alt="">
+                                    </button>
+                                    <button class="btn">
+                                        <img src="../assets/images/trash-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="select-9">
+                                    <label for="select-9" class="checkbox-label">
+                                    <div class="checkbox-icon"></div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>username</td>
+                            <td>lastname user</td>
+                            <td>Administrador</td>
+                            <td>Edicion, Lectura, Eliminación</td>
+                            <td>
+                                <div class="row-controls">
+                                    <button class="btn">
+                                        <img src="../assets/images/edit-icon.svg" alt="">
+                                    </button>
+                                    <button class="btn">
+                                        <img src="../assets/images/trash-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="col">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="select-10">
+                                    <label for="select-10" class="checkbox-label">
+                                    <div class="checkbox-icon"></div>
+                                    </label>
+                                </div>
+                            </td>
+                            <td>username</td>
+                            <td>lastname user</td>
+                            <td>Administrador</td>
+                            <td>Edicion, Lectura, Eliminación</td>
+                            <td>
+                                <div class="row-controls">
+                                    <button class="btn">
+                                        <img src="../assets/images/edit-icon.svg" alt="">
+                                    </button>
+                                    <button class="btn">
+                                        <img src="../assets/images/trash-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+
+                <div class="table-pagination">
+                    <div>
+                        <button class="btn nowrap btn-sm" type="button">
+                            <img src="../assets/images/pagination-back-icon.svg" alt="">
+                        </button>
+                        <button class="btn nowrap btn-sm" type="button">
+                            <img src="../assets/images/pagination-double-back-icon.svg" alt="">
+                        </button>
+                    </div>
+
+                    <div class="current-page">
+                        <span class="fw-bold">Página</span>
+                        <select class="form-select" aria-label="pagina">
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                        </select>
+                        <span class="nowrap">de 20</span>
+                    </div>
+
+                    <div>
+                        <button class="btn nowrap btn-sm" type="button">
+                            <img src="../assets/images/pagination-next-icon.svg" alt="">
+                        </button>
+                        <button class="btn nowrap btn-sm" type="button">
+                            <img src="../assets/images/pagination-double-next-icon.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

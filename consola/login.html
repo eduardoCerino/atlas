@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!--  Hoja de estilos externa -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/forms.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="../assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="../assets/bootstrap/popper.min.js"></script>
+    <script src="../assets/bootstrap/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <script src="../assets/js/scripts.js"></script>
+</head>
+
+<body class="main">
+
+    <!-- Content -->
+    <div id="content">
+
+        <!-- Login Container -->
+        <div class="login-container">
+
+            <!-- Login Header -->
+            <div style="display: flex; align-items: center; gap: 20px; list-style: none;">
+                <li>
+                    <a href="../index.html">
+                        <img src="../assets/images/Logo.svg" alt="Logo"  class="logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="../index.html">
+                        <img src="../assets/images/Logo-estado.svg" alt="Logo" class="logo-estado">
+                    </a>
+                </li>
+            </div>
+
+            <!-- Login Body -->
+            <div class="login-body">
+                <form action="tabla.html">
+                    <h6 class="login-title">Inicia sesión</h6>
+                    <p class="login-text">El acceso a la sección de Gestión de Riesgos es únicamente para personal autorizado.</p>
+                    <div class="login-form-container">
+                        <div class="login-form-inputs">
+                            <div class="input-container">
+                                <label>ID o nombre de usuario *</label>
+                                <input type="text" class="login-input" placeholder="Ingresa tu ID o nombre de usuario" />
+                            </div>
+                            <div class="input-container">
+                                <label>Contraseña *</label>
+                                <input type="text" class="login-input" placeholder="Ingresa tu contraseña" />
+                                <a href="">Olvidé mi contraseña</a>
+                            </div>
+                        </div>
+                        
+                        <div class="checkbox-container">
+                            <input type="checkbox" id="subtipo-1">
+                            <label for="subtipo-1" class="checkbox-label">
+                                <div class="checkbox-icon"></div>
+                                <span class="checkbox-text">Recordar mi sesión</span>
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary" type="submit">
+                            Iniciar Sesión
+                        </button>
+                    </form>
+                </div>
+                <p class="login-footer">Si tienes alguna duda contáctanos a través del correo electrónico <b>correo@gmail.com</b></p>
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+
+</html>
