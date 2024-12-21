@@ -810,13 +810,6 @@
     }
 }
 
-.custom-input-label {
-    font-size: 14px;
-    font-style: normal;
-    color: #000 !important;
-    font-weight: 500 !important;
-}
-
 .emergency-date,
 .emergency-date-label {
     color:  #484848 !important;

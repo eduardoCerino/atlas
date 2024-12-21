@@ -114,6 +114,13 @@ input[type="range"]::-ms-thumb {
     line-height: 150%;
 }
 
+.custom-input-label {
+    font-size: 14px;
+    font-style: normal;
+    color: #000 !important;
+    font-weight: 500 !important;
+}
+
 /* text field */
 .text-input-container,
 .search-input-container,

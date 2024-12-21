@@ -182,3 +182,14 @@ th, td {
     width: 18px !important;
     height: 18px !important;
 }
+
+.dropdown-with-checkbox > button {
+    color: #000 !important;
+    font-weight: 500 !important;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

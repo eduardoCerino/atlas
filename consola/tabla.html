@@ -76,7 +76,8 @@
                         Ordenar
                         <img src="../assets/images/sort-icon.svg" alt="">
                     </button>
-                    <button class="btn btn-primary nowrap btn-sm" type="button">
+                    <button class="btn btn-primary nowrap btn-sm" type="button"
+                        data-bs-toggle="modal" data-bs-target="#agregar-usuario">
                         <img src="../assets/images/plus-icon.svg" alt="">
                         Agregar Objetivo
                     </button>
@@ -117,7 +118,8 @@
                             <td>Edicion, Lectura, Eliminación</td>
                             <td>
                                 <div class="row-controls">
-                                    <button class="btn">
+                                    <button class="btn"
+                                        data-bs-toggle="modal" data-bs-target="#editar-usuario">
                                         <img src="../assets/images/edit-icon.svg" alt="">
                                     </button>
                                     <button class="btn">
@@ -141,7 +143,8 @@
                             <td>Edicion, Lectura, Eliminación</td>
                             <td>
                                 <div class="row-controls">
-                                    <button class="btn">
+                                    <button class="btn"
+                                        data-bs-toggle="modal" data-bs-target="#editar-usuario">
                                         <img src="../assets/images/edit-icon.svg" alt="">
                                     </button>
                                     <button class="btn">
@@ -165,7 +168,8 @@
                             <td>Edicion, Lectura, Eliminación</td>
                             <td>
                                 <div class="row-controls">
-                                    <button class="btn">
+                                    <button class="btn"
+                                        data-bs-toggle="modal" data-bs-target="#editar-usuario">
                                         <img src="../assets/images/edit-icon.svg" alt="">
                                     </button>
                                     <button class="btn">
@@ -189,7 +193,8 @@
                             <td>Edicion, Lectura, Eliminación</td>
                             <td>
                                 <div class="row-controls">
-                                    <button class="btn">
+                                    <button class="btn"
+                                        data-bs-toggle="modal" data-bs-target="#editar-usuario">
                                         <img src="../assets/images/edit-icon.svg" alt="">
                                     </button>
                                     <button class="btn">
@@ -213,7 +218,8 @@
                             <td>Edicion, Lectura, Eliminación</td>
                             <td>
                                 <div class="row-controls">
-                                    <button class="btn">
+                                    <button class="btn"
+                                        data-bs-toggle="modal" data-bs-target="#editar-usuario">
                                         <img src="../assets/images/edit-icon.svg" alt="">
                                     </button>
                                     <button class="btn">
@@ -237,7 +243,8 @@
                             <td>Edicion, Lectura, Eliminación</td>
                             <td>
                                 <div class="row-controls">
-                                    <button class="btn">
+                                    <button class="btn"
+                                        data-bs-toggle="modal" data-bs-target="#editar-usuario">
                                         <img src="../assets/images/edit-icon.svg" alt="">
                                     </button>
                                     <button class="btn">
@@ -261,7 +268,8 @@
                             <td>Edicion, Lectura, Eliminación</td>
                             <td>
                                 <div class="row-controls">
-                                    <button class="btn">
+                                    <button class="btn"
+                                        data-bs-toggle="modal" data-bs-target="#editar-usuario">
                                         <img src="../assets/images/edit-icon.svg" alt="">
                                     </button>
                                     <button class="btn">
@@ -285,7 +293,8 @@
                             <td>Edicion, Lectura, Eliminación</td>
                             <td>
                                 <div class="row-controls">
-                                    <button class="btn">
+                                    <button class="btn"
+                                        data-bs-toggle="modal" data-bs-target="#editar-usuario">
                                         <img src="../assets/images/edit-icon.svg" alt="">
                                     </button>
                                     <button class="btn">
@@ -309,7 +318,8 @@
                             <td>Edicion, Lectura, Eliminación</td>
                             <td>
                                 <div class="row-controls">
-                                    <button class="btn">
+                                    <button class="btn"
+                                        data-bs-toggle="modal" data-bs-target="#editar-usuario">
                                         <img src="../assets/images/edit-icon.svg" alt="">
                                     </button>
                                     <button class="btn">
@@ -333,7 +343,8 @@
                             <td>Edicion, Lectura, Eliminación</td>
                             <td>
                                 <div class="row-controls">
-                                    <button class="btn">
+                                    <button class="btn"
+                                        data-bs-toggle="modal" data-bs-target="#editar-usuario">
                                         <img src="../assets/images/edit-icon.svg" alt="">
                                     </button>
                                     <button class="btn">
@@ -396,6 +407,142 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="modal fade" id="agregar-usuario" aria-hidden="true" aria-labelledby="agregar-usuario-label" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="agregar-usuario-label">Agregar usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-input-container w-100">
+                        <label>Nombre *</label>
+                        <input type="text" placeholder="Ingresa el nombre" />
+                    </div>
+                    <div class="text-input-container w-100">
+                        <label>Apellidos *</label>
+                        <input type="text" placeholder="Ingresa los apellidos" />
+                    </div>
+
+                    <div class="d-flex flex-column w-100">
+                        <label class="custom-input-label">Rol *</label>
+                        <select class="form-select" aria-label="rol">
+                            <option disabled selected>Selecciona un rol</option>
+                            <option value="1">Administrador</option>
+                            <option value="2">Usuario</option>
+                            <option value="3">Superadministrador</option>
+                        </select>
+                    </div>
+
+                    <div class="select-container w-100">
+                        <label class="custom-input-label">Permisos *</label>
+                        <div class="dropdown-with-checkbox">
+                            <button type="button" class="btn btn-select" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                Selecciona los permisos
+                                <i><img src="../../assets/images/select-icon.svg" alt=""></i>
+                            </button>
+                            <form class="dropdown-menu">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="permiso-editar">
+                                    <label for="permiso-editar" class="checkbox-label">
+                                        <div class="checkbox-icon"></div>
+                                        <span class="checkbox-text">Editar</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="permiso-eliminar">
+                                    <label for="permiso-eliminar" class="checkbox-label"> 
+                                        <div class="checkbox-icon"></div>
+                                        <span class="checkbox-text">Eliminar</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="permiso-agregar">
+                                    <label for="permiso-agregar" class="checkbox-label">
+                                        <div class="checkbox-icon"></div>
+                                        <span class="checkbox-text">Agregar</span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Agregar usuario</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editar-usuario" aria-hidden="true" aria-labelledby="agregar-usuario-label" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="agregar-usuario-label">Editar usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-input-container w-100">
+                        <label>Nombre *</label>
+                        <input type="text" placeholder="Ingresa el nombre" value="Nombre del usuario" />
+                    </div>
+                    <div class="text-input-container w-100">
+                        <label>Apellidos *</label>
+                        <input type="text" placeholder="Ingresa los apellidos" value="Apellidos de usuario"/>
+                    </div>
+
+                    <div class="d-flex flex-column w-100">
+                        <label class="custom-input-label">Rol *</label>
+                        <select class="form-select" aria-label="rol">
+                            <option disabled selected>Selecciona un rol</option>
+                            <option selected>Administrador</option>
+                            <option>Usuario</option>
+                            <option>Superadministrador</option>
+                        </select>
+                    </div>
+
+                    <div class="select-container w-100">
+                        <label class="custom-input-label">Permisos *</label>
+                        <div class="dropdown-with-checkbox">
+                            <button type="button" class="btn btn-select" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                Selecciona los permisos
+                                <i><img src="../../assets/images/select-icon.svg" alt=""></i>
+                            </button>
+                            <form class="dropdown-menu">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="permiso-editar">
+                                    <label for="permiso-editar" class="checkbox-label">
+                                        <div class="checkbox-icon"></div>
+                                        <span class="checkbox-text">Editar</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="permiso-eliminar">
+                                    <label for="permiso-eliminar" class="checkbox-label"> 
+                                        <div class="checkbox-icon"></div>
+                                        <span class="checkbox-text">Eliminar</span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="permiso-agregar">
+                                    <label for="permiso-agregar" class="checkbox-label">
+                                        <div class="checkbox-icon"></div>
+                                        <span class="checkbox-text">Agregar</span>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Agregar usuario</button>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
