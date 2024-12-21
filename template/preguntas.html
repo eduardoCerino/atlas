@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  Hoja de estilos externa -->
+    <link href="../assets/css/common.css" rel="stylesheet">
+    <link href="../assets/css/template.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="../assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="../assets/bootstrap/popper.min.js"></script>
+    <script src="../assets/bootstrap/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <script src="../assets/js/scripts.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul class="navbar-container">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <li><a href="index.html">
+                        <img src="../assets/images/Logo.svg" alt="Logo"  class="logo">
+
+                    </a></li>
+                <li>
+                <li><a href="index.html">
+                        <img src="../assets/images/Logo-estado.svg" alt="Logo" class="logo-estado">
+
+                    </a></li>
+                <li>
+            </div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <img src="../assets/images/icono-navbar.svg" alt="Usuario" style="width: 40px;" class="icono-navbar">
+                <a href="../emergencias/login.html">
+                    <button class="btn-navbar" type="button">
+                        Iniciar Sesión
+                    </button>
+                </a>
+            </div>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="about-us">
+        <div class="contenido-box">
+            <p class="text-1">Entradas</p>
+            <h1>Avisos legales</h1>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <section class="glosario responsive-column">
+            <div class="content-table">
+                <h3>Contenido</h3>
+                <button class="btn btn-link" type="button">
+                    Titular
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link" type="button">
+                    Antecedentes
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link" type="button">
+                    Misión, visión y objetivo
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link" type="button">
+                    Atribuciones
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link" type="button">
+                    Marco jurídico
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link" type="button">
+                    Organigrama
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link" type="button">
+                    Directorio
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link" type="button">
+                    Ubicación
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link" type="button">
+                    Centros Regionales
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link" type="button">
+                    Glosario de términos
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link selected" type="button">
+                    Preguntas frecuentes
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+                <button class="btn btn-link" type="button">
+                    Contacto
+                    <img src="../assets/images/pagination-next-icon.svg" alt="">
+                </button>
+            </div>
+    
+            <div class="glosario-faqs-container">
+                <div class="glosario-faqs">
+                    <div class="glosario-faqs-title">
+                        <h2> Preguntas frecuentes</h2>
+                    </div>
+                    <div class="glosario-faqs-content">
+                        <div class="glosario-faqs-container">
+                            <div class="faqs-item">
+                                <div class="faq-item-question">
+                                    <p> ¿Con qué frecuencia se actualizan los mapas del atlas
+                                        de riesgo?</p>
+                                    <img src="../assets/images/icono-mas.png" alt="" style="cursor: pointer;"
+                                        onclick="toggleElement('faq1'); toogleImageSrc('faq1-icon-resta')"
+                                        id="faq1-icon-resta">
+                                </div>
+                                <div class="faq-item-text  hide-item" id="faq1">
+                                    <p>Explora las preguntas frecuentes y aclara cualquier duda sobre el uso y beneficios del atlas de riesgo.</p>
+                                </div>
+                            </div>
+                            <div class="faqs-item">
+                                <div class="faq-item-question">
+                                    <p>¿Cómo puedo interpretar los colores y símbolos en los
+                                        mapas del atlas?</p>
+                                    <img src="../assets/images/icono-mas.png" alt="" style="cursor: pointer;"
+                                        onclick="toggleElement('faq2'); toogleImageSrc('faq2-icon-resta')"
+                                        id="faq2-icon-resta">
+                                </div>
+                                <div class="faq-item-text hide-item" id="faq2">
+                                    <p> Explora las preguntas frecuentes y aclara cualquier duda sobre el uso y beneficios del atlas de riesgo.</p>
+                                </div>
+                            </div>
+                            <div class="faqs-item ">
+                                <div class="faq-item-question">
+                                    <p>¿Puedo descargar o compartir los datos del atlas de
+                                        riesgo?</p>
+                                    <img src="../assets/images/icono-mas.png" alt="" style="cursor: pointer;"
+                                        onclick="toggleElement('faq3'); toogleImageSrc('faq3-icon-resta')"
+                                        id="faq3-icon-resta">
+                                </div>
+                                <div class="faq-item-text hide-item" id="faq3">
+                                    <p>Explora las preguntas frecuentes y aclara cualquier duda sobre el uso y beneficios del atlas de riesgo.</p>
+                                </div>
+                            </div>
+                            <div class="faqs-item ">
+                                <div class="faq-item-question">
+                                    <p>¿Puedo descargar o compartir los datos del atlas de
+                                        riesgo?</p>
+                                    <img src="../assets/images/icono-mas.png" alt="" style="cursor: pointer;"
+                                        onclick="toggleElement('faq4'); toogleImageSrc('faq4-icon-resta')"
+                                        id="faq4-icon-resta">
+                                </div>
+                                <div class="faq-item-text hide-item" id="faq4">
+                                    <p>Explora las preguntas frecuentes y aclara cualquier duda sobre el uso y beneficios del atlas de riesgo.</p>
+                                </div>
+                            </div>
+                            <div class="faqs-item ">
+                                <div class="faq-item-question">
+                                    <p>¿Puedo descargar o compartir los datos del atlas de
+                                        riesgo?</p>
+                                    <img src="../assets/images/icono-mas.png" alt="" style="cursor: pointer;"
+                                        onclick="toggleElement('faq5'); toogleImageSrc('faq5-icon-resta')"
+                                        id="faq5-icon-resta">
+                                </div>
+                                <div class="faq-item-text hide-item" id="faq5">
+                                    <p>Explora las preguntas frecuentes y aclara cualquier duda sobre el uso y beneficios del atlas de riesgo.</p>
+                                </div>
+                            </div>
+                            <div class="faqs-item ">
+                                <div class="faq-item-question">
+                                    <p>¿Puedo descargar o compartir los datos del atlas de
+                                        riesgo?</p>
+                                    <img src="../assets/images/icono-mas.png" alt="" style="cursor: pointer;"
+                                        onclick="toggleElement('faq6'); toogleImageSrc('faq6-icon-resta')"
+                                        id="faq6-icon-resta">
+                                </div>
+                                <div class="faq-item-text hide-item" id="faq6">
+                                    <p>Explora las preguntas frecuentes y aclara cualquier duda sobre el uso y beneficios del atlas de riesgo.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <br><br><br>
+
+    <!-- Footer -->
+    <section class="footer">
+
+        <div class="footer-left">
+            <div class="footer-left-images">
+                <img src="../assets/images/Logo.svg" alt="Logo" style="width: 94px; height: 44px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2" height="46" viewBox="0 0 2 46" fill="none">
+                    <path d="M1 1V45.0002" stroke="black" stroke-opacity="0.12" stroke-linecap="round" />
+                </svg>
+                <img src="../assets/images/Logo-estado.svg" alt="Logo" style="width: 108.789px; height: 44px;">
+
+            </div>
+
+            <div class="footer-left-text">
+                <p> Derechos reservados 2024, Gobierno del Estado de México</p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <div class="footer-right-item">
+                <h3> Conoce el estado</h3>
+                <div class="footer-right-item-text">
+                    <p> Nuestros Municipios</p>
+                    <p> Corredores Turísticos</p>
+                    <p> Parques</p>
+                    <p> Pueblos Mágicos</p>
+                    <p> Visita el Estado</p>
+                </div>
+            </div>
+            <div class="footer-right-item">
+                <h3> Trámites y servicios</h3>
+                <div class="footer-right-item-text">
+                    <p> Ventanilla Electrónica</p>
+                    <p> Carpeta Ciudadana</p>
+                    <p> Centros de Servicios Administrativos</p>
+                    <p> Portal de Servicios</p>
+                    <p> Edicto 21/10/2021</p>
+                </div>
+            </div>
+            <div class="footer-right-item">
+                <h3>Transparencia</h3>
+                <div class="footer-right-item-text">
+                    <p> ¿Qué es?</p>
+                    <p>Transparencia Fiscal</p>
+                    <p> INFOEM</p>
+                    <p> Información Pública</p>
+                    <p> SAIMEX</p>
+                </div>
+            </div>
+            <div class="footer-right-item">
+                <h3> Datos abiertos</h3>
+                <div class="footer-right-item-text">
+                    <p> Datos abiertos en el Estado</p>
+                    <p> Estadísticas</p>
+                    <p> Parques</p>
+                    <p> Datos abiertos en México</p>
+                    <span> Fundación de Datos Abiertos</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

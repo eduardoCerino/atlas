@@ -162,10 +162,10 @@ function toogleImageSrc(imageId) {
 
     if (currentSrc.includes(sumaIcon)) {
         console.log("includes resta");
-        image.src = './assets/images/icono-mas.png';
+        image.src = '../assets/images/icono-mas.png';
     } else {
         console.log("includes suma");
-        image.src = './assets/images/icono-resta.png';
+        image.src = '../assets/images/icono-resta.png';
     }
 }
 
